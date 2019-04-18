@@ -1,0 +1,16 @@
+{
+    "name"  : "workerman/mysql",
+    "type"  : "library",
+    "keywords": ["mysql", "pdo", "pdo_mysql"],
+    "homepage": "http://www.workerman.net",
+    "license" : "MIT",
+    "description": "Long-living MySQL connection for daemon.",
+    "require": {
+        "php": ">=5.3",
+        "ext-pdo": "*",
+        "ext-pdo_mysql": "*"
+    },
+    "autoload": {
+        "psr-4": {"Workerman\\MySQL\\": "./src"}
+    }
+}

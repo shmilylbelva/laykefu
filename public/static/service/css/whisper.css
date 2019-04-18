@@ -1,0 +1,67 @@
+.layui-nav-item{height:60px;padding:10px 0px 0px 10px;cursor:pointer;border-bottom: 1px solid #fff;}
+.layui-nav-item:hover{background:#c2c2c2;color:white;}
+.active{background:#c2c2c2;color:white}
+.layui-nav-item img{width: 50px;height: 50px;border-radius: 100%;}
+.chat-left{width:70%;height:100%;float:left;border-right:1px solid #e2e2e2}
+.msg-send{width:100%;height:28%;background:white;}
+.tools-bar{width:98%;height:13%;padding:1% 1% 2% 1%;border-top:1px solid #e2e2e2;}
+.tools-bar i{cursor: pointer;margin-left:10px}
+.msg-box{width:100%;height:65%;}
+.msg-area{width:98%;height:98%;padding:0 1%;resize:none;border:none;overflow-y: auto;}
+.send-area{width:100%;height:18%;}
+.user-name{width:80px;display:inline-block;word-break:keep-all;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;position: relative;top: 5px;left: 10px;}
+.clear{ height:0px;font-size:0;clear:both;}
+
+ 
+.chat-box{width:98%;height:62%;overflow-x: hidden; overflow-y: auto;padding: 2% 1%}
+.chat-box ul{display:none}
+.chat-box .show-chat-detail{display:block}
+.whisper-chat-main ul li{position: relative; font-size: 0; margin-bottom: 10px; padding-left: 60px; min-height: 68px;}
+.whisper-chat-user,
+.whisper-chat-text{display: inline-block; *display:inline; *zoom:1; vertical-align:top; font-size: 14px;}
+.whisper-chat-user{position: absolute; left: 3px;}
+.whisper-chat-user img{width: 40px; height: 40px; border-radius: 100%;}
+.whisper-chat-user cite{position: absolute; left: 60px; top: -2px;line-height: 24px; font-size: 12px; white-space: nowrap; color: #999; text-align: left; font-style: normal;}
+.whisper-chat-user cite i{padding-left: 15px; font-style: normal;}
+.whisper-chat-text{position: relative; line-height: 22px; margin-top: 25px; padding: 8px 15px; background-color: #e2e2e2; border-radius: 3px; color: #333; word-break: break-all;}
+.whisper-chat-text:after{content: ''; position: absolute; left: -10px; top: 13px; width: 0; height: 0; border-style: dashed; border-color:transparent; overflow:hidden; border-width: 10px; border-top-style: solid; border-top-color: #e2e2e2;}
+.whisper-chat-text{max-width: 462px;}
+.whisper-chat-text a{color: #33DF83;}
+.whisper-chat-text img{ max-width: 100%; vertical-align: middle;}
+.layui-whisper-file,
+.whisper-chat-text .layui-whisper-file{display: block; text-align: center; }
+.whisper-chat-text .layui-whisper-file{color: #333;}
+.layui-whisper-file:hover{opacity: 0.9}
+.layui-whisper-file i{font-size: 80px; line-height: 80px;}
+.layui-whisper-file cite{display: block; line-height: 20px; font-size: 14px;}
+.layui-whisper-audio{text-align: center; cursor: pointer;}
+.layui-whisper-audio .layui-icon{position: relative; top: 5px; font-size: 24px;}
+.layui-whisper-audio p{margin-top: 3px;}
+.layui-whisper-video{width: 120px; height: 80px; line-height: 80px; background-color: #333; text-align: center; border-radius: 3px;}
+.layui-whisper-video .layui-icon{font-size: 36px; cursor: pointer; color: #fff;}
+.whisper-chat-main ul .whisper-chat-system{min-height: 0; padding: 0;}
+
+.whisper-chat-main ul .whisper-chat-mine{text-align: right; padding-left: 0; padding-right: 60px;}
+.whisper-chat-mine .whisper-chat-user{left: auto; right: 3px;}
+.whisper-chat-mine .whisper-chat-user cite{left: auto; right: 60px; text-align: right;}
+.whisper-chat-mine .whisper-chat-user cite i{padding-left: 0; padding-right: 15px;}
+.whisper-chat-mine .whisper-chat-text{margin-left: 0; text-align: left; background-color: #5FB878; color: #fff;}
+.whisper-chat-mine .whisper-chat-text:after{left: auto; right: -10px; border-top-color: #5FB878;}
+.whisper-chat-mine .whisper-chat-text a{color: #fff;}
+
+.whisper-chat-footer{border-top: 1px solid #F1F1F1;}
+.whisper-chat-tool{position: relative; padding: 0 8px; height: 38px; line-height: 38px; font-size: 0;}
+.whisper-chat-tool span{position: relative; margin: 0 10px; display: inline-block; *display:inline; *zoom:1; vertical-align:top; font-size: 24px; cursor: pointer;}
+.whisper-chat-tool .whisper-tool-log{position: absolute; right: 5px; font-size: 14px; }
+.whisper-tool-log i{position: relative; top: 2px; margin-right: 5px; font-size: 20px; color: #999}
+.whisper-tool-image input{position: absolute; font-size: 0; left: 0; top: 0; width: 100%; height: 100%; opacity: 0.01; filter: Alpha(opacity=1); cursor: pointer;}
+
+.layui-tab-title li{width:30%}
+.chat_page{position:absolute;bottom:0;right:0;width:320px;height:480px;background:#e8e8e8;z-index:9999}
+
+body .layui-whisper-face{border: none; background: none;}
+body .layui-whisper-face  .layui-layer-content{padding:0; background-color:#fff; color:#666; box-shadow:none}
+.layui-whisper-face .layui-layer-TipsG{display:none;}
+.layui-whisper-face ul{position:relative; width:372px; padding:10px; border:1px solid #D9D9D9; background-color:#fff; box-shadow: 0 0 20px rgba(0,0,0,.2);}
+.layui-whisper-face ul li{cursor: pointer; float: left; border: 1px solid #e8e8e8; height: 22px; width: 26px; overflow: hidden; margin: -1px 0 0 -1px; padding: 4px 2px; text-align: center;}
+.layui-whisper-face ul li:hover{position: relative; z-index: 2; border: 1px solid #eb7350; background: #fff9ec;}

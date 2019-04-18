@@ -1,0 +1,12 @@
+{
+    "name"  : "workerman/globaldata",
+    "type"  : "library",
+    "homepage": "http://www.workerman.net",
+    "license" : "MIT",
+    "require": {
+        "workerman/workerman" : ">=3.3.0"
+    },
+    "autoload": {
+        "psr-4": {"GlobalData\\": "./src"}
+    }
+}
