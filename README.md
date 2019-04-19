@@ -1,7 +1,8 @@
 ## laykefu
-tp5+Gatewayworker搭建的高性能客服系统  
-
-## 接入
+thinkphp5+Gatewayworker搭建的web客服系统
+体验地址：http://laykefu.guoshanchina.com
+github仓库：https://github.com/shmilylbelva/laykefu
+## 1.客户端接入
 
 1、添加laykefu.css样式文件
 ```php
@@ -14,21 +15,110 @@ tp5+Gatewayworker搭建的高性能客服系统
 <script src="http://laykefu.guoshanchina.com/static/customer/js/laykefu.js"></script>
 ```
 
-3、添加html目标代码 id="show-laykefu"
+3、添加html目标代码 id="show-laykefu"，样式可根据需求自定义
 ```php
-<div class="laykefu-min"  id="show-laykefu">咨询客服</div>
+<div class="laykefu-min">咨询客服</div>
 ```
+默认显示一个客服
 
 4、初始化laykefu
 ```php
-  laykefu.init({
-    group: 1,//客服分组
-    // socket: 'www.laykefu.com:7272',//聊天服务器地址
-    socket: 'ws.guoshanchina.com',//聊天服务器地址
-    face_path:'/static/customer/images/face',//表情包路径
-    upload_url:'/index/upload/uploadImg',//图片上传路径
-  });
+	laykefu.init({
+		group: 1,//客服分组
+		socket: 'ws.guoshanchina.com',//聊天服务器地址
+		face_path:'/static/customer/images/face',//表情包路径
+		upload_url:'/index/upload/uploadImg',//图片上传路径
+	});
 
-```  
-## 效果图
+```
+
+5、如果需要展示多个客服，那么需要这么修改
+
+```php
+<div class="laykefu-min" data-group="1" >售前客服</div>
+<div class="laykefu-min" data-group="2" style="margin:100px">售后客服</div>
+
+```
+初始化前需要先获取group的值
+```php
+$(".laykefu-min").click(function(){
+    var group = $(this).attr('data-group');
+	laykefu.init({
+		group: group,//客服分组
+		socket: '127.0.0.1:7272',//聊天服务器地址
+		face_path:'/static/customer/images/face',//表情包路径
+		upload_url:'/index/upload/uploadImg',//图片上传路径
+	});
+});
+```
+
+6、可选参数
+可配置参数如下
+```php
+	laykefu.init({
+		uid: '',//客户id
+		name: '',//客户昵称
+		group: '',//客服分组
+		avatar: '',//客户头像
+		socket: '',//聊天服务器地址
+		face_path:'',//表情包路径
+		upload_url:'',//图片上传路径
+		height:'',//窗口高度
+		width:'',//窗口宽度
+	});
+
+``` 
+5、关联已有账户系统
+默认情况下咨询的客户是随机分配账户信息，如果你的平台有账户系统，那么可以在初始化的时候传递uid和name即可
+
+## 2.服务端配置
+1、安装依赖
+```php
+composer install
+```
+2、配置环境
+ 修改目录下.env信息
+3、启动gatawayworker相关服务
+如果你是在windows上运行的话，直接双击`/vendor/workerman/Conf/start_for_bat.bat`即可
+如果你是在linux或mac上运行的话，请进入`/vendor/workerman/Conf/`目录，然后运行
+```php
+php start.php start -d
+```
+开启服务
+命令如下
+启动
+以debug（调试）方式启动
+
+php start.php start
+
+以daemon（守护进程）方式启动
+
+php start.php start -d
+
+停止
+php start.php stop
+
+重启
+php start.php restart
+
+平滑重启
+php start.php reload
+
+查看状态
+php start.php status
+
+查看连接状态
+php start.php connections
+
+## 其他信息
+
+客服地址:host/service
+账户密码：客服小美 123456 //售前客服
+		 客服小丽 123456 //售后客服
+
+
+后台管理地址：host/admin
+账户密码：admin admin
+
+
 

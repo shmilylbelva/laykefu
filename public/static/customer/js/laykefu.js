@@ -23,10 +23,7 @@
         socket: '',//聊天服务器地址
         face_path: '',//表情地址
         height: '',//窗口高度
-        width: '', //窗口宽度
-        title: '',//窗口标题
-        commChat: '',// 是否显示默认的聊天记录
-        flag: '' //是否点击显示表情的标志         
+        width: '', //窗口宽度      
     },check = function(){
         if('' == config.url || 0 == config.group || '' == config.socket){
             console.log("配置文件错误");
@@ -84,11 +81,10 @@
                     break;
                 // 问候语
                 case 'helloMessage':
-                    showMsg(data.data, 1);
+                    showMsg(data.data);
                     break;
                 // 转接
                 case 'relinkMessage':
-                    commChat = 2;
                     $('#laykefu-title').html('正在转接中...');
                     break;
             }            
@@ -149,7 +145,6 @@
         tpl +=          '<div class="heading" draggable="true">';
         tpl +=              '<small class="chat-date pull-right" id="hidden-laykefu">';
         tpl +=              '关闭';
-        // tpl +=                  '<a href="http://laykefu.baiyf.com" target="_blank">'+config.title+'</a>';
         tpl +=              '</small>';
         tpl +=              '<span id="laykefu-title">与 客服 交流中</span>'
         tpl +=          '</div>';
@@ -199,7 +194,7 @@
         // 滚动条自动定位到最底端
         showBigPic();
         wordBottom();
-    },showMsg = function(info, flag){// 展示收到的消息
+    },showMsg = function(info){// 展示收到的消息
         // 清除系统消息
         $('.laykefu-chat-system').html('');
         var _html = $('#laykefu-chat-list').html();
@@ -212,7 +207,7 @@
     },msgFactory = function(content, type,time,info) {// 消息体    
         // 储存信息
         var key = kf_id + '-' + uinfo[0].userId;
-        if(typeof(Storage) !== "undefined" && typeof(flag) == "undefined"){
+        if(typeof(Storage) !== "undefined"){
             var localMsg = getCache(key);
             if(localMsg == null || localMsg.length == 0){
                 localMsg = [];
@@ -457,25 +452,24 @@
         }); 
         $("#hidden-laykefu").click(function(){
             $("#laykefu").css('display','none');
-            $("#show-laykefu").css('display','block');
+            $(".laykefu-min").css('display','block');
         });         
-        $("#show-laykefu").click(function(){
-            $("#show-laykefu").css('display','none');
+        $(".laykefu-min").click(function(){
+            $(".laykefu-min").css('display','none');
             $("#laykefu").css('display','block');
         });       
     };
 
-    Laykefu.prototype.init = function(options){        
-        options.avatar = options.avatar||'http://wx2.sinaimg.cn/mw690/5db11ff4gy1flxmew7edlj203d03wt8n.jpg',//用户头像
+    Laykefu.prototype.init = function(options){  
+        options.uid = options.uid || '',//客户id      
+        options.name = options.name || '',//客户昵称      
+        options.avatar = options.avatar ||'http://img.52z.com/upload/news/image/20180213/20180213062641_35687.jpg',//用户头像
         options.group = options.group,//客服分组
         options.socket = options.socket,//聊天服务器地址
         options.face_path = options.face_path+'/',
         options.uploadUrl = options.uploadUrl,
         options.height = options.height || '600px',//窗口高度
-        options.width = options.width || '400px', //窗口宽度
-        options.title = options.title || 'laykefu',//窗口标题
-        options.commChat = options.commChat || 1,// 是否显示默认的聊天记录
-        options.flag = options.flag || 1, //是否点击显示表情的标志           
+        options.width = options.width || '400px', //窗口宽度     
         config = options; 
         check(); 
         register();

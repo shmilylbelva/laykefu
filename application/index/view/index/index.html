@@ -12,17 +12,16 @@
 
 <body class="gray-bg">
 <!-- 右侧悬浮 -->       
-<div class="laykefu-min" data-group="1" id="show-laykefu">咨询客服</div>
+<div class="laykefu-min" id="show-laykefu">咨询客服</div>
 <!-- 右侧悬浮 -->
 
 <script src="https://cdn.staticfile.org/jquery/2.1.4/jquery.min.js"></script>
-<script src="http://laykefu.guoshanchina.com/static/customer/js/laykefu.js"></script>
+<script src="/static/customer/js/laykefu.js"></script>
 <script type="text/javascript">
 
   laykefu.init({
     group: 1,//客服分组
-    // socket: 'www.laykefu.com:7272',//聊天服务器地址
-    socket: 'ws.guoshanchina.com',//聊天服务器地址
+    socket: '127.0.0.1:7272',//聊天服务器地址
     face_path:'/static/customer/images/face',//表情包路径
     upload_url:'/index/upload/uploadImg',//图片上传路径
   });

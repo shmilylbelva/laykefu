@@ -5,6 +5,7 @@
  */
 
 ini_set('display_errors', 'on');
+ini_set('date.timezone','Asia/Shanghai');
 use Workerman\Worker;
 
 if(strpos(strtolower(PHP_OS), 'win') === 0)
@@ -25,10 +26,11 @@ if(!extension_loaded('posix'))
 
 
 // 加载所有Applications/*/start.php，以便启动所有服务
-foreach(glob(__DIR__.'/Events/start*.php') as $start_file)
-{
-    require_once $start_file;
-}
+
+require_once './Events/start_register.php';
+require_once './Events/start_gataway.php';
+require_once './Events/start_bussinessworker.php';
+require_once './Events/start_globaldata.php';
 
 
 // 运行所有服务

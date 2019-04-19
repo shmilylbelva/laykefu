@@ -13,13 +13,13 @@ function replaceContent(content) {
             return '<img alt="' + alt + '" title="' + alt + '" src="' + faces[alt] + '">';
         })
         .replace(/img\[([^\s]+?)\]/g, function (img) {  // 转义图片
-            return '<img class="layui-whisper-photos" src="' + img.replace(/(^img\[)|(\]$)/g, '') + '" width="100px" height="100px">';
+            return '<img class="layui-laykefu-photos" src="' + img.replace(/(^img\[)|(\]$)/g, '') + '" width="100px" height="100px">';
         })
         .replace(/file\([\s\S]+?\)\[[\s\S]*?\]/g, function (str) { // 转义文件
             var href = (str.match(/file\(([\s\S]+?)\)\[/) || [])[1];
             var text = (str.match(/\)\[([\s\S]*?)\]/) || [])[1];
             if (!href) return str;
-            return '<a class="layui-whisper-file" href="' + href + '" download target="_blank"><i class="layui-icon">&#xe61e;</i><cite>' + (text || href) + '</cite></a>';
+            return '<a class="layui-laykefu-file" href="' + href + '" download target="_blank"><i class="layui-icon">&#xe61e;</i><cite>' + (text || href) + '</cite></a>';
         })
         .replace(/a\([\s\S]+?\)\[[\s\S]*?\]/g, function (str) { // 转义链接
             var href = (str.match(/a\(([\s\S]+?)\)\[/) || [])[1];

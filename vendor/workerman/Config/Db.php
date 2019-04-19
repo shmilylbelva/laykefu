@@ -1,5 +1,7 @@
 <?php
 namespace Config;
+
+use \think\Env;
 /**
  * mysql配置
  * @author walkor
@@ -14,16 +16,16 @@ class Db
      * @var array
      */
     public static $db = array(
-        'host'    => 'rm-bp195qct86bpp011c.mysql.rds.aliyuncs.com',
+        'host'    => '127.0.0.1',
         'port'    => 3306,
-        'user'    => 'laykefu',
-        'password' => 'laykefu@123',
+        'user'    => 'root',
+        'password' => 'root',
         'dbname'  => 'laykefu',
         'charset'    => 'utf8',
     );    
 
     public static $GlobalData = array(
-        'host'    => '10.0.2.219',
+        'host'    => '127.0.0.1',
         'port'    => 2207,
     );
 }

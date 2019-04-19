@@ -1,0 +1,3591 @@
+---------------------------------------------------------------
+[ 2019-04-19T11:18:02+08:00 ] 127.0.0.1 GET www.laykefu.com/static/admin/css/bootstrap.min.css.map
+[运行时间：0.040002s] [吞吐率：25.00req/s] [内存消耗：878.09kb] [文件加载：28]
+[ info ] [ LANG ] F:\laragon\www\laykefu\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'static',
+    1 => 'admin',
+    2 => 'css',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'user_name=admin; user_id=1',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/70.0.3538.77 Safari/537.36',
+  'connection' => 'keep-alive',
+  'host' => 'www.laykefu.com',
+  'content-length' => '',
+  'content-type' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2019-04-19T11:18:09+08:00 ] 127.0.0.1 GET www.laykefu.com/admin/users/adduser.html
+[运行时间：0.062004s] [吞吐率：16.13req/s] [内存消耗：1,938.75kb] [文件加载：47]
+[ info ] [ LANG ] F:\laragon\www\laykefu\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'users',
+    2 => 'adduser',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'user_name=admin; user_id=1',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://www.laykefu.com/admin/index/index.html',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/70.0.3538.77 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'keep-alive',
+  'host' => 'www.laykefu.com',
+  'content-length' => '',
+  'content-type' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\admin\controller\Users->addUser[ F:\laragon\www\laykefu\application\admin\controller\Users.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] F:\laragon\www\laykefu\public/../application/admin\view\users\add_user.html [ array (
+  0 => 'version',
+  1 => 'groups',
+  2 => 'status',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.002001s ] mysql:host=127.0.0.1;port=3306;dbname=laykefu;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `ws_groups` [ RunTime:0.009000s ]
+[ sql ] [ SQL ] SELECT * FROM `ws_groups` [ RunTime:0.001000s ]
+---------------------------------------------------------------
+[ 2019-04-19T11:18:10+08:00 ] 127.0.0.1 GET www.laykefu.com/admin/users/index.html
+[运行时间：0.039002s] [吞吐率：25.64req/s] [内存消耗：1,300.40kb] [文件加载：40]
+[ info ] [ LANG ] F:\laragon\www\laykefu\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'users',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'user_name=admin; user_id=1',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://www.laykefu.com/admin/index/index.html',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/70.0.3538.77 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'keep-alive',
+  'host' => 'www.laykefu.com',
+  'content-length' => '',
+  'content-type' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\admin\controller\Users->index[ F:\laragon\www\laykefu\application\admin\controller\Users.php ]
+[ info ] [ VIEW ] F:\laragon\www\laykefu\public/../application/admin\view\users\index.html [ array (
+  0 => 'version',
+) ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2019-04-19T11:18:10+08:00 ] 127.0.0.1 GET www.laykefu.com/admin/users/index.html?pageNumber=1&pageSize=10&searchText=
+[运行时间：0.088005s] [吞吐率：11.36req/s] [内存消耗：1,824.95kb] [文件加载：46]
+[ info ] [ LANG ] F:\laragon\www\laykefu\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'users',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'user_name=admin; user_id=1',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://www.laykefu.com/admin/users/index.html',
+  'content-type' => 'application/json',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/70.0.3538.77 Safari/537.36',
+  'x-requested-with' => 'XMLHttpRequest',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'connection' => 'keep-alive',
+  'host' => 'www.laykefu.com',
+  'content-length' => '',
+)
+[ info ] [ PARAM ] array (
+  'pageNumber' => '1',
+  'pageSize' => '10',
+  'searchText' => '',
+)
+[ info ] [ RUN ] app\admin\controller\Users->index[ F:\laragon\www\laykefu\application\admin\controller\Users.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001000s ] mysql:host=127.0.0.1;port=3306;dbname=laykefu;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `ws_users` [ RunTime:0.018001s ]
+[ sql ] [ SQL ] SELECT * FROM `ws_users` ORDER BY `id` DESC [ RunTime:0.001001s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `ws_groups` [ RunTime:0.016000s ]
+[ sql ] [ SQL ] SELECT `name` FROM `ws_groups` WHERE  `id` = 1 LIMIT 1 [ RunTime:0.001001s ]
+[ sql ] [ SQL ] SELECT `name` FROM `ws_groups` WHERE  `id` = 1 LIMIT 1 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `ws_users` LIMIT 1 [ RunTime:0.000000s ]
+---------------------------------------------------------------
+[ 2019-04-19T11:18:12+08:00 ] 127.0.0.1 GET www.laykefu.com/admin/users/edituser/id/2.html
+[运行时间：0.059004s] [吞吐率：16.95req/s] [内存消耗：1,946.50kb] [文件加载：47]
+[ info ] [ LANG ] F:\laragon\www\laykefu\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'users',
+    2 => 'edituser',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'user_name=admin; user_id=1',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://www.laykefu.com/admin/users/index.html',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/70.0.3538.77 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'keep-alive',
+  'host' => 'www.laykefu.com',
+  'content-length' => '',
+  'content-type' => '',
+)
+[ info ] [ PARAM ] array (
+  'id' => '2',
+)
+[ info ] [ RUN ] app\admin\controller\Users->editUser[ F:\laragon\www\laykefu\application\admin\controller\Users.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] F:\laragon\www\laykefu\public/../application/admin\view\users\edit_user.html [ array (
+  0 => 'version',
+  1 => 'info',
+  2 => 'status',
+  3 => 'groups',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001000s ] mysql:host=127.0.0.1;port=3306;dbname=laykefu;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `ws_users` [ RunTime:0.007001s ]
+[ sql ] [ SQL ] SELECT * FROM `ws_users` WHERE  `id` = 2 LIMIT 1 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `ws_groups` [ RunTime:0.008000s ]
+[ sql ] [ SQL ] SELECT * FROM `ws_groups` [ RunTime:0.000000s ]
+---------------------------------------------------------------
+[ 2019-04-19T11:19:38+08:00 ] 127.0.0.1 POST www.laykefu.com/admin/users/upavatar.html
+[运行时间：0.062003s] [吞吐率：16.13req/s] [内存消耗：1,203.71kb] [文件加载：38]
+[ info ] [ LANG ] F:\laragon\www\laykefu\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'users',
+    2 => 'upavatar',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'user_name=admin; user_id=1',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://www.laykefu.com/admin/users/edituser/id/2.html',
+  'content-type' => 'multipart/form-data; boundary=----WebKitFormBoundaryD44QZGvANjrF8DVb',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/70.0.3538.77 Safari/537.36',
+  'x-requested-with' => 'XMLHttpRequest',
+  'origin' => 'http://www.laykefu.com',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'content-length' => '96972',
+  'connection' => 'keep-alive',
+  'host' => 'www.laykefu.com',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\admin\controller\Users->upAvatar[ F:\laragon\www\laykefu\application\admin\controller\Users.php ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2019-04-19T11:19:50+08:00 ] 127.0.0.1 POST www.laykefu.com/admin/users/edituser.html
+[运行时间：0.077004s] [吞吐率：12.99req/s] [内存消耗：1,845.51kb] [文件加载：47]
+[ info ] [ LANG ] F:\laragon\www\laykefu\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'users',
+    2 => 'edituser',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'user_name=admin; user_id=1',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://www.laykefu.com/admin/users/edituser/id/2.html',
+  'content-type' => 'application/x-www-form-urlencoded; charset=UTF-8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/70.0.3538.77 Safari/537.36',
+  'x-requested-with' => 'XMLHttpRequest',
+  'origin' => 'http://www.laykefu.com',
+  'accept' => '*/*',
+  'content-length' => '166',
+  'connection' => 'keep-alive',
+  'host' => 'www.laykefu.com',
+)
+[ info ] [ PARAM ] array (
+  'id' => '2',
+  'user_name' => '客服小美',
+  'user_pwd' => '123456',
+  'group_id' => '1',
+  'status' => '1',
+  'user_avatar' => '/uploads/20190419/4eb84234138339f27018e1e3625afd15.jpg',
+  'file' => '',
+)
+[ info ] [ RUN ] app\admin\controller\Users->editUser[ F:\laragon\www\laykefu\application\admin\controller\Users.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ CACHE ] INIT File
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.010000s ] mysql:host=127.0.0.1;port=3306;dbname=laykefu;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `ws_users` [ RunTime:0.007001s ]
+[ sql ] [ SQL ] SELECT * FROM `ws_users` WHERE  `user_name` = '客服小美'  AND `id` <> 2 LIMIT 1 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] UPDATE `ws_users`  SET `id`=2,`user_name`='客服小美',`user_pwd`='d4339df9b6b410516505802ed30c20b4',`group_id`=1,`status`=1,`user_avatar`='/uploads/20190419/4eb84234138339f27018e1e3625afd15.jpg'  WHERE  `id` = 2 [ RunTime:0.016001s ]
+---------------------------------------------------------------
+[ 2019-04-19T11:19:51+08:00 ] 127.0.0.1 GET www.laykefu.com/admin/users/edituser/id/2.html
+[运行时间：0.063004s] [吞吐率：15.87req/s] [内存消耗：1,819.48kb] [文件加载：45]
+[ info ] [ LANG ] F:\laragon\www\laykefu\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'users',
+    2 => 'edituser',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'user_name=admin; user_id=1',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://www.laykefu.com/admin/users/edituser/id/2.html',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/70.0.3538.77 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'keep-alive',
+  'host' => 'www.laykefu.com',
+  'content-length' => '',
+  'content-type' => '',
+)
+[ info ] [ PARAM ] array (
+  'id' => '2',
+)
+[ info ] [ RUN ] app\admin\controller\Users->editUser[ F:\laragon\www\laykefu\application\admin\controller\Users.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] F:\laragon\www\laykefu\public/../application/admin\view\users\edit_user.html [ array (
+  0 => 'version',
+  1 => 'info',
+  2 => 'status',
+  3 => 'groups',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.010000s ] mysql:host=127.0.0.1;port=3306;dbname=laykefu;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `ws_users` [ RunTime:0.006000s ]
+[ sql ] [ SQL ] SELECT * FROM `ws_users` WHERE  `id` = 2 LIMIT 1 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `ws_groups` [ RunTime:0.006000s ]
+[ sql ] [ SQL ] SELECT * FROM `ws_groups` [ RunTime:0.001000s ]
+---------------------------------------------------------------
+[ 2019-04-19T11:19:55+08:00 ] 127.0.0.1 GET www.laykefu.com/admin/users/index.html
+[运行时间：0.027001s] [吞吐率：37.04req/s] [内存消耗：1,178.27kb] [文件加载：38]
+[ info ] [ LANG ] F:\laragon\www\laykefu\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'users',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'user_name=admin; user_id=1',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://www.laykefu.com/admin/index/index.html',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/70.0.3538.77 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'keep-alive',
+  'host' => 'www.laykefu.com',
+  'content-length' => '',
+  'content-type' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\admin\controller\Users->index[ F:\laragon\www\laykefu\application\admin\controller\Users.php ]
+[ info ] [ VIEW ] F:\laragon\www\laykefu\public/../application/admin\view\users\index.html [ array (
+  0 => 'version',
+) ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2019-04-19T11:19:55+08:00 ] 127.0.0.1 GET www.laykefu.com/admin/users/index.html?pageNumber=1&pageSize=10&searchText=
+[运行时间：0.068004s] [吞吐率：14.70req/s] [内存消耗：1,824.95kb] [文件加载：46]
+[ info ] [ LANG ] F:\laragon\www\laykefu\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'users',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'user_name=admin; user_id=1',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://www.laykefu.com/admin/users/index.html',
+  'content-type' => 'application/json',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/70.0.3538.77 Safari/537.36',
+  'x-requested-with' => 'XMLHttpRequest',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'connection' => 'keep-alive',
+  'host' => 'www.laykefu.com',
+  'content-length' => '',
+)
+[ info ] [ PARAM ] array (
+  'pageNumber' => '1',
+  'pageSize' => '10',
+  'searchText' => '',
+)
+[ info ] [ RUN ] app\admin\controller\Users->index[ F:\laragon\www\laykefu\application\admin\controller\Users.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001000s ] mysql:host=127.0.0.1;port=3306;dbname=laykefu;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `ws_users` [ RunTime:0.014001s ]
+[ sql ] [ SQL ] SELECT * FROM `ws_users` ORDER BY `id` DESC [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `ws_groups` [ RunTime:0.007000s ]
+[ sql ] [ SQL ] SELECT `name` FROM `ws_groups` WHERE  `id` = 1 LIMIT 1 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT `name` FROM `ws_groups` WHERE  `id` = 1 LIMIT 1 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `ws_users` LIMIT 1 [ RunTime:0.000000s ]
+---------------------------------------------------------------
+[ 2019-04-19T11:19:57+08:00 ] 127.0.0.1 GET www.laykefu.com/admin/users/edituser/id/1.html
+[运行时间：0.064004s] [吞吐率：15.62req/s] [内存消耗：1,819.33kb] [文件加载：45]
+[ info ] [ LANG ] F:\laragon\www\laykefu\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'users',
+    2 => 'edituser',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'user_name=admin; user_id=1',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://www.laykefu.com/admin/users/index.html',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/70.0.3538.77 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'keep-alive',
+  'host' => 'www.laykefu.com',
+  'content-length' => '',
+  'content-type' => '',
+)
+[ info ] [ PARAM ] array (
+  'id' => '1',
+)
+[ info ] [ RUN ] app\admin\controller\Users->editUser[ F:\laragon\www\laykefu\application\admin\controller\Users.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] F:\laragon\www\laykefu\public/../application/admin\view\users\edit_user.html [ array (
+  0 => 'version',
+  1 => 'info',
+  2 => 'status',
+  3 => 'groups',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.010001s ] mysql:host=127.0.0.1;port=3306;dbname=laykefu;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `ws_users` [ RunTime:0.007000s ]
+[ sql ] [ SQL ] SELECT * FROM `ws_users` WHERE  `id` = 1 LIMIT 1 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `ws_groups` [ RunTime:0.007000s ]
+[ sql ] [ SQL ] SELECT * FROM `ws_groups` [ RunTime:0.000000s ]
+---------------------------------------------------------------
+[ 2019-04-19T11:20:19+08:00 ] 127.0.0.1 POST www.laykefu.com/admin/users/upavatar.html
+[运行时间：0.083004s] [吞吐率：12.05req/s] [内存消耗：1,203.71kb] [文件加载：38]
+[ info ] [ LANG ] F:\laragon\www\laykefu\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'users',
+    2 => 'upavatar',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'user_name=admin; user_id=1',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://www.laykefu.com/admin/users/edituser/id/1.html',
+  'content-type' => 'multipart/form-data; boundary=----WebKitFormBoundaryF0AcQ0t9b5yB53q8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/70.0.3538.77 Safari/537.36',
+  'x-requested-with' => 'XMLHttpRequest',
+  'origin' => 'http://www.laykefu.com',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'content-length' => '47523',
+  'connection' => 'keep-alive',
+  'host' => 'www.laykefu.com',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\admin\controller\Users->upAvatar[ F:\laragon\www\laykefu\application\admin\controller\Users.php ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2019-04-19T11:20:20+08:00 ] 127.0.0.1 POST www.laykefu.com/admin/users/edituser.html
+[运行时间：0.063004s] [吞吐率：15.87req/s] [内存消耗：1,845.51kb] [文件加载：47]
+[ info ] [ LANG ] F:\laragon\www\laykefu\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'users',
+    2 => 'edituser',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'user_name=admin; user_id=1',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://www.laykefu.com/admin/users/edituser/id/1.html',
+  'content-type' => 'application/x-www-form-urlencoded; charset=UTF-8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/70.0.3538.77 Safari/537.36',
+  'x-requested-with' => 'XMLHttpRequest',
+  'origin' => 'http://www.laykefu.com',
+  'accept' => '*/*',
+  'content-length' => '166',
+  'connection' => 'keep-alive',
+  'host' => 'www.laykefu.com',
+)
+[ info ] [ PARAM ] array (
+  'id' => '1',
+  'user_name' => '客服小丽',
+  'user_pwd' => '123456',
+  'group_id' => '2',
+  'status' => '1',
+  'user_avatar' => '/uploads/20190419/84666a987327fe8a5d37ed4809a529cb.jpg',
+  'file' => '',
+)
+[ info ] [ RUN ] app\admin\controller\Users->editUser[ F:\laragon\www\laykefu\application\admin\controller\Users.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ CACHE ] INIT File
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.012001s ] mysql:host=127.0.0.1;port=3306;dbname=laykefu;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `ws_users` [ RunTime:0.008000s ]
+[ sql ] [ SQL ] SELECT * FROM `ws_users` WHERE  `user_name` = '客服小丽'  AND `id` <> 1 LIMIT 1 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] UPDATE `ws_users`  SET `id`=1,`user_name`='客服小丽',`user_pwd`='d4339df9b6b410516505802ed30c20b4',`group_id`=2,`status`=1,`user_avatar`='/uploads/20190419/84666a987327fe8a5d37ed4809a529cb.jpg'  WHERE  `id` = 1 [ RunTime:0.001000s ]
+---------------------------------------------------------------
+[ 2019-04-19T11:20:22+08:00 ] 127.0.0.1 GET www.laykefu.com/admin/users/edituser/id/1.html
+[运行时间：0.052003s] [吞吐率：19.23req/s] [内存消耗：1,819.48kb] [文件加载：45]
+[ info ] [ LANG ] F:\laragon\www\laykefu\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'users',
+    2 => 'edituser',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'user_name=admin; user_id=1',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://www.laykefu.com/admin/users/edituser/id/1.html',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/70.0.3538.77 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'keep-alive',
+  'host' => 'www.laykefu.com',
+  'content-length' => '',
+  'content-type' => '',
+)
+[ info ] [ PARAM ] array (
+  'id' => '1',
+)
+[ info ] [ RUN ] app\admin\controller\Users->editUser[ F:\laragon\www\laykefu\application\admin\controller\Users.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] F:\laragon\www\laykefu\public/../application/admin\view\users\edit_user.html [ array (
+  0 => 'version',
+  1 => 'info',
+  2 => 'status',
+  3 => 'groups',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001000s ] mysql:host=127.0.0.1;port=3306;dbname=laykefu;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `ws_users` [ RunTime:0.007000s ]
+[ sql ] [ SQL ] SELECT * FROM `ws_users` WHERE  `id` = 1 LIMIT 1 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `ws_groups` [ RunTime:0.007001s ]
+[ sql ] [ SQL ] SELECT * FROM `ws_groups` [ RunTime:0.001000s ]
+---------------------------------------------------------------
+[ 2019-04-19T11:20:23+08:00 ] 127.0.0.1 GET www.laykefu.com/admin/users/index.html
+[运行时间：0.032002s] [吞吐率：31.25req/s] [内存消耗：1,178.27kb] [文件加载：38]
+[ info ] [ LANG ] F:\laragon\www\laykefu\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'users',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'user_name=admin; user_id=1',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://www.laykefu.com/admin/index/index.html',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/70.0.3538.77 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'keep-alive',
+  'host' => 'www.laykefu.com',
+  'content-length' => '',
+  'content-type' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\admin\controller\Users->index[ F:\laragon\www\laykefu\application\admin\controller\Users.php ]
+[ info ] [ VIEW ] F:\laragon\www\laykefu\public/../application/admin\view\users\index.html [ array (
+  0 => 'version',
+) ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2019-04-19T11:20:23+08:00 ] 127.0.0.1 GET www.laykefu.com/admin/users/index.html?pageNumber=1&pageSize=10&searchText=
+[运行时间：0.071004s] [吞吐率：14.08req/s] [内存消耗：1,824.95kb] [文件加载：46]
+[ info ] [ LANG ] F:\laragon\www\laykefu\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'users',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'user_name=admin; user_id=1',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://www.laykefu.com/admin/users/index.html',
+  'content-type' => 'application/json',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/70.0.3538.77 Safari/537.36',
+  'x-requested-with' => 'XMLHttpRequest',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'connection' => 'keep-alive',
+  'host' => 'www.laykefu.com',
+  'content-length' => '',
+)
+[ info ] [ PARAM ] array (
+  'pageNumber' => '1',
+  'pageSize' => '10',
+  'searchText' => '',
+)
+[ info ] [ RUN ] app\admin\controller\Users->index[ F:\laragon\www\laykefu\application\admin\controller\Users.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.011001s ] mysql:host=127.0.0.1;port=3306;dbname=laykefu;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `ws_users` [ RunTime:0.009001s ]
+[ sql ] [ SQL ] SELECT * FROM `ws_users` ORDER BY `id` DESC [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `ws_groups` [ RunTime:0.007000s ]
+[ sql ] [ SQL ] SELECT `name` FROM `ws_groups` WHERE  `id` = 1 LIMIT 1 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT `name` FROM `ws_groups` WHERE  `id` = 2 LIMIT 1 [ RunTime:0.002000s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `ws_users` LIMIT 1 [ RunTime:0.001000s ]
+---------------------------------------------------------------
+[ 2019-04-19T11:44:35+08:00 ] 127.0.0.1 GET www.laykefu.com/
+[运行时间：0.037002s] [吞吐率：27.03req/s] [内存消耗：1,189.14kb] [文件加载：37]
+[ info ] [ LANG ] F:\laragon\www\laykefu\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => '',
+    1 => NULL,
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'user_name=admin; user_id=1',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/70.0.3538.77 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'keep-alive',
+  'host' => 'www.laykefu.com',
+  'content-length' => '',
+  'content-type' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\index\controller\Index->index[ F:\laragon\www\laykefu\application\index\controller\Index.php ]
+[ info ] [ VIEW ] F:\laragon\www\laykefu\public/../application/index\view\index\index.html [ array (
+) ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2019-04-19T11:45:02+08:00 ] 127.0.0.1 GET www.laykefu.com/
+[运行时间：0.024002s] [吞吐率：41.66req/s] [内存消耗：1,075.81kb] [文件加载：35]
+[ info ] [ LANG ] F:\laragon\www\laykefu\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => '',
+    1 => NULL,
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'user_name=admin; user_id=1',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/70.0.3538.77 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'cache-control' => 'max-age=0',
+  'connection' => 'keep-alive',
+  'host' => 'www.laykefu.com',
+  'content-length' => '',
+  'content-type' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\index\controller\Index->index[ F:\laragon\www\laykefu\application\index\controller\Index.php ]
+[ info ] [ VIEW ] F:\laragon\www\laykefu\public/../application/index\view\index\index.html [ array (
+) ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2019-04-19T11:45:49+08:00 ] 127.0.0.1 GET www.laykefu.com/
+[运行时间：0.026002s] [吞吐率：38.46req/s] [内存消耗：1,075.97kb] [文件加载：35]
+[ info ] [ LANG ] F:\laragon\www\laykefu\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => '',
+    1 => NULL,
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'user_name=admin; user_id=1',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/70.0.3538.77 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'cache-control' => 'no-cache',
+  'pragma' => 'no-cache',
+  'connection' => 'keep-alive',
+  'host' => 'www.laykefu.com',
+  'content-length' => '',
+  'content-type' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\index\controller\Index->index[ F:\laragon\www\laykefu\application\index\controller\Index.php ]
+[ info ] [ VIEW ] F:\laragon\www\laykefu\public/../application/index\view\index\index.html [ array (
+) ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2019-04-19T11:45:49+08:00 ] 127.0.0.1 GET www.laykefu.com/
+[运行时间：0.026001s] [吞吐率：38.46req/s] [内存消耗：1,075.97kb] [文件加载：35]
+[ info ] [ LANG ] F:\laragon\www\laykefu\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => '',
+    1 => NULL,
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'user_name=admin; user_id=1',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/70.0.3538.77 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'cache-control' => 'no-cache',
+  'pragma' => 'no-cache',
+  'connection' => 'keep-alive',
+  'host' => 'www.laykefu.com',
+  'content-length' => '',
+  'content-type' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\index\controller\Index->index[ F:\laragon\www\laykefu\application\index\controller\Index.php ]
+[ info ] [ VIEW ] F:\laragon\www\laykefu\public/../application/index\view\index\index.html [ array (
+) ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2019-04-19T11:45:50+08:00 ] 127.0.0.1 GET www.laykefu.com/favicon.ico
+[运行时间：0.020001s] [吞吐率：50.00req/s] [内存消耗：879.21kb] [文件加载：28]
+[ info ] [ LANG ] F:\laragon\www\laykefu\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'favicon.ico',
+    1 => NULL,
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'user_name=admin; user_id=1',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://www.laykefu.com/',
+  'accept' => 'image/webp,image/apng,image/*,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/70.0.3538.77 Safari/537.36',
+  'cache-control' => 'no-cache',
+  'pragma' => 'no-cache',
+  'connection' => 'keep-alive',
+  'host' => 'www.laykefu.com',
+  'content-length' => '',
+  'content-type' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2019-04-19T11:46:05+08:00 ] 127.0.0.1 GET www.laykefu.com/
+[运行时间：0.029002s] [吞吐率：34.48req/s] [内存消耗：1,075.81kb] [文件加载：35]
+[ info ] [ LANG ] F:\laragon\www\laykefu\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => '',
+    1 => NULL,
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'user_name=admin; user_id=1',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/70.0.3538.77 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'cache-control' => 'max-age=0',
+  'connection' => 'keep-alive',
+  'host' => 'www.laykefu.com',
+  'content-length' => '',
+  'content-type' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\index\controller\Index->index[ F:\laragon\www\laykefu\application\index\controller\Index.php ]
+[ info ] [ VIEW ] F:\laragon\www\laykefu\public/../application/index\view\index\index.html [ array (
+) ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2019-04-19T11:46:22+08:00 ] 127.0.0.1 GET www.laykefu.com//service
+[运行时间：0.037002s] [吞吐率：27.03req/s] [内存消耗：1,146.97kb] [文件加载：39]
+[ info ] [ LANG ] F:\laragon\www\laykefu\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'service',
+    1 => NULL,
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/70.0.3538.25 Safari/537.36 Core/1.70.3650.400 QQBrowser/10.4.3341.400',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'keep-alive',
+  'host' => 'www.laykefu.com',
+  'content-length' => '',
+  'content-type' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2019-04-19T11:46:22+08:00 ] 127.0.0.1 GET www.laykefu.com/service/login/index.html
+[运行时间：0.031002s] [吞吐率：32.26req/s] [内存消耗：1,200.75kb] [文件加载：38]
+[ info ] [ LANG ] F:\laragon\www\laykefu\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'service',
+    1 => 'login',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/70.0.3538.25 Safari/537.36 Core/1.70.3650.400 QQBrowser/10.4.3341.400',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'keep-alive',
+  'host' => 'www.laykefu.com',
+  'content-length' => '',
+  'content-type' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\service\controller\Login->index[ F:\laragon\www\laykefu\application\service\controller\Login.php ]
+[ info ] [ VIEW ] F:\laragon\www\laykefu\public/../application/service\view\login\index.html [ array (
+  0 => 'version',
+) ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2019-04-19T11:46:22+08:00 ] 127.0.0.1 GET www.laykefu.com/favicon.ico
+[运行时间：0.019001s] [吞吐率：52.63req/s] [内存消耗：878.63kb] [文件加载：28]
+[ info ] [ LANG ] F:\laragon\www\laykefu\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'favicon.ico',
+    1 => NULL,
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://www.laykefu.com/service/login/index.html',
+  'accept' => 'image/webp,image/apng,image/*,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/70.0.3538.25 Safari/537.36 Core/1.70.3650.400 QQBrowser/10.4.3341.400',
+  'connection' => 'keep-alive',
+  'host' => 'www.laykefu.com',
+  'content-length' => '',
+  'content-type' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2019-04-19T11:46:33+08:00 ] 127.0.0.1 POST www.laykefu.com/service/login/doLogin
+[运行时间：0.045003s] [吞吐率：22.22req/s] [内存消耗：1,798.80kb] [文件加载：45]
+[ info ] [ LANG ] F:\laragon\www\laykefu\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'service',
+    1 => 'login',
+    2 => 'doLogin',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://www.laykefu.com/service/login/index.html',
+  'content-type' => 'application/x-www-form-urlencoded; charset=UTF-8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/70.0.3538.25 Safari/537.36 Core/1.70.3650.400 QQBrowser/10.4.3341.400',
+  'x-requested-with' => 'XMLHttpRequest',
+  'origin' => 'http://www.laykefu.com',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'content-length' => '61',
+  'connection' => 'keep-alive',
+  'host' => 'www.laykefu.com',
+)
+[ info ] [ PARAM ] array (
+  'username' => '客服小美',
+  'password' => '123456',
+)
+[ info ] [ RUN ] app\service\controller\Login->doLogin[ F:\laragon\www\laykefu\application\service\controller\Login.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001000s ] mysql:host=127.0.0.1;port=3306;dbname=laykefu;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `ws_users` [ RunTime:0.009000s ]
+[ sql ] [ SQL ] SELECT * FROM `ws_users` WHERE  `user_name` = '客服小美' LIMIT 1 [ RunTime:0.000000s ]
+---------------------------------------------------------------
+[ 2019-04-19T11:46:34+08:00 ] 127.0.0.1 GET www.laykefu.com/service/index/index.html
+[运行时间：0.089005s] [吞吐率：11.24req/s] [内存消耗：1,899.51kb] [文件加载：47]
+[ info ] [ LANG ] F:\laragon\www\laykefu\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'service',
+    1 => 'index',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'l_user_name=%E5%AE%A2%E6%9C%8D%E5%B0%8F%E7%BE%8E; l_user_id=2; l_user_avatar=%2Fuploads%2F20190419%2F4eb84234138339f27018e1e3625afd15.jpg',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://www.laykefu.com/service/login/index.html',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/70.0.3538.25 Safari/537.36 Core/1.70.3650.400 QQBrowser/10.4.3341.400',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'keep-alive',
+  'host' => 'www.laykefu.com',
+  'content-length' => '',
+  'content-type' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\service\controller\Index->index[ F:\laragon\www\laykefu\application\service\controller\Index.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] F:\laragon\www\laykefu\public/../application/service\view\index\index.html [ array (
+  0 => 'version',
+  1 => 'socket',
+  2 => 'uinfo',
+  3 => 'word',
+  4 => 'groups',
+  5 => 'status',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001000s ] mysql:host=127.0.0.1;port=3306;dbname=laykefu;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `ws_users` [ RunTime:0.009001s ]
+[ sql ] [ SQL ] SELECT * FROM `ws_users` WHERE  `id` = 2 LIMIT 1 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `ws_words` [ RunTime:0.009000s ]
+[ sql ] [ SQL ] SELECT * FROM `ws_words` [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `ws_groups` [ RunTime:0.009001s ]
+[ sql ] [ SQL ] SELECT * FROM `ws_groups` WHERE  `status` = 1 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `ws_kf_config` [ RunTime:0.007000s ]
+[ sql ] [ SQL ] SELECT * FROM `ws_kf_config` WHERE  `id` = 1 LIMIT 1 [ RunTime:0.000000s ]
+---------------------------------------------------------------
+[ 2019-04-19T11:46:34+08:00 ] 127.0.0.1 GET www.laykefu.com/service/index/getUserList
+[运行时间：0.069004s] [吞吐率：14.49req/s] [内存消耗：1,766.80kb] [文件加载：45]
+[ info ] [ LANG ] F:\laragon\www\laykefu\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'service',
+    1 => 'index',
+    2 => 'getUserList',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'l_user_name=%E5%AE%A2%E6%9C%8D%E5%B0%8F%E7%BE%8E; l_user_id=2; l_user_avatar=%2Fuploads%2F20190419%2F4eb84234138339f27018e1e3625afd15.jpg',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://www.laykefu.com/service/index/index.html',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/70.0.3538.25 Safari/537.36 Core/1.70.3650.400 QQBrowser/10.4.3341.400',
+  'x-requested-with' => 'XMLHttpRequest',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'connection' => 'keep-alive',
+  'host' => 'www.laykefu.com',
+  'content-length' => '',
+  'content-type' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\service\controller\Index->getUserList[ F:\laragon\www\laykefu\application\service\controller\Index.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001000s ] mysql:host=127.0.0.1;port=3306;dbname=laykefu;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `ws_service_log` [ RunTime:0.016001s ]
+[ sql ] [ SQL ] SELECT user_id id,user_name name,user_avatar avatar,user_ip ip FROM `ws_service_log` WHERE  `kf_id` = '2'  AND `start_time` > 1555634794  AND `end_time` = 0 [ RunTime:0.002000s ]
+---------------------------------------------------------------
+[ 2019-04-19T11:46:37+08:00 ] 127.0.0.1 GET www.laykefu.com/
+[运行时间：0.028002s] [吞吐率：35.71req/s] [内存消耗：1,075.81kb] [文件加载：35]
+[ info ] [ LANG ] F:\laragon\www\laykefu\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => '',
+    1 => NULL,
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'user_name=admin; user_id=1',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/70.0.3538.77 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'cache-control' => 'max-age=0',
+  'connection' => 'keep-alive',
+  'host' => 'www.laykefu.com',
+  'content-length' => '',
+  'content-type' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\index\controller\Index->index[ F:\laragon\www\laykefu\application\index\controller\Index.php ]
+[ info ] [ VIEW ] F:\laragon\www\laykefu\public/../application/index\view\index\index.html [ array (
+) ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2019-04-19T11:46:37+08:00 ] 127.0.0.1 GET www.laykefu.com/service/index/getCity?ip=127.0.0.1
+[运行时间：0.044003s] [吞吐率：22.73req/s] [内存消耗：1,159.43kb] [文件加载：39]
+[ info ] [ LANG ] F:\laragon\www\laykefu\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'service',
+    1 => 'index',
+    2 => 'getCity',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'l_user_name=%E5%AE%A2%E6%9C%8D%E5%B0%8F%E7%BE%8E; l_user_id=2; l_user_avatar=%2Fuploads%2F20190419%2F4eb84234138339f27018e1e3625afd15.jpg',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://www.laykefu.com/service/index/index.html',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/70.0.3538.25 Safari/537.36 Core/1.70.3650.400 QQBrowser/10.4.3341.400',
+  'x-requested-with' => 'XMLHttpRequest',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'connection' => 'keep-alive',
+  'host' => 'www.laykefu.com',
+  'content-length' => '',
+  'content-type' => '',
+)
+[ info ] [ PARAM ] array (
+  'ip' => '127.0.0.1',
+)
+[ info ] [ RUN ] app\service\controller\Index->getCity[ F:\laragon\www\laykefu\application\service\controller\Index.php ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2019-04-19T11:46:37+08:00 ] 127.0.0.1 GET www.laykefu.com/service/index/getChatLog?uid=32&page=1
+[运行时间：0.061004s] [吞吐率：16.39req/s] [内存消耗：1,778.95kb] [文件加载：46]
+[ info ] [ LANG ] F:\laragon\www\laykefu\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'service',
+    1 => 'index',
+    2 => 'getChatLog',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'l_user_name=%E5%AE%A2%E6%9C%8D%E5%B0%8F%E7%BE%8E; l_user_id=2; l_user_avatar=%2Fuploads%2F20190419%2F4eb84234138339f27018e1e3625afd15.jpg',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://www.laykefu.com/service/index/index.html',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/70.0.3538.25 Safari/537.36 Core/1.70.3650.400 QQBrowser/10.4.3341.400',
+  'x-requested-with' => 'XMLHttpRequest',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'connection' => 'keep-alive',
+  'host' => 'www.laykefu.com',
+  'content-length' => '',
+  'content-type' => '',
+)
+[ info ] [ PARAM ] array (
+  'uid' => '32',
+  'page' => '1',
+)
+[ info ] [ RUN ] app\service\controller\Index->getChatLog[ F:\laragon\www\laykefu\application\service\controller\Index.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001000s ] mysql:host=127.0.0.1;port=3306;dbname=laykefu;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `ws_chat_log` [ RunTime:0.012001s ]
+[ sql ] [ SQL ] SELECT * FROM `ws_chat_log` WHERE  (  `from_id` = '32'  AND `to_id` = 'KF2' ) OR (  `from_id` = 'KF2'  AND `to_id` = '32' ) ORDER BY `id` DESC LIMIT 0,10 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `ws_chat_log` WHERE  (  `from_id` = '32'  AND `to_id` = 'KF2' ) OR (  `from_id` = 'KF2'  AND `to_id` = '32' ) LIMIT 1 [ RunTime:0.001000s ]
+---------------------------------------------------------------
+[ 2019-04-19T11:46:44+08:00 ] 127.0.0.1 GET www.laykefu.com/service/index/index.html
+[运行时间：0.066003s] [吞吐率：15.15req/s] [内存消耗：1,773.70kb] [文件加载：45]
+[ info ] [ LANG ] F:\laragon\www\laykefu\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'service',
+    1 => 'index',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'l_user_name=%E5%AE%A2%E6%9C%8D%E5%B0%8F%E7%BE%8E; l_user_id=2; l_user_avatar=%2Fuploads%2F20190419%2F4eb84234138339f27018e1e3625afd15.jpg',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://www.laykefu.com/service/login/index.html',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/70.0.3538.25 Safari/537.36 Core/1.70.3650.400 QQBrowser/10.4.3341.400',
+  'upgrade-insecure-requests' => '1',
+  'cache-control' => 'max-age=0',
+  'connection' => 'keep-alive',
+  'host' => 'www.laykefu.com',
+  'content-length' => '',
+  'content-type' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\service\controller\Index->index[ F:\laragon\www\laykefu\application\service\controller\Index.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] F:\laragon\www\laykefu\public/../application/service\view\index\index.html [ array (
+  0 => 'version',
+  1 => 'socket',
+  2 => 'uinfo',
+  3 => 'word',
+  4 => 'groups',
+  5 => 'status',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.002000s ] mysql:host=127.0.0.1;port=3306;dbname=laykefu;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `ws_users` [ RunTime:0.009001s ]
+[ sql ] [ SQL ] SELECT * FROM `ws_users` WHERE  `id` = 2 LIMIT 1 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `ws_words` [ RunTime:0.006000s ]
+[ sql ] [ SQL ] SELECT * FROM `ws_words` [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `ws_groups` [ RunTime:0.007001s ]
+[ sql ] [ SQL ] SELECT * FROM `ws_groups` WHERE  `status` = 1 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `ws_kf_config` [ RunTime:0.007000s ]
+[ sql ] [ SQL ] SELECT * FROM `ws_kf_config` WHERE  `id` = 1 LIMIT 1 [ RunTime:0.000000s ]
+---------------------------------------------------------------
+[ 2019-04-19T11:46:44+08:00 ] 127.0.0.1 GET www.laykefu.com/service/index/getUserList
+[运行时间：0.061004s] [吞吐率：16.39req/s] [内存消耗：1,767.19kb] [文件加载：45]
+[ info ] [ LANG ] F:\laragon\www\laykefu\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'service',
+    1 => 'index',
+    2 => 'getUserList',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'l_user_name=%E5%AE%A2%E6%9C%8D%E5%B0%8F%E7%BE%8E; l_user_id=2; l_user_avatar=%2Fuploads%2F20190419%2F4eb84234138339f27018e1e3625afd15.jpg',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://www.laykefu.com/service/index/index.html',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/70.0.3538.25 Safari/537.36 Core/1.70.3650.400 QQBrowser/10.4.3341.400',
+  'x-requested-with' => 'XMLHttpRequest',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'connection' => 'keep-alive',
+  'host' => 'www.laykefu.com',
+  'content-length' => '',
+  'content-type' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\service\controller\Index->getUserList[ F:\laragon\www\laykefu\application\service\controller\Index.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001000s ] mysql:host=127.0.0.1;port=3306;dbname=laykefu;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `ws_service_log` [ RunTime:0.010000s ]
+[ sql ] [ SQL ] SELECT user_id id,user_name name,user_avatar avatar,user_ip ip FROM `ws_service_log` WHERE  `kf_id` = '2'  AND `start_time` > 1555634804  AND `end_time` = 0 [ RunTime:0.001000s ]
+---------------------------------------------------------------
+[ 2019-04-19T11:46:44+08:00 ] 127.0.0.1 GET www.laykefu.com/service/index/getCity?ip=127.0.0.1
+[运行时间：0.037002s] [吞吐率：27.03req/s] [内存消耗：1,159.43kb] [文件加载：39]
+[ info ] [ LANG ] F:\laragon\www\laykefu\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'service',
+    1 => 'index',
+    2 => 'getCity',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'l_user_name=%E5%AE%A2%E6%9C%8D%E5%B0%8F%E7%BE%8E; l_user_id=2; l_user_avatar=%2Fuploads%2F20190419%2F4eb84234138339f27018e1e3625afd15.jpg',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://www.laykefu.com/service/index/index.html',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/70.0.3538.25 Safari/537.36 Core/1.70.3650.400 QQBrowser/10.4.3341.400',
+  'x-requested-with' => 'XMLHttpRequest',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'connection' => 'keep-alive',
+  'host' => 'www.laykefu.com',
+  'content-length' => '',
+  'content-type' => '',
+)
+[ info ] [ PARAM ] array (
+  'ip' => '127.0.0.1',
+)
+[ info ] [ RUN ] app\service\controller\Index->getCity[ F:\laragon\www\laykefu\application\service\controller\Index.php ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2019-04-19T11:46:44+08:00 ] 127.0.0.1 GET www.laykefu.com/service/index/getChatLog?uid=32&page=1
+[运行时间：0.047002s] [吞吐率：21.28req/s] [内存消耗：1,778.95kb] [文件加载：46]
+[ info ] [ LANG ] F:\laragon\www\laykefu\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'service',
+    1 => 'index',
+    2 => 'getChatLog',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'l_user_name=%E5%AE%A2%E6%9C%8D%E5%B0%8F%E7%BE%8E; l_user_id=2; l_user_avatar=%2Fuploads%2F20190419%2F4eb84234138339f27018e1e3625afd15.jpg',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://www.laykefu.com/service/index/index.html',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/70.0.3538.25 Safari/537.36 Core/1.70.3650.400 QQBrowser/10.4.3341.400',
+  'x-requested-with' => 'XMLHttpRequest',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'connection' => 'keep-alive',
+  'host' => 'www.laykefu.com',
+  'content-length' => '',
+  'content-type' => '',
+)
+[ info ] [ PARAM ] array (
+  'uid' => '32',
+  'page' => '1',
+)
+[ info ] [ RUN ] app\service\controller\Index->getChatLog[ F:\laragon\www\laykefu\application\service\controller\Index.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001000s ] mysql:host=127.0.0.1;port=3306;dbname=laykefu;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `ws_chat_log` [ RunTime:0.008001s ]
+[ sql ] [ SQL ] SELECT * FROM `ws_chat_log` WHERE  (  `from_id` = '32'  AND `to_id` = 'KF2' ) OR (  `from_id` = 'KF2'  AND `to_id` = '32' ) ORDER BY `id` DESC LIMIT 0,10 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `ws_chat_log` WHERE  (  `from_id` = '32'  AND `to_id` = 'KF2' ) OR (  `from_id` = 'KF2'  AND `to_id` = '32' ) LIMIT 1 [ RunTime:0.001000s ]
+---------------------------------------------------------------
+[ 2019-04-19T11:46:44+08:00 ] 127.0.0.1 GET www.laykefu.com/service/index/getCity?ip=127.0.0.1
+[运行时间：0.027001s] [吞吐率：37.04req/s] [内存消耗：1,159.43kb] [文件加载：39]
+[ info ] [ LANG ] F:\laragon\www\laykefu\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'service',
+    1 => 'index',
+    2 => 'getCity',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'l_user_name=%E5%AE%A2%E6%9C%8D%E5%B0%8F%E7%BE%8E; l_user_id=2; l_user_avatar=%2Fuploads%2F20190419%2F4eb84234138339f27018e1e3625afd15.jpg',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://www.laykefu.com/service/index/index.html',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/70.0.3538.25 Safari/537.36 Core/1.70.3650.400 QQBrowser/10.4.3341.400',
+  'x-requested-with' => 'XMLHttpRequest',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'connection' => 'keep-alive',
+  'host' => 'www.laykefu.com',
+  'content-length' => '',
+  'content-type' => '',
+)
+[ info ] [ PARAM ] array (
+  'ip' => '127.0.0.1',
+)
+[ info ] [ RUN ] app\service\controller\Index->getCity[ F:\laragon\www\laykefu\application\service\controller\Index.php ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2019-04-19T11:46:44+08:00 ] 127.0.0.1 GET www.laykefu.com/service/index/getChatLog?uid=32&page=1
+[运行时间：0.041003s] [吞吐率：24.39req/s] [内存消耗：1,778.95kb] [文件加载：46]
+[ info ] [ LANG ] F:\laragon\www\laykefu\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'service',
+    1 => 'index',
+    2 => 'getChatLog',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'l_user_name=%E5%AE%A2%E6%9C%8D%E5%B0%8F%E7%BE%8E; l_user_id=2; l_user_avatar=%2Fuploads%2F20190419%2F4eb84234138339f27018e1e3625afd15.jpg',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://www.laykefu.com/service/index/index.html',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/70.0.3538.25 Safari/537.36 Core/1.70.3650.400 QQBrowser/10.4.3341.400',
+  'x-requested-with' => 'XMLHttpRequest',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'connection' => 'keep-alive',
+  'host' => 'www.laykefu.com',
+  'content-length' => '',
+  'content-type' => '',
+)
+[ info ] [ PARAM ] array (
+  'uid' => '32',
+  'page' => '1',
+)
+[ info ] [ RUN ] app\service\controller\Index->getChatLog[ F:\laragon\www\laykefu\application\service\controller\Index.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000000s ] mysql:host=127.0.0.1;port=3306;dbname=laykefu;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `ws_chat_log` [ RunTime:0.008000s ]
+[ sql ] [ SQL ] SELECT * FROM `ws_chat_log` WHERE  (  `from_id` = '32'  AND `to_id` = 'KF2' ) OR (  `from_id` = 'KF2'  AND `to_id` = '32' ) ORDER BY `id` DESC LIMIT 0,10 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `ws_chat_log` WHERE  (  `from_id` = '32'  AND `to_id` = 'KF2' ) OR (  `from_id` = 'KF2'  AND `to_id` = '32' ) LIMIT 1 [ RunTime:0.001001s ]
+---------------------------------------------------------------
+[ 2019-04-19T12:29:33+08:00 ] 127.0.0.1 GET www.laykefu.com/
+[运行时间：0.030002s] [吞吐率：33.33req/s] [内存消耗：1,189.34kb] [文件加载：37]
+[ info ] [ LANG ] F:\laragon\www\laykefu\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => '',
+    1 => NULL,
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'user_name=admin; user_id=1',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/70.0.3538.77 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'cache-control' => 'max-age=0',
+  'connection' => 'keep-alive',
+  'host' => 'www.laykefu.com',
+  'content-length' => '',
+  'content-type' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\index\controller\Index->index[ F:\laragon\www\laykefu\application\index\controller\Index.php ]
+[ info ] [ VIEW ] F:\laragon\www\laykefu\public/../application/index\view\index\index.html [ array (
+) ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2019-04-19T12:29:33+08:00 ] 127.0.0.1 GET www.laykefu.com/service/index/getCity?ip=127.0.0.1
+[运行时间：0.043002s] [吞吐率：23.25req/s] [内存消耗：1,159.43kb] [文件加载：39]
+[ info ] [ LANG ] F:\laragon\www\laykefu\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'service',
+    1 => 'index',
+    2 => 'getCity',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'l_user_name=%E5%AE%A2%E6%9C%8D%E5%B0%8F%E7%BE%8E; l_user_id=2; l_user_avatar=%2Fuploads%2F20190419%2F4eb84234138339f27018e1e3625afd15.jpg',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://www.laykefu.com/service/index/index.html',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/70.0.3538.25 Safari/537.36 Core/1.70.3650.400 QQBrowser/10.4.3341.400',
+  'x-requested-with' => 'XMLHttpRequest',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'connection' => 'keep-alive',
+  'host' => 'www.laykefu.com',
+  'content-length' => '',
+  'content-type' => '',
+)
+[ info ] [ PARAM ] array (
+  'ip' => '127.0.0.1',
+)
+[ info ] [ RUN ] app\service\controller\Index->getCity[ F:\laragon\www\laykefu\application\service\controller\Index.php ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2019-04-19T12:29:33+08:00 ] 127.0.0.1 GET www.laykefu.com/service/index/getChatLog?uid=32&page=1
+[运行时间：0.061003s] [吞吐率：16.39req/s] [内存消耗：1,779.01kb] [文件加载：46]
+[ info ] [ LANG ] F:\laragon\www\laykefu\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'service',
+    1 => 'index',
+    2 => 'getChatLog',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'l_user_name=%E5%AE%A2%E6%9C%8D%E5%B0%8F%E7%BE%8E; l_user_id=2; l_user_avatar=%2Fuploads%2F20190419%2F4eb84234138339f27018e1e3625afd15.jpg',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://www.laykefu.com/service/index/index.html',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/70.0.3538.25 Safari/537.36 Core/1.70.3650.400 QQBrowser/10.4.3341.400',
+  'x-requested-with' => 'XMLHttpRequest',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'connection' => 'keep-alive',
+  'host' => 'www.laykefu.com',
+  'content-length' => '',
+  'content-type' => '',
+)
+[ info ] [ PARAM ] array (
+  'uid' => '32',
+  'page' => '1',
+)
+[ info ] [ RUN ] app\service\controller\Index->getChatLog[ F:\laragon\www\laykefu\application\service\controller\Index.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.002000s ] mysql:host=127.0.0.1;port=3306;dbname=laykefu;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `ws_chat_log` [ RunTime:0.013001s ]
+[ sql ] [ SQL ] SELECT * FROM `ws_chat_log` WHERE  (  `from_id` = '32'  AND `to_id` = 'KF2' ) OR (  `from_id` = 'KF2'  AND `to_id` = '32' ) ORDER BY `id` DESC LIMIT 0,10 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `ws_chat_log` WHERE  (  `from_id` = '32'  AND `to_id` = 'KF2' ) OR (  `from_id` = 'KF2'  AND `to_id` = '32' ) LIMIT 1 [ RunTime:0.002000s ]
+---------------------------------------------------------------
+[ 2019-04-19T12:29:35+08:00 ] 127.0.0.1 GET www.laykefu.com/
+[运行时间：0.024001s] [吞吐率：41.66req/s] [内存消耗：1,075.98kb] [文件加载：35]
+[ info ] [ LANG ] F:\laragon\www\laykefu\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => '',
+    1 => NULL,
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'user_name=admin; user_id=1',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/70.0.3538.77 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'cache-control' => 'no-cache',
+  'pragma' => 'no-cache',
+  'connection' => 'keep-alive',
+  'host' => 'www.laykefu.com',
+  'content-length' => '',
+  'content-type' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\index\controller\Index->index[ F:\laragon\www\laykefu\application\index\controller\Index.php ]
+[ info ] [ VIEW ] F:\laragon\www\laykefu\public/../application/index\view\index\index.html [ array (
+) ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2019-04-19T12:29:36+08:00 ] 127.0.0.1 GET www.laykefu.com/service/index/getCity?ip=127.0.0.1
+[运行时间：0.051003s] [吞吐率：19.61req/s] [内存消耗：1,159.43kb] [文件加载：39]
+[ info ] [ LANG ] F:\laragon\www\laykefu\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'service',
+    1 => 'index',
+    2 => 'getCity',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'l_user_name=%E5%AE%A2%E6%9C%8D%E5%B0%8F%E7%BE%8E; l_user_id=2; l_user_avatar=%2Fuploads%2F20190419%2F4eb84234138339f27018e1e3625afd15.jpg',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://www.laykefu.com/service/index/index.html',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/70.0.3538.25 Safari/537.36 Core/1.70.3650.400 QQBrowser/10.4.3341.400',
+  'x-requested-with' => 'XMLHttpRequest',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'connection' => 'keep-alive',
+  'host' => 'www.laykefu.com',
+  'content-length' => '',
+  'content-type' => '',
+)
+[ info ] [ PARAM ] array (
+  'ip' => '127.0.0.1',
+)
+[ info ] [ RUN ] app\service\controller\Index->getCity[ F:\laragon\www\laykefu\application\service\controller\Index.php ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2019-04-19T12:29:36+08:00 ] 127.0.0.1 GET www.laykefu.com/service/index/getChatLog?uid=32&page=1
+[运行时间：0.054003s] [吞吐率：18.52req/s] [内存消耗：1,779.01kb] [文件加载：46]
+[ info ] [ LANG ] F:\laragon\www\laykefu\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'service',
+    1 => 'index',
+    2 => 'getChatLog',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'l_user_name=%E5%AE%A2%E6%9C%8D%E5%B0%8F%E7%BE%8E; l_user_id=2; l_user_avatar=%2Fuploads%2F20190419%2F4eb84234138339f27018e1e3625afd15.jpg',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://www.laykefu.com/service/index/index.html',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/70.0.3538.25 Safari/537.36 Core/1.70.3650.400 QQBrowser/10.4.3341.400',
+  'x-requested-with' => 'XMLHttpRequest',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'connection' => 'keep-alive',
+  'host' => 'www.laykefu.com',
+  'content-length' => '',
+  'content-type' => '',
+)
+[ info ] [ PARAM ] array (
+  'uid' => '32',
+  'page' => '1',
+)
+[ info ] [ RUN ] app\service\controller\Index->getChatLog[ F:\laragon\www\laykefu\application\service\controller\Index.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000000s ] mysql:host=127.0.0.1;port=3306;dbname=laykefu;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `ws_chat_log` [ RunTime:0.007000s ]
+[ sql ] [ SQL ] SELECT * FROM `ws_chat_log` WHERE  (  `from_id` = '32'  AND `to_id` = 'KF2' ) OR (  `from_id` = 'KF2'  AND `to_id` = '32' ) ORDER BY `id` DESC LIMIT 0,10 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `ws_chat_log` WHERE  (  `from_id` = '32'  AND `to_id` = 'KF2' ) OR (  `from_id` = 'KF2'  AND `to_id` = '32' ) LIMIT 1 [ RunTime:0.001000s ]
+---------------------------------------------------------------
+[ 2019-04-19T12:29:36+08:00 ] 127.0.0.1 GET www.laykefu.com/favicon.ico
+[运行时间：0.031002s] [吞吐率：32.26req/s] [内存消耗：879.21kb] [文件加载：28]
+[ info ] [ LANG ] F:\laragon\www\laykefu\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'favicon.ico',
+    1 => NULL,
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'user_name=admin; user_id=1',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://www.laykefu.com/',
+  'accept' => 'image/webp,image/apng,image/*,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/70.0.3538.77 Safari/537.36',
+  'cache-control' => 'no-cache',
+  'pragma' => 'no-cache',
+  'connection' => 'keep-alive',
+  'host' => 'www.laykefu.com',
+  'content-length' => '',
+  'content-type' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2019-04-19T12:29:58+08:00 ] 127.0.0.1 GET www.laykefu.com/
+[运行时间：0.054003s] [吞吐率：18.52req/s] [内存消耗：1,075.98kb] [文件加载：35]
+[ info ] [ LANG ] F:\laragon\www\laykefu\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => '',
+    1 => NULL,
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'user_name=admin; user_id=1',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/70.0.3538.77 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'cache-control' => 'no-cache',
+  'pragma' => 'no-cache',
+  'connection' => 'keep-alive',
+  'host' => 'www.laykefu.com',
+  'content-length' => '',
+  'content-type' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\index\controller\Index->index[ F:\laragon\www\laykefu\application\index\controller\Index.php ]
+[ info ] [ VIEW ] F:\laragon\www\laykefu\public/../application/index\view\index\index.html [ array (
+) ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2019-04-19T12:29:58+08:00 ] 127.0.0.1 GET www.laykefu.com/
+[运行时间：0.061004s] [吞吐率：16.39req/s] [内存消耗：1,075.98kb] [文件加载：35]
+[ info ] [ LANG ] F:\laragon\www\laykefu\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => '',
+    1 => NULL,
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'user_name=admin; user_id=1',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/70.0.3538.77 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'cache-control' => 'no-cache',
+  'pragma' => 'no-cache',
+  'connection' => 'keep-alive',
+  'host' => 'www.laykefu.com',
+  'content-length' => '',
+  'content-type' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\index\controller\Index->index[ F:\laragon\www\laykefu\application\index\controller\Index.php ]
+[ info ] [ VIEW ] F:\laragon\www\laykefu\public/../application/index\view\index\index.html [ array (
+) ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2019-04-19T12:29:58+08:00 ] 127.0.0.1 GET www.laykefu.com/service/index/getCity?ip=127.0.0.1
+[运行时间：0.031002s] [吞吐率：32.26req/s] [内存消耗：1,159.43kb] [文件加载：39]
+[ info ] [ LANG ] F:\laragon\www\laykefu\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'service',
+    1 => 'index',
+    2 => 'getCity',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'l_user_name=%E5%AE%A2%E6%9C%8D%E5%B0%8F%E7%BE%8E; l_user_id=2; l_user_avatar=%2Fuploads%2F20190419%2F4eb84234138339f27018e1e3625afd15.jpg',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://www.laykefu.com/service/index/index.html',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/70.0.3538.25 Safari/537.36 Core/1.70.3650.400 QQBrowser/10.4.3341.400',
+  'x-requested-with' => 'XMLHttpRequest',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'connection' => 'keep-alive',
+  'host' => 'www.laykefu.com',
+  'content-length' => '',
+  'content-type' => '',
+)
+[ info ] [ PARAM ] array (
+  'ip' => '127.0.0.1',
+)
+[ info ] [ RUN ] app\service\controller\Index->getCity[ F:\laragon\www\laykefu\application\service\controller\Index.php ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2019-04-19T12:29:58+08:00 ] 127.0.0.1 GET www.laykefu.com/service/index/getChatLog?uid=32&page=1
+[运行时间：0.057003s] [吞吐率：17.54req/s] [内存消耗：1,779.01kb] [文件加载：46]
+[ info ] [ LANG ] F:\laragon\www\laykefu\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'service',
+    1 => 'index',
+    2 => 'getChatLog',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'l_user_name=%E5%AE%A2%E6%9C%8D%E5%B0%8F%E7%BE%8E; l_user_id=2; l_user_avatar=%2Fuploads%2F20190419%2F4eb84234138339f27018e1e3625afd15.jpg',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://www.laykefu.com/service/index/index.html',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/70.0.3538.25 Safari/537.36 Core/1.70.3650.400 QQBrowser/10.4.3341.400',
+  'x-requested-with' => 'XMLHttpRequest',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'connection' => 'keep-alive',
+  'host' => 'www.laykefu.com',
+  'content-length' => '',
+  'content-type' => '',
+)
+[ info ] [ PARAM ] array (
+  'uid' => '32',
+  'page' => '1',
+)
+[ info ] [ RUN ] app\service\controller\Index->getChatLog[ F:\laragon\www\laykefu\application\service\controller\Index.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001000s ] mysql:host=127.0.0.1;port=3306;dbname=laykefu;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `ws_chat_log` [ RunTime:0.010001s ]
+[ sql ] [ SQL ] SELECT * FROM `ws_chat_log` WHERE  (  `from_id` = '32'  AND `to_id` = 'KF2' ) OR (  `from_id` = 'KF2'  AND `to_id` = '32' ) ORDER BY `id` DESC LIMIT 0,10 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `ws_chat_log` WHERE  (  `from_id` = '32'  AND `to_id` = 'KF2' ) OR (  `from_id` = 'KF2'  AND `to_id` = '32' ) LIMIT 1 [ RunTime:0.001000s ]
+---------------------------------------------------------------
+[ 2019-04-19T12:29:58+08:00 ] 127.0.0.1 GET www.laykefu.com/
+[运行时间：0.031001s] [吞吐率：32.26req/s] [内存消耗：1,075.98kb] [文件加载：35]
+[ info ] [ LANG ] F:\laragon\www\laykefu\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => '',
+    1 => NULL,
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'user_name=admin; user_id=1',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/70.0.3538.77 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'cache-control' => 'no-cache',
+  'pragma' => 'no-cache',
+  'connection' => 'keep-alive',
+  'host' => 'www.laykefu.com',
+  'content-length' => '',
+  'content-type' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\index\controller\Index->index[ F:\laragon\www\laykefu\application\index\controller\Index.php ]
+[ info ] [ VIEW ] F:\laragon\www\laykefu\public/../application/index\view\index\index.html [ array (
+) ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2019-04-19T12:29:58+08:00 ] 127.0.0.1 GET www.laykefu.com/
+[运行时间：0.026001s] [吞吐率：38.46req/s] [内存消耗：1,075.98kb] [文件加载：35]
+[ info ] [ LANG ] F:\laragon\www\laykefu\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => '',
+    1 => NULL,
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'user_name=admin; user_id=1',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/70.0.3538.77 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'cache-control' => 'no-cache',
+  'pragma' => 'no-cache',
+  'connection' => 'keep-alive',
+  'host' => 'www.laykefu.com',
+  'content-length' => '',
+  'content-type' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\index\controller\Index->index[ F:\laragon\www\laykefu\application\index\controller\Index.php ]
+[ info ] [ VIEW ] F:\laragon\www\laykefu\public/../application/index\view\index\index.html [ array (
+) ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2019-04-19T12:29:58+08:00 ] 127.0.0.1 GET www.laykefu.com/service/index/getCity?ip=127.0.0.1
+[运行时间：0.055003s] [吞吐率：18.18req/s] [内存消耗：1,159.43kb] [文件加载：39]
+[ info ] [ LANG ] F:\laragon\www\laykefu\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'service',
+    1 => 'index',
+    2 => 'getCity',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'l_user_name=%E5%AE%A2%E6%9C%8D%E5%B0%8F%E7%BE%8E; l_user_id=2; l_user_avatar=%2Fuploads%2F20190419%2F4eb84234138339f27018e1e3625afd15.jpg',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://www.laykefu.com/service/index/index.html',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/70.0.3538.25 Safari/537.36 Core/1.70.3650.400 QQBrowser/10.4.3341.400',
+  'x-requested-with' => 'XMLHttpRequest',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'connection' => 'keep-alive',
+  'host' => 'www.laykefu.com',
+  'content-length' => '',
+  'content-type' => '',
+)
+[ info ] [ PARAM ] array (
+  'ip' => '127.0.0.1',
+)
+[ info ] [ RUN ] app\service\controller\Index->getCity[ F:\laragon\www\laykefu\application\service\controller\Index.php ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2019-04-19T12:29:59+08:00 ] 127.0.0.1 GET www.laykefu.com/service/index/getChatLog?uid=32&page=1
+[运行时间：0.050003s] [吞吐率：20.00req/s] [内存消耗：1,779.01kb] [文件加载：46]
+[ info ] [ LANG ] F:\laragon\www\laykefu\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'service',
+    1 => 'index',
+    2 => 'getChatLog',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'l_user_name=%E5%AE%A2%E6%9C%8D%E5%B0%8F%E7%BE%8E; l_user_id=2; l_user_avatar=%2Fuploads%2F20190419%2F4eb84234138339f27018e1e3625afd15.jpg',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://www.laykefu.com/service/index/index.html',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/70.0.3538.25 Safari/537.36 Core/1.70.3650.400 QQBrowser/10.4.3341.400',
+  'x-requested-with' => 'XMLHttpRequest',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'connection' => 'keep-alive',
+  'host' => 'www.laykefu.com',
+  'content-length' => '',
+  'content-type' => '',
+)
+[ info ] [ PARAM ] array (
+  'uid' => '32',
+  'page' => '1',
+)
+[ info ] [ RUN ] app\service\controller\Index->getChatLog[ F:\laragon\www\laykefu\application\service\controller\Index.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001000s ] mysql:host=127.0.0.1;port=3306;dbname=laykefu;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `ws_chat_log` [ RunTime:0.010001s ]
+[ sql ] [ SQL ] SELECT * FROM `ws_chat_log` WHERE  (  `from_id` = '32'  AND `to_id` = 'KF2' ) OR (  `from_id` = 'KF2'  AND `to_id` = '32' ) ORDER BY `id` DESC LIMIT 0,10 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `ws_chat_log` WHERE  (  `from_id` = '32'  AND `to_id` = 'KF2' ) OR (  `from_id` = 'KF2'  AND `to_id` = '32' ) LIMIT 1 [ RunTime:0.001000s ]
+---------------------------------------------------------------
+[ 2019-04-19T12:29:59+08:00 ] 127.0.0.1 GET www.laykefu.com/favicon.ico
+[运行时间：0.024001s] [吞吐率：41.67req/s] [内存消耗：879.21kb] [文件加载：28]
+[ info ] [ LANG ] F:\laragon\www\laykefu\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'favicon.ico',
+    1 => NULL,
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'user_name=admin; user_id=1',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://www.laykefu.com/',
+  'accept' => 'image/webp,image/apng,image/*,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/70.0.3538.77 Safari/537.36',
+  'cache-control' => 'no-cache',
+  'pragma' => 'no-cache',
+  'connection' => 'keep-alive',
+  'host' => 'www.laykefu.com',
+  'content-length' => '',
+  'content-type' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2019-04-19T12:30:20+08:00 ] 127.0.0.1 GET www.laykefu.com/
+[运行时间：0.058004s] [吞吐率：17.24req/s] [内存消耗：1,075.98kb] [文件加载：35]
+[ info ] [ LANG ] F:\laragon\www\laykefu\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => '',
+    1 => NULL,
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'user_name=admin; user_id=1',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/70.0.3538.77 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'cache-control' => 'no-cache',
+  'pragma' => 'no-cache',
+  'connection' => 'keep-alive',
+  'host' => 'www.laykefu.com',
+  'content-length' => '',
+  'content-type' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\index\controller\Index->index[ F:\laragon\www\laykefu\application\index\controller\Index.php ]
+[ info ] [ VIEW ] F:\laragon\www\laykefu\public/../application/index\view\index\index.html [ array (
+) ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2019-04-19T12:30:21+08:00 ] 127.0.0.1 GET www.laykefu.com/
+[运行时间：0.050003s] [吞吐率：20.00req/s] [内存消耗：1,075.98kb] [文件加载：35]
+[ info ] [ LANG ] F:\laragon\www\laykefu\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => '',
+    1 => NULL,
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'user_name=admin; user_id=1',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/70.0.3538.77 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'cache-control' => 'no-cache',
+  'pragma' => 'no-cache',
+  'connection' => 'keep-alive',
+  'host' => 'www.laykefu.com',
+  'content-length' => '',
+  'content-type' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\index\controller\Index->index[ F:\laragon\www\laykefu\application\index\controller\Index.php ]
+[ info ] [ VIEW ] F:\laragon\www\laykefu\public/../application/index\view\index\index.html [ array (
+) ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2019-04-19T12:30:21+08:00 ] 127.0.0.1 GET www.laykefu.com/service/index/getCity?ip=127.0.0.1
+[运行时间：0.070004s] [吞吐率：14.28req/s] [内存消耗：1,159.43kb] [文件加载：39]
+[ info ] [ LANG ] F:\laragon\www\laykefu\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'service',
+    1 => 'index',
+    2 => 'getCity',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'l_user_name=%E5%AE%A2%E6%9C%8D%E5%B0%8F%E7%BE%8E; l_user_id=2; l_user_avatar=%2Fuploads%2F20190419%2F4eb84234138339f27018e1e3625afd15.jpg',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://www.laykefu.com/service/index/index.html',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/70.0.3538.25 Safari/537.36 Core/1.70.3650.400 QQBrowser/10.4.3341.400',
+  'x-requested-with' => 'XMLHttpRequest',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'connection' => 'keep-alive',
+  'host' => 'www.laykefu.com',
+  'content-length' => '',
+  'content-type' => '',
+)
+[ info ] [ PARAM ] array (
+  'ip' => '127.0.0.1',
+)
+[ info ] [ RUN ] app\service\controller\Index->getCity[ F:\laragon\www\laykefu\application\service\controller\Index.php ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2019-04-19T12:30:21+08:00 ] 127.0.0.1 GET www.laykefu.com/service/index/getChatLog?uid=32&page=1
+[运行时间：0.097005s] [吞吐率：10.31req/s] [内存消耗：1,779.01kb] [文件加载：46]
+[ info ] [ LANG ] F:\laragon\www\laykefu\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'service',
+    1 => 'index',
+    2 => 'getChatLog',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'l_user_name=%E5%AE%A2%E6%9C%8D%E5%B0%8F%E7%BE%8E; l_user_id=2; l_user_avatar=%2Fuploads%2F20190419%2F4eb84234138339f27018e1e3625afd15.jpg',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://www.laykefu.com/service/index/index.html',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/70.0.3538.25 Safari/537.36 Core/1.70.3650.400 QQBrowser/10.4.3341.400',
+  'x-requested-with' => 'XMLHttpRequest',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'connection' => 'keep-alive',
+  'host' => 'www.laykefu.com',
+  'content-length' => '',
+  'content-type' => '',
+)
+[ info ] [ PARAM ] array (
+  'uid' => '32',
+  'page' => '1',
+)
+[ info ] [ RUN ] app\service\controller\Index->getChatLog[ F:\laragon\www\laykefu\application\service\controller\Index.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.008001s ] mysql:host=127.0.0.1;port=3306;dbname=laykefu;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `ws_chat_log` [ RunTime:0.017001s ]
+[ sql ] [ SQL ] SELECT * FROM `ws_chat_log` WHERE  (  `from_id` = '32'  AND `to_id` = 'KF2' ) OR (  `from_id` = 'KF2'  AND `to_id` = '32' ) ORDER BY `id` DESC LIMIT 0,10 [ RunTime:0.002000s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `ws_chat_log` WHERE  (  `from_id` = '32'  AND `to_id` = 'KF2' ) OR (  `from_id` = 'KF2'  AND `to_id` = '32' ) LIMIT 1 [ RunTime:0.002000s ]
+---------------------------------------------------------------
+[ 2019-04-19T12:30:21+08:00 ] 127.0.0.1 GET www.laykefu.com/
+[运行时间：0.046003s] [吞吐率：21.74req/s] [内存消耗：1,075.98kb] [文件加载：35]
+[ info ] [ LANG ] F:\laragon\www\laykefu\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => '',
+    1 => NULL,
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'user_name=admin; user_id=1',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/70.0.3538.77 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'cache-control' => 'no-cache',
+  'pragma' => 'no-cache',
+  'connection' => 'keep-alive',
+  'host' => 'www.laykefu.com',
+  'content-length' => '',
+  'content-type' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\index\controller\Index->index[ F:\laragon\www\laykefu\application\index\controller\Index.php ]
+[ info ] [ VIEW ] F:\laragon\www\laykefu\public/../application/index\view\index\index.html [ array (
+) ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2019-04-19T12:30:21+08:00 ] 127.0.0.1 GET www.laykefu.com/service/index/getCity?ip=127.0.0.1
+[运行时间：0.093006s] [吞吐率：10.75req/s] [内存消耗：1,159.43kb] [文件加载：39]
+[ info ] [ LANG ] F:\laragon\www\laykefu\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'service',
+    1 => 'index',
+    2 => 'getCity',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'l_user_name=%E5%AE%A2%E6%9C%8D%E5%B0%8F%E7%BE%8E; l_user_id=2; l_user_avatar=%2Fuploads%2F20190419%2F4eb84234138339f27018e1e3625afd15.jpg',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://www.laykefu.com/service/index/index.html',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/70.0.3538.25 Safari/537.36 Core/1.70.3650.400 QQBrowser/10.4.3341.400',
+  'x-requested-with' => 'XMLHttpRequest',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'connection' => 'keep-alive',
+  'host' => 'www.laykefu.com',
+  'content-length' => '',
+  'content-type' => '',
+)
+[ info ] [ PARAM ] array (
+  'ip' => '127.0.0.1',
+)
+[ info ] [ RUN ] app\service\controller\Index->getCity[ F:\laragon\www\laykefu\application\service\controller\Index.php ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2019-04-19T12:30:21+08:00 ] 127.0.0.1 GET www.laykefu.com/service/index/getChatLog?uid=32&page=1
+[运行时间：0.113007s] [吞吐率：8.85req/s] [内存消耗：1,779.01kb] [文件加载：46]
+[ info ] [ LANG ] F:\laragon\www\laykefu\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'service',
+    1 => 'index',
+    2 => 'getChatLog',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'l_user_name=%E5%AE%A2%E6%9C%8D%E5%B0%8F%E7%BE%8E; l_user_id=2; l_user_avatar=%2Fuploads%2F20190419%2F4eb84234138339f27018e1e3625afd15.jpg',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://www.laykefu.com/service/index/index.html',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/70.0.3538.25 Safari/537.36 Core/1.70.3650.400 QQBrowser/10.4.3341.400',
+  'x-requested-with' => 'XMLHttpRequest',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'connection' => 'keep-alive',
+  'host' => 'www.laykefu.com',
+  'content-length' => '',
+  'content-type' => '',
+)
+[ info ] [ PARAM ] array (
+  'uid' => '32',
+  'page' => '1',
+)
+[ info ] [ RUN ] app\service\controller\Index->getChatLog[ F:\laragon\www\laykefu\application\service\controller\Index.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.002000s ] mysql:host=127.0.0.1;port=3306;dbname=laykefu;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `ws_chat_log` [ RunTime:0.012001s ]
+[ sql ] [ SQL ] SELECT * FROM `ws_chat_log` WHERE  (  `from_id` = '32'  AND `to_id` = 'KF2' ) OR (  `from_id` = 'KF2'  AND `to_id` = '32' ) ORDER BY `id` DESC LIMIT 0,10 [ RunTime:0.002000s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `ws_chat_log` WHERE  (  `from_id` = '32'  AND `to_id` = 'KF2' ) OR (  `from_id` = 'KF2'  AND `to_id` = '32' ) LIMIT 1 [ RunTime:0.002000s ]
+---------------------------------------------------------------
+[ 2019-04-19T12:30:21+08:00 ] 127.0.0.1 GET www.laykefu.com/service/index/getCity?ip=127.0.0.1
+[运行时间：0.060004s] [吞吐率：16.67req/s] [内存消耗：1,159.43kb] [文件加载：39]
+[ info ] [ LANG ] F:\laragon\www\laykefu\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'service',
+    1 => 'index',
+    2 => 'getCity',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'l_user_name=%E5%AE%A2%E6%9C%8D%E5%B0%8F%E7%BE%8E; l_user_id=2; l_user_avatar=%2Fuploads%2F20190419%2F4eb84234138339f27018e1e3625afd15.jpg',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://www.laykefu.com/service/index/index.html',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/70.0.3538.25 Safari/537.36 Core/1.70.3650.400 QQBrowser/10.4.3341.400',
+  'x-requested-with' => 'XMLHttpRequest',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'connection' => 'keep-alive',
+  'host' => 'www.laykefu.com',
+  'content-length' => '',
+  'content-type' => '',
+)
+[ info ] [ PARAM ] array (
+  'ip' => '127.0.0.1',
+)
+[ info ] [ RUN ] app\service\controller\Index->getCity[ F:\laragon\www\laykefu\application\service\controller\Index.php ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2019-04-19T12:30:21+08:00 ] 127.0.0.1 GET www.laykefu.com/service/index/getChatLog?uid=32&page=1
+[运行时间：0.061003s] [吞吐率：16.39req/s] [内存消耗：1,779.01kb] [文件加载：46]
+[ info ] [ LANG ] F:\laragon\www\laykefu\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'service',
+    1 => 'index',
+    2 => 'getChatLog',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'l_user_name=%E5%AE%A2%E6%9C%8D%E5%B0%8F%E7%BE%8E; l_user_id=2; l_user_avatar=%2Fuploads%2F20190419%2F4eb84234138339f27018e1e3625afd15.jpg',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://www.laykefu.com/service/index/index.html',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/70.0.3538.25 Safari/537.36 Core/1.70.3650.400 QQBrowser/10.4.3341.400',
+  'x-requested-with' => 'XMLHttpRequest',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'connection' => 'keep-alive',
+  'host' => 'www.laykefu.com',
+  'content-length' => '',
+  'content-type' => '',
+)
+[ info ] [ PARAM ] array (
+  'uid' => '32',
+  'page' => '1',
+)
+[ info ] [ RUN ] app\service\controller\Index->getChatLog[ F:\laragon\www\laykefu\application\service\controller\Index.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.002000s ] mysql:host=127.0.0.1;port=3306;dbname=laykefu;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `ws_chat_log` [ RunTime:0.013001s ]
+[ sql ] [ SQL ] SELECT * FROM `ws_chat_log` WHERE  (  `from_id` = '32'  AND `to_id` = 'KF2' ) OR (  `from_id` = 'KF2'  AND `to_id` = '32' ) ORDER BY `id` DESC LIMIT 0,10 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `ws_chat_log` WHERE  (  `from_id` = '32'  AND `to_id` = 'KF2' ) OR (  `from_id` = 'KF2'  AND `to_id` = '32' ) LIMIT 1 [ RunTime:0.001000s ]
+---------------------------------------------------------------
+[ 2019-04-19T12:30:21+08:00 ] 127.0.0.1 GET www.laykefu.com/favicon.ico
+[运行时间：0.026001s] [吞吐率：38.46req/s] [内存消耗：879.21kb] [文件加载：28]
+[ info ] [ LANG ] F:\laragon\www\laykefu\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'favicon.ico',
+    1 => NULL,
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'user_name=admin; user_id=1',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://www.laykefu.com/',
+  'accept' => 'image/webp,image/apng,image/*,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/70.0.3538.77 Safari/537.36',
+  'cache-control' => 'no-cache',
+  'pragma' => 'no-cache',
+  'connection' => 'keep-alive',
+  'host' => 'www.laykefu.com',
+  'content-length' => '',
+  'content-type' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2019-04-19T12:31:01+08:00 ] 127.0.0.1 GET www.laykefu.com/
+[运行时间：0.034002s] [吞吐率：29.41req/s] [内存消耗：1,075.83kb] [文件加载：35]
+[ info ] [ LANG ] F:\laragon\www\laykefu\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => '',
+    1 => NULL,
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'user_name=admin; user_id=1',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/70.0.3538.77 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'cache-control' => 'max-age=0',
+  'connection' => 'keep-alive',
+  'host' => 'www.laykefu.com',
+  'content-length' => '',
+  'content-type' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\index\controller\Index->index[ F:\laragon\www\laykefu\application\index\controller\Index.php ]
+[ info ] [ VIEW ] F:\laragon\www\laykefu\public/../application/index\view\index\index.html [ array (
+) ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2019-04-19T12:31:01+08:00 ] 127.0.0.1 GET www.laykefu.com/service/index/getCity?ip=127.0.0.1
+[运行时间：0.062003s] [吞吐率：16.13req/s] [内存消耗：1,159.43kb] [文件加载：39]
+[ info ] [ LANG ] F:\laragon\www\laykefu\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'service',
+    1 => 'index',
+    2 => 'getCity',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'l_user_name=%E5%AE%A2%E6%9C%8D%E5%B0%8F%E7%BE%8E; l_user_id=2; l_user_avatar=%2Fuploads%2F20190419%2F4eb84234138339f27018e1e3625afd15.jpg',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://www.laykefu.com/service/index/index.html',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/70.0.3538.25 Safari/537.36 Core/1.70.3650.400 QQBrowser/10.4.3341.400',
+  'x-requested-with' => 'XMLHttpRequest',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'connection' => 'keep-alive',
+  'host' => 'www.laykefu.com',
+  'content-length' => '',
+  'content-type' => '',
+)
+[ info ] [ PARAM ] array (
+  'ip' => '127.0.0.1',
+)
+[ info ] [ RUN ] app\service\controller\Index->getCity[ F:\laragon\www\laykefu\application\service\controller\Index.php ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2019-04-19T12:31:01+08:00 ] 127.0.0.1 GET www.laykefu.com/service/index/getChatLog?uid=32&page=1
+[运行时间：0.060003s] [吞吐率：16.67req/s] [内存消耗：1,779.01kb] [文件加载：46]
+[ info ] [ LANG ] F:\laragon\www\laykefu\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'service',
+    1 => 'index',
+    2 => 'getChatLog',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'l_user_name=%E5%AE%A2%E6%9C%8D%E5%B0%8F%E7%BE%8E; l_user_id=2; l_user_avatar=%2Fuploads%2F20190419%2F4eb84234138339f27018e1e3625afd15.jpg',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://www.laykefu.com/service/index/index.html',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/70.0.3538.25 Safari/537.36 Core/1.70.3650.400 QQBrowser/10.4.3341.400',
+  'x-requested-with' => 'XMLHttpRequest',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'connection' => 'keep-alive',
+  'host' => 'www.laykefu.com',
+  'content-length' => '',
+  'content-type' => '',
+)
+[ info ] [ PARAM ] array (
+  'uid' => '32',
+  'page' => '1',
+)
+[ info ] [ RUN ] app\service\controller\Index->getChatLog[ F:\laragon\www\laykefu\application\service\controller\Index.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001000s ] mysql:host=127.0.0.1;port=3306;dbname=laykefu;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `ws_chat_log` [ RunTime:0.009001s ]
+[ sql ] [ SQL ] SELECT * FROM `ws_chat_log` WHERE  (  `from_id` = '32'  AND `to_id` = 'KF2' ) OR (  `from_id` = 'KF2'  AND `to_id` = '32' ) ORDER BY `id` DESC LIMIT 0,10 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `ws_chat_log` WHERE  (  `from_id` = '32'  AND `to_id` = 'KF2' ) OR (  `from_id` = 'KF2'  AND `to_id` = '32' ) LIMIT 1 [ RunTime:0.001000s ]
+---------------------------------------------------------------
+[ 2019-04-19T12:31:31+08:00 ] 127.0.0.1 GET www.laykefu.com/
+[运行时间：0.049003s] [吞吐率：20.41req/s] [内存消耗：1,189.45kb] [文件加载：37]
+[ info ] [ LANG ] F:\laragon\www\laykefu\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => '',
+    1 => NULL,
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'user_name=admin; user_id=1',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/70.0.3538.77 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'cache-control' => 'no-cache',
+  'pragma' => 'no-cache',
+  'connection' => 'keep-alive',
+  'host' => 'www.laykefu.com',
+  'content-length' => '',
+  'content-type' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\index\controller\Index->index[ F:\laragon\www\laykefu\application\index\controller\Index.php ]
+[ info ] [ VIEW ] F:\laragon\www\laykefu\public/../application/index\view\index\index.html [ array (
+) ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2019-04-19T12:31:31+08:00 ] 127.0.0.1 GET www.laykefu.com/
+[运行时间：0.054003s] [吞吐率：18.52req/s] [内存消耗：1,075.97kb] [文件加载：35]
+[ info ] [ LANG ] F:\laragon\www\laykefu\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => '',
+    1 => NULL,
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'user_name=admin; user_id=1',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/70.0.3538.77 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'cache-control' => 'no-cache',
+  'pragma' => 'no-cache',
+  'connection' => 'keep-alive',
+  'host' => 'www.laykefu.com',
+  'content-length' => '',
+  'content-type' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\index\controller\Index->index[ F:\laragon\www\laykefu\application\index\controller\Index.php ]
+[ info ] [ VIEW ] F:\laragon\www\laykefu\public/../application/index\view\index\index.html [ array (
+) ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2019-04-19T12:31:31+08:00 ] 127.0.0.1 GET www.laykefu.com/service/index/getCity?ip=127.0.0.1
+[运行时间：0.112006s] [吞吐率：8.93req/s] [内存消耗：1,159.43kb] [文件加载：39]
+[ info ] [ LANG ] F:\laragon\www\laykefu\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'service',
+    1 => 'index',
+    2 => 'getCity',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'l_user_name=%E5%AE%A2%E6%9C%8D%E5%B0%8F%E7%BE%8E; l_user_id=2; l_user_avatar=%2Fuploads%2F20190419%2F4eb84234138339f27018e1e3625afd15.jpg',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://www.laykefu.com/service/index/index.html',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/70.0.3538.25 Safari/537.36 Core/1.70.3650.400 QQBrowser/10.4.3341.400',
+  'x-requested-with' => 'XMLHttpRequest',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'connection' => 'keep-alive',
+  'host' => 'www.laykefu.com',
+  'content-length' => '',
+  'content-type' => '',
+)
+[ info ] [ PARAM ] array (
+  'ip' => '127.0.0.1',
+)
+[ info ] [ RUN ] app\service\controller\Index->getCity[ F:\laragon\www\laykefu\application\service\controller\Index.php ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2019-04-19T12:31:31+08:00 ] 127.0.0.1 GET www.laykefu.com/service/index/getChatLog?uid=32&page=1
+[运行时间：0.110006s] [吞吐率：9.09req/s] [内存消耗：1,779.01kb] [文件加载：46]
+[ info ] [ LANG ] F:\laragon\www\laykefu\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'service',
+    1 => 'index',
+    2 => 'getChatLog',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'l_user_name=%E5%AE%A2%E6%9C%8D%E5%B0%8F%E7%BE%8E; l_user_id=2; l_user_avatar=%2Fuploads%2F20190419%2F4eb84234138339f27018e1e3625afd15.jpg',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://www.laykefu.com/service/index/index.html',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/70.0.3538.25 Safari/537.36 Core/1.70.3650.400 QQBrowser/10.4.3341.400',
+  'x-requested-with' => 'XMLHttpRequest',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'connection' => 'keep-alive',
+  'host' => 'www.laykefu.com',
+  'content-length' => '',
+  'content-type' => '',
+)
+[ info ] [ PARAM ] array (
+  'uid' => '32',
+  'page' => '1',
+)
+[ info ] [ RUN ] app\service\controller\Index->getChatLog[ F:\laragon\www\laykefu\application\service\controller\Index.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.002000s ] mysql:host=127.0.0.1;port=3306;dbname=laykefu;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `ws_chat_log` [ RunTime:0.016001s ]
+[ sql ] [ SQL ] SELECT * FROM `ws_chat_log` WHERE  (  `from_id` = '32'  AND `to_id` = 'KF2' ) OR (  `from_id` = 'KF2'  AND `to_id` = '32' ) ORDER BY `id` DESC LIMIT 0,10 [ RunTime:0.004000s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `ws_chat_log` WHERE  (  `from_id` = '32'  AND `to_id` = 'KF2' ) OR (  `from_id` = 'KF2'  AND `to_id` = '32' ) LIMIT 1 [ RunTime:0.005001s ]
+---------------------------------------------------------------
+[ 2019-04-19T12:31:31+08:00 ] 127.0.0.1 GET www.laykefu.com/service/index/getCity?ip=127.0.0.1
+[运行时间：0.055003s] [吞吐率：18.18req/s] [内存消耗：1,159.43kb] [文件加载：39]
+[ info ] [ LANG ] F:\laragon\www\laykefu\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'service',
+    1 => 'index',
+    2 => 'getCity',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'l_user_name=%E5%AE%A2%E6%9C%8D%E5%B0%8F%E7%BE%8E; l_user_id=2; l_user_avatar=%2Fuploads%2F20190419%2F4eb84234138339f27018e1e3625afd15.jpg',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://www.laykefu.com/service/index/index.html',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/70.0.3538.25 Safari/537.36 Core/1.70.3650.400 QQBrowser/10.4.3341.400',
+  'x-requested-with' => 'XMLHttpRequest',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'connection' => 'keep-alive',
+  'host' => 'www.laykefu.com',
+  'content-length' => '',
+  'content-type' => '',
+)
+[ info ] [ PARAM ] array (
+  'ip' => '127.0.0.1',
+)
+[ info ] [ RUN ] app\service\controller\Index->getCity[ F:\laragon\www\laykefu\application\service\controller\Index.php ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2019-04-19T12:31:31+08:00 ] 127.0.0.1 GET www.laykefu.com/service/index/getChatLog?uid=32&page=1
+[运行时间：0.058003s] [吞吐率：17.24req/s] [内存消耗：1,779.01kb] [文件加载：46]
+[ info ] [ LANG ] F:\laragon\www\laykefu\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'service',
+    1 => 'index',
+    2 => 'getChatLog',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'l_user_name=%E5%AE%A2%E6%9C%8D%E5%B0%8F%E7%BE%8E; l_user_id=2; l_user_avatar=%2Fuploads%2F20190419%2F4eb84234138339f27018e1e3625afd15.jpg',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://www.laykefu.com/service/index/index.html',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/70.0.3538.25 Safari/537.36 Core/1.70.3650.400 QQBrowser/10.4.3341.400',
+  'x-requested-with' => 'XMLHttpRequest',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'connection' => 'keep-alive',
+  'host' => 'www.laykefu.com',
+  'content-length' => '',
+  'content-type' => '',
+)
+[ info ] [ PARAM ] array (
+  'uid' => '32',
+  'page' => '1',
+)
+[ info ] [ RUN ] app\service\controller\Index->getChatLog[ F:\laragon\www\laykefu\application\service\controller\Index.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.002000s ] mysql:host=127.0.0.1;port=3306;dbname=laykefu;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `ws_chat_log` [ RunTime:0.012000s ]
+[ sql ] [ SQL ] SELECT * FROM `ws_chat_log` WHERE  (  `from_id` = '32'  AND `to_id` = 'KF2' ) OR (  `from_id` = 'KF2'  AND `to_id` = '32' ) ORDER BY `id` DESC LIMIT 0,10 [ RunTime:0.001001s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `ws_chat_log` WHERE  (  `from_id` = '32'  AND `to_id` = 'KF2' ) OR (  `from_id` = 'KF2'  AND `to_id` = '32' ) LIMIT 1 [ RunTime:0.002000s ]
+---------------------------------------------------------------
+[ 2019-04-19T12:31:31+08:00 ] 127.0.0.1 GET www.laykefu.com/favicon.ico
+[运行时间：0.033002s] [吞吐率：30.30req/s] [内存消耗：879.21kb] [文件加载：28]
+[ info ] [ LANG ] F:\laragon\www\laykefu\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'favicon.ico',
+    1 => NULL,
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'user_name=admin; user_id=1',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://www.laykefu.com/',
+  'accept' => 'image/webp,image/apng,image/*,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/70.0.3538.77 Safari/537.36',
+  'cache-control' => 'no-cache',
+  'pragma' => 'no-cache',
+  'connection' => 'keep-alive',
+  'host' => 'www.laykefu.com',
+  'content-length' => '',
+  'content-type' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2019-04-19T12:32:40+08:00 ] 127.0.0.1 GET www.laykefu.com/
+[运行时间：0.051002s] [吞吐率：19.61req/s] [内存消耗：1,190.39kb] [文件加载：37]
+[ info ] [ LANG ] F:\laragon\www\laykefu\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => '',
+    1 => NULL,
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'user_name=admin; user_id=1',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/70.0.3538.77 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'cache-control' => 'no-cache',
+  'pragma' => 'no-cache',
+  'connection' => 'keep-alive',
+  'host' => 'www.laykefu.com',
+  'content-length' => '',
+  'content-type' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\index\controller\Index->index[ F:\laragon\www\laykefu\application\index\controller\Index.php ]
+[ info ] [ VIEW ] F:\laragon\www\laykefu\public/../application/index\view\index\index.html [ array (
+) ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2019-04-19T12:32:40+08:00 ] 127.0.0.1 GET www.laykefu.com/
+[运行时间：0.039002s] [吞吐率：25.64req/s] [内存消耗：1,075.96kb] [文件加载：35]
+[ info ] [ LANG ] F:\laragon\www\laykefu\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => '',
+    1 => NULL,
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'user_name=admin; user_id=1',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/70.0.3538.77 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'cache-control' => 'no-cache',
+  'pragma' => 'no-cache',
+  'connection' => 'keep-alive',
+  'host' => 'www.laykefu.com',
+  'content-length' => '',
+  'content-type' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\index\controller\Index->index[ F:\laragon\www\laykefu\application\index\controller\Index.php ]
+[ info ] [ VIEW ] F:\laragon\www\laykefu\public/../application/index\view\index\index.html [ array (
+) ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2019-04-19T12:32:40+08:00 ] 127.0.0.1 GET www.laykefu.com/favicon.ico
+[运行时间：0.026002s] [吞吐率：38.46req/s] [内存消耗：879.21kb] [文件加载：28]
+[ info ] [ LANG ] F:\laragon\www\laykefu\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'favicon.ico',
+    1 => NULL,
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'user_name=admin; user_id=1',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://www.laykefu.com/',
+  'accept' => 'image/webp,image/apng,image/*,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/70.0.3538.77 Safari/537.36',
+  'cache-control' => 'no-cache',
+  'pragma' => 'no-cache',
+  'connection' => 'keep-alive',
+  'host' => 'www.laykefu.com',
+  'content-length' => '',
+  'content-type' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2019-04-19T12:33:13+08:00 ] 127.0.0.1 GET www.laykefu.com/
+[运行时间：0.036002s] [吞吐率：27.78req/s] [内存消耗：1,190.42kb] [文件加载：37]
+[ info ] [ LANG ] F:\laragon\www\laykefu\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => '',
+    1 => NULL,
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'user_name=admin; user_id=1',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/70.0.3538.77 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'cache-control' => 'no-cache',
+  'pragma' => 'no-cache',
+  'connection' => 'keep-alive',
+  'host' => 'www.laykefu.com',
+  'content-length' => '',
+  'content-type' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\index\controller\Index->index[ F:\laragon\www\laykefu\application\index\controller\Index.php ]
+[ info ] [ VIEW ] F:\laragon\www\laykefu\public/../application/index\view\index\index.html [ array (
+) ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2019-04-19T12:33:13+08:00 ] 127.0.0.1 GET www.laykefu.com/favicon.ico
+[运行时间：0.027002s] [吞吐率：37.03req/s] [内存消耗：879.21kb] [文件加载：28]
+[ info ] [ LANG ] F:\laragon\www\laykefu\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'favicon.ico',
+    1 => NULL,
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'user_name=admin; user_id=1',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://www.laykefu.com/',
+  'accept' => 'image/webp,image/apng,image/*,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/70.0.3538.77 Safari/537.36',
+  'cache-control' => 'no-cache',
+  'pragma' => 'no-cache',
+  'connection' => 'keep-alive',
+  'host' => 'www.laykefu.com',
+  'content-length' => '',
+  'content-type' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2019-04-19T12:33:22+08:00 ] 127.0.0.1 GET www.laykefu.com/
+[运行时间：0.040002s] [吞吐率：25.00req/s] [内存消耗：1,190.42kb] [文件加载：37]
+[ info ] [ LANG ] F:\laragon\www\laykefu\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => '',
+    1 => NULL,
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'user_name=admin; user_id=1',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/70.0.3538.77 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'cache-control' => 'no-cache',
+  'pragma' => 'no-cache',
+  'connection' => 'keep-alive',
+  'host' => 'www.laykefu.com',
+  'content-length' => '',
+  'content-type' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\index\controller\Index->index[ F:\laragon\www\laykefu\application\index\controller\Index.php ]
+[ info ] [ VIEW ] F:\laragon\www\laykefu\public/../application/index\view\index\index.html [ array (
+) ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2019-04-19T12:33:22+08:00 ] 127.0.0.1 GET www.laykefu.com/favicon.ico
+[运行时间：0.026002s] [吞吐率：38.46req/s] [内存消耗：879.21kb] [文件加载：28]
+[ info ] [ LANG ] F:\laragon\www\laykefu\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'favicon.ico',
+    1 => NULL,
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'user_name=admin; user_id=1',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://www.laykefu.com/',
+  'accept' => 'image/webp,image/apng,image/*,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/70.0.3538.77 Safari/537.36',
+  'cache-control' => 'no-cache',
+  'pragma' => 'no-cache',
+  'connection' => 'keep-alive',
+  'host' => 'www.laykefu.com',
+  'content-length' => '',
+  'content-type' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2019-04-19T12:34:04+08:00 ] 127.0.0.1 GET www.laykefu.com/
+[运行时间：0.025002s] [吞吐率：40.00req/s] [内存消耗：1,190.47kb] [文件加载：37]
+[ info ] [ LANG ] F:\laragon\www\laykefu\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => '',
+    1 => NULL,
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'user_name=admin; user_id=1',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/70.0.3538.77 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'cache-control' => 'no-cache',
+  'pragma' => 'no-cache',
+  'connection' => 'keep-alive',
+  'host' => 'www.laykefu.com',
+  'content-length' => '',
+  'content-type' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\index\controller\Index->index[ F:\laragon\www\laykefu\application\index\controller\Index.php ]
+[ info ] [ VIEW ] F:\laragon\www\laykefu\public/../application/index\view\index\index.html [ array (
+) ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2019-04-19T12:34:04+08:00 ] 127.0.0.1 GET www.laykefu.com/favicon.ico
+[运行时间：0.020001s] [吞吐率：50.00req/s] [内存消耗：879.21kb] [文件加载：28]
+[ info ] [ LANG ] F:\laragon\www\laykefu\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'favicon.ico',
+    1 => NULL,
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'user_name=admin; user_id=1',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://www.laykefu.com/',
+  'accept' => 'image/webp,image/apng,image/*,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/70.0.3538.77 Safari/537.36',
+  'cache-control' => 'no-cache',
+  'pragma' => 'no-cache',
+  'connection' => 'keep-alive',
+  'host' => 'www.laykefu.com',
+  'content-length' => '',
+  'content-type' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2019-04-19T12:34:15+08:00 ] 127.0.0.1 GET www.laykefu.com/service/index/index.html
+[运行时间：0.081005s] [吞吐率：12.34req/s] [内存消耗：1,773.70kb] [文件加载：45]
+[ info ] [ LANG ] F:\laragon\www\laykefu\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'service',
+    1 => 'index',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'l_user_name=%E5%AE%A2%E6%9C%8D%E5%B0%8F%E7%BE%8E; l_user_id=2; l_user_avatar=%2Fuploads%2F20190419%2F4eb84234138339f27018e1e3625afd15.jpg',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://www.laykefu.com/service/login/index.html',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/70.0.3538.25 Safari/537.36 Core/1.70.3650.400 QQBrowser/10.4.3341.400',
+  'upgrade-insecure-requests' => '1',
+  'cache-control' => 'max-age=0',
+  'connection' => 'keep-alive',
+  'host' => 'www.laykefu.com',
+  'content-length' => '',
+  'content-type' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\service\controller\Index->index[ F:\laragon\www\laykefu\application\service\controller\Index.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] F:\laragon\www\laykefu\public/../application/service\view\index\index.html [ array (
+  0 => 'version',
+  1 => 'socket',
+  2 => 'uinfo',
+  3 => 'word',
+  4 => 'groups',
+  5 => 'status',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.010000s ] mysql:host=127.0.0.1;port=3306;dbname=laykefu;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `ws_users` [ RunTime:0.008001s ]
+[ sql ] [ SQL ] SELECT * FROM `ws_users` WHERE  `id` = 2 LIMIT 1 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `ws_words` [ RunTime:0.008000s ]
+[ sql ] [ SQL ] SELECT * FROM `ws_words` [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `ws_groups` [ RunTime:0.009001s ]
+[ sql ] [ SQL ] SELECT * FROM `ws_groups` WHERE  `status` = 1 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `ws_kf_config` [ RunTime:0.007000s ]
+[ sql ] [ SQL ] SELECT * FROM `ws_kf_config` WHERE  `id` = 1 LIMIT 1 [ RunTime:0.000000s ]
+---------------------------------------------------------------
+[ 2019-04-19T12:34:15+08:00 ] 127.0.0.1 GET www.laykefu.com/service/index/getUserList
+[运行时间：0.058003s] [吞吐率：17.24req/s] [内存消耗：1,766.80kb] [文件加载：45]
+[ info ] [ LANG ] F:\laragon\www\laykefu\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'service',
+    1 => 'index',
+    2 => 'getUserList',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'l_user_name=%E5%AE%A2%E6%9C%8D%E5%B0%8F%E7%BE%8E; l_user_id=2; l_user_avatar=%2Fuploads%2F20190419%2F4eb84234138339f27018e1e3625afd15.jpg',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://www.laykefu.com/service/index/index.html',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/70.0.3538.25 Safari/537.36 Core/1.70.3650.400 QQBrowser/10.4.3341.400',
+  'x-requested-with' => 'XMLHttpRequest',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'connection' => 'keep-alive',
+  'host' => 'www.laykefu.com',
+  'content-length' => '',
+  'content-type' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\service\controller\Index->getUserList[ F:\laragon\www\laykefu\application\service\controller\Index.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000000s ] mysql:host=127.0.0.1;port=3306;dbname=laykefu;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `ws_service_log` [ RunTime:0.010001s ]
+[ sql ] [ SQL ] SELECT user_id id,user_name name,user_avatar avatar,user_ip ip FROM `ws_service_log` WHERE  `kf_id` = '2'  AND `start_time` > 1555637655  AND `end_time` = 0 [ RunTime:0.002000s ]
+---------------------------------------------------------------
+[ 2019-04-19T12:34:28+08:00 ] 127.0.0.1 GET www.laykefu.com/
+[运行时间：0.024002s] [吞吐率：41.66req/s] [内存消耗：1,075.84kb] [文件加载：35]
+[ info ] [ LANG ] F:\laragon\www\laykefu\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => '',
+    1 => NULL,
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'user_name=admin; user_id=1',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/70.0.3538.77 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'cache-control' => 'max-age=0',
+  'connection' => 'keep-alive',
+  'host' => 'www.laykefu.com',
+  'content-length' => '',
+  'content-type' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\index\controller\Index->index[ F:\laragon\www\laykefu\application\index\controller\Index.php ]
+[ info ] [ VIEW ] F:\laragon\www\laykefu\public/../application/index\view\index\index.html [ array (
+) ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2019-04-19T12:35:05+08:00 ] 127.0.0.1 GET www.laykefu.com/
+[运行时间：0.030002s] [吞吐率：33.33req/s] [内存消耗：1,190.43kb] [文件加载：37]
+[ info ] [ LANG ] F:\laragon\www\laykefu\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => '',
+    1 => NULL,
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'user_name=admin; user_id=1',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/70.0.3538.77 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'cache-control' => 'no-cache',
+  'pragma' => 'no-cache',
+  'connection' => 'keep-alive',
+  'host' => 'www.laykefu.com',
+  'content-length' => '',
+  'content-type' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\index\controller\Index->index[ F:\laragon\www\laykefu\application\index\controller\Index.php ]
+[ info ] [ VIEW ] F:\laragon\www\laykefu\public/../application/index\view\index\index.html [ array (
+) ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2019-04-19T12:35:05+08:00 ] 127.0.0.1 GET www.laykefu.com/favicon.ico
+[运行时间：0.022001s] [吞吐率：45.45req/s] [内存消耗：879.21kb] [文件加载：28]
+[ info ] [ LANG ] F:\laragon\www\laykefu\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'favicon.ico',
+    1 => NULL,
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'user_name=admin; user_id=1',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://www.laykefu.com/',
+  'accept' => 'image/webp,image/apng,image/*,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/70.0.3538.77 Safari/537.36',
+  'cache-control' => 'no-cache',
+  'pragma' => 'no-cache',
+  'connection' => 'keep-alive',
+  'host' => 'www.laykefu.com',
+  'content-length' => '',
+  'content-type' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2019-04-19T12:35:06+08:00 ] 127.0.0.1 GET www.laykefu.com/service/index/getCity?ip=127.0.0.1
+[运行时间：0.031002s] [吞吐率：32.26req/s] [内存消耗：1,159.43kb] [文件加载：39]
+[ info ] [ LANG ] F:\laragon\www\laykefu\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'service',
+    1 => 'index',
+    2 => 'getCity',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'l_user_name=%E5%AE%A2%E6%9C%8D%E5%B0%8F%E7%BE%8E; l_user_id=2; l_user_avatar=%2Fuploads%2F20190419%2F4eb84234138339f27018e1e3625afd15.jpg',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://www.laykefu.com/service/index/index.html',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/70.0.3538.25 Safari/537.36 Core/1.70.3650.400 QQBrowser/10.4.3341.400',
+  'x-requested-with' => 'XMLHttpRequest',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'connection' => 'keep-alive',
+  'host' => 'www.laykefu.com',
+  'content-length' => '',
+  'content-type' => '',
+)
+[ info ] [ PARAM ] array (
+  'ip' => '127.0.0.1',
+)
+[ info ] [ RUN ] app\service\controller\Index->getCity[ F:\laragon\www\laykefu\application\service\controller\Index.php ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2019-04-19T12:35:06+08:00 ] 127.0.0.1 GET www.laykefu.com/service/index/getChatLog?uid=7&page=1
+[运行时间：0.039002s] [吞吐率：25.64req/s] [内存消耗：1,778.93kb] [文件加载：46]
+[ info ] [ LANG ] F:\laragon\www\laykefu\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'service',
+    1 => 'index',
+    2 => 'getChatLog',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'l_user_name=%E5%AE%A2%E6%9C%8D%E5%B0%8F%E7%BE%8E; l_user_id=2; l_user_avatar=%2Fuploads%2F20190419%2F4eb84234138339f27018e1e3625afd15.jpg',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://www.laykefu.com/service/index/index.html',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/70.0.3538.25 Safari/537.36 Core/1.70.3650.400 QQBrowser/10.4.3341.400',
+  'x-requested-with' => 'XMLHttpRequest',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'connection' => 'keep-alive',
+  'host' => 'www.laykefu.com',
+  'content-length' => '',
+  'content-type' => '',
+)
+[ info ] [ PARAM ] array (
+  'uid' => '7',
+  'page' => '1',
+)
+[ info ] [ RUN ] app\service\controller\Index->getChatLog[ F:\laragon\www\laykefu\application\service\controller\Index.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000000s ] mysql:host=127.0.0.1;port=3306;dbname=laykefu;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `ws_chat_log` [ RunTime:0.006001s ]
+[ sql ] [ SQL ] SELECT * FROM `ws_chat_log` WHERE  (  `from_id` = '7'  AND `to_id` = 'KF2' ) OR (  `from_id` = 'KF2'  AND `to_id` = '7' ) ORDER BY `id` DESC LIMIT 0,10 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `ws_chat_log` WHERE  (  `from_id` = '7'  AND `to_id` = 'KF2' ) OR (  `from_id` = 'KF2'  AND `to_id` = '7' ) LIMIT 1 [ RunTime:0.001000s ]
+---------------------------------------------------------------
+[ 2019-04-19T12:35:09+08:00 ] 127.0.0.1 GET www.laykefu.com/service/index/getChatLog?uid=7&page=1
+[运行时间：0.046002s] [吞吐率：21.74req/s] [内存消耗：1,778.93kb] [文件加载：46]
+[ info ] [ LANG ] F:\laragon\www\laykefu\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'service',
+    1 => 'index',
+    2 => 'getChatLog',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'l_user_name=%E5%AE%A2%E6%9C%8D%E5%B0%8F%E7%BE%8E; l_user_id=2; l_user_avatar=%2Fuploads%2F20190419%2F4eb84234138339f27018e1e3625afd15.jpg',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://www.laykefu.com/service/index/index.html',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/70.0.3538.25 Safari/537.36 Core/1.70.3650.400 QQBrowser/10.4.3341.400',
+  'x-requested-with' => 'XMLHttpRequest',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'connection' => 'keep-alive',
+  'host' => 'www.laykefu.com',
+  'content-length' => '',
+  'content-type' => '',
+)
+[ info ] [ PARAM ] array (
+  'uid' => '7',
+  'page' => '1',
+)
+[ info ] [ RUN ] app\service\controller\Index->getChatLog[ F:\laragon\www\laykefu\application\service\controller\Index.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.002000s ] mysql:host=127.0.0.1;port=3306;dbname=laykefu;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `ws_chat_log` [ RunTime:0.009000s ]
+[ sql ] [ SQL ] SELECT * FROM `ws_chat_log` WHERE  (  `from_id` = '7'  AND `to_id` = 'KF2' ) OR (  `from_id` = 'KF2'  AND `to_id` = '7' ) ORDER BY `id` DESC LIMIT 0,10 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `ws_chat_log` WHERE  (  `from_id` = '7'  AND `to_id` = 'KF2' ) OR (  `from_id` = 'KF2'  AND `to_id` = '7' ) LIMIT 1 [ RunTime:0.001000s ]
+---------------------------------------------------------------
+[ 2019-04-19T12:35:16+08:00 ] 127.0.0.1 GET www.laykefu.com/service/index/getChatLog?uid=7&page=1
+[运行时间：0.047003s] [吞吐率：21.28req/s] [内存消耗：1,778.93kb] [文件加载：46]
+[ info ] [ LANG ] F:\laragon\www\laykefu\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'service',
+    1 => 'index',
+    2 => 'getChatLog',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'l_user_name=%E5%AE%A2%E6%9C%8D%E5%B0%8F%E7%BE%8E; l_user_id=2; l_user_avatar=%2Fuploads%2F20190419%2F4eb84234138339f27018e1e3625afd15.jpg',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://www.laykefu.com/service/index/index.html',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/70.0.3538.25 Safari/537.36 Core/1.70.3650.400 QQBrowser/10.4.3341.400',
+  'x-requested-with' => 'XMLHttpRequest',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'connection' => 'keep-alive',
+  'host' => 'www.laykefu.com',
+  'content-length' => '',
+  'content-type' => '',
+)
+[ info ] [ PARAM ] array (
+  'uid' => '7',
+  'page' => '1',
+)
+[ info ] [ RUN ] app\service\controller\Index->getChatLog[ F:\laragon\www\laykefu\application\service\controller\Index.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001000s ] mysql:host=127.0.0.1;port=3306;dbname=laykefu;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `ws_chat_log` [ RunTime:0.007001s ]
+[ sql ] [ SQL ] SELECT * FROM `ws_chat_log` WHERE  (  `from_id` = '7'  AND `to_id` = 'KF2' ) OR (  `from_id` = 'KF2'  AND `to_id` = '7' ) ORDER BY `id` DESC LIMIT 0,10 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `ws_chat_log` WHERE  (  `from_id` = '7'  AND `to_id` = 'KF2' ) OR (  `from_id` = 'KF2'  AND `to_id` = '7' ) LIMIT 1 [ RunTime:0.001000s ]
+---------------------------------------------------------------
+[ 2019-04-19T12:35:21+08:00 ] 127.0.0.1 GET www.laykefu.com/
+[运行时间：0.029002s] [吞吐率：34.48req/s] [内存消耗：1,075.84kb] [文件加载：35]
+[ info ] [ LANG ] F:\laragon\www\laykefu\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => '',
+    1 => NULL,
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'user_name=admin; user_id=1',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/70.0.3538.77 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'cache-control' => 'max-age=0',
+  'connection' => 'keep-alive',
+  'host' => 'www.laykefu.com',
+  'content-length' => '',
+  'content-type' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\index\controller\Index->index[ F:\laragon\www\laykefu\application\index\controller\Index.php ]
+[ info ] [ VIEW ] F:\laragon\www\laykefu\public/../application/index\view\index\index.html [ array (
+) ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2019-04-19T12:36:34+08:00 ] 127.0.0.1 GET www.laykefu.com/service/index/getChatLog?uid=7&page=1
+[运行时间：0.077004s] [吞吐率：12.99req/s] [内存消耗：1,778.93kb] [文件加载：46]
+[ info ] [ LANG ] F:\laragon\www\laykefu\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'service',
+    1 => 'index',
+    2 => 'getChatLog',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'l_user_name=%E5%AE%A2%E6%9C%8D%E5%B0%8F%E7%BE%8E; l_user_id=2; l_user_avatar=%2Fuploads%2F20190419%2F4eb84234138339f27018e1e3625afd15.jpg',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://www.laykefu.com/service/index/index.html',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/70.0.3538.25 Safari/537.36 Core/1.70.3650.400 QQBrowser/10.4.3341.400',
+  'x-requested-with' => 'XMLHttpRequest',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'connection' => 'keep-alive',
+  'host' => 'www.laykefu.com',
+  'content-length' => '',
+  'content-type' => '',
+)
+[ info ] [ PARAM ] array (
+  'uid' => '7',
+  'page' => '1',
+)
+[ info ] [ RUN ] app\service\controller\Index->getChatLog[ F:\laragon\www\laykefu\application\service\controller\Index.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.005000s ] mysql:host=127.0.0.1;port=3306;dbname=laykefu;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `ws_chat_log` [ RunTime:0.012001s ]
+[ sql ] [ SQL ] SELECT * FROM `ws_chat_log` WHERE  (  `from_id` = '7'  AND `to_id` = 'KF2' ) OR (  `from_id` = 'KF2'  AND `to_id` = '7' ) ORDER BY `id` DESC LIMIT 0,10 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `ws_chat_log` WHERE  (  `from_id` = '7'  AND `to_id` = 'KF2' ) OR (  `from_id` = 'KF2'  AND `to_id` = '7' ) LIMIT 1 [ RunTime:0.001000s ]
+---------------------------------------------------------------
+[ 2019-04-19T12:37:12+08:00 ] 127.0.0.1 GET www.laykefu.com/
+[运行时间：0.023002s] [吞吐率：43.47req/s] [内存消耗：1,075.84kb] [文件加载：35]
+[ info ] [ LANG ] F:\laragon\www\laykefu\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => '',
+    1 => NULL,
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'user_name=admin; user_id=1',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/70.0.3538.77 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'cache-control' => 'max-age=0',
+  'connection' => 'keep-alive',
+  'host' => 'www.laykefu.com',
+  'content-length' => '',
+  'content-type' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\index\controller\Index->index[ F:\laragon\www\laykefu\application\index\controller\Index.php ]
+[ info ] [ VIEW ] F:\laragon\www\laykefu\public/../application/index\view\index\index.html [ array (
+) ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2019-04-19T12:37:15+08:00 ] 127.0.0.1 GET www.laykefu.com/service/index/getChatLog?uid=7&page=1
+[运行时间：0.056003s] [吞吐率：17.86req/s] [内存消耗：1,778.93kb] [文件加载：46]
+[ info ] [ LANG ] F:\laragon\www\laykefu\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'service',
+    1 => 'index',
+    2 => 'getChatLog',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'l_user_name=%E5%AE%A2%E6%9C%8D%E5%B0%8F%E7%BE%8E; l_user_id=2; l_user_avatar=%2Fuploads%2F20190419%2F4eb84234138339f27018e1e3625afd15.jpg',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://www.laykefu.com/service/index/index.html',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/70.0.3538.25 Safari/537.36 Core/1.70.3650.400 QQBrowser/10.4.3341.400',
+  'x-requested-with' => 'XMLHttpRequest',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'connection' => 'keep-alive',
+  'host' => 'www.laykefu.com',
+  'content-length' => '',
+  'content-type' => '',
+)
+[ info ] [ PARAM ] array (
+  'uid' => '7',
+  'page' => '1',
+)
+[ info ] [ RUN ] app\service\controller\Index->getChatLog[ F:\laragon\www\laykefu\application\service\controller\Index.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.010000s ] mysql:host=127.0.0.1;port=3306;dbname=laykefu;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `ws_chat_log` [ RunTime:0.011001s ]
+[ sql ] [ SQL ] SELECT * FROM `ws_chat_log` WHERE  (  `from_id` = '7'  AND `to_id` = 'KF2' ) OR (  `from_id` = 'KF2'  AND `to_id` = '7' ) ORDER BY `id` DESC LIMIT 0,10 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `ws_chat_log` WHERE  (  `from_id` = '7'  AND `to_id` = 'KF2' ) OR (  `from_id` = 'KF2'  AND `to_id` = '7' ) LIMIT 1 [ RunTime:0.001000s ]
+---------------------------------------------------------------
+[ 2019-04-19T12:37:43+08:00 ] 127.0.0.1 GET www.laykefu.com/
+[运行时间：0.026001s] [吞吐率：38.46req/s] [内存消耗：1,075.84kb] [文件加载：35]
+[ info ] [ LANG ] F:\laragon\www\laykefu\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => '',
+    1 => NULL,
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'user_name=admin; user_id=1',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/70.0.3538.77 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'cache-control' => 'max-age=0',
+  'connection' => 'keep-alive',
+  'host' => 'www.laykefu.com',
+  'content-length' => '',
+  'content-type' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\index\controller\Index->index[ F:\laragon\www\laykefu\application\index\controller\Index.php ]
+[ info ] [ VIEW ] F:\laragon\www\laykefu\public/../application/index\view\index\index.html [ array (
+) ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2019-04-19T12:38:32+08:00 ] 127.0.0.1 GET www.laykefu.com/service/index/getCity?ip=127.0.0.1
+[运行时间：0.039002s] [吞吐率：25.64req/s] [内存消耗：1,159.43kb] [文件加载：39]
+[ info ] [ LANG ] F:\laragon\www\laykefu\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'service',
+    1 => 'index',
+    2 => 'getCity',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'l_user_name=%E5%AE%A2%E6%9C%8D%E5%B0%8F%E7%BE%8E; l_user_id=2; l_user_avatar=%2Fuploads%2F20190419%2F4eb84234138339f27018e1e3625afd15.jpg',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://www.laykefu.com/service/index/index.html',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/70.0.3538.25 Safari/537.36 Core/1.70.3650.400 QQBrowser/10.4.3341.400',
+  'x-requested-with' => 'XMLHttpRequest',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'connection' => 'keep-alive',
+  'host' => 'www.laykefu.com',
+  'content-length' => '',
+  'content-type' => '',
+)
+[ info ] [ PARAM ] array (
+  'ip' => '127.0.0.1',
+)
+[ info ] [ RUN ] app\service\controller\Index->getCity[ F:\laragon\www\laykefu\application\service\controller\Index.php ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2019-04-19T12:38:33+08:00 ] 127.0.0.1 GET www.laykefu.com/service/index/getChatLog?uid=7&page=1
+[运行时间：0.058004s] [吞吐率：17.24req/s] [内存消耗：1,778.93kb] [文件加载：46]
+[ info ] [ LANG ] F:\laragon\www\laykefu\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'service',
+    1 => 'index',
+    2 => 'getChatLog',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'l_user_name=%E5%AE%A2%E6%9C%8D%E5%B0%8F%E7%BE%8E; l_user_id=2; l_user_avatar=%2Fuploads%2F20190419%2F4eb84234138339f27018e1e3625afd15.jpg',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://www.laykefu.com/service/index/index.html',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/70.0.3538.25 Safari/537.36 Core/1.70.3650.400 QQBrowser/10.4.3341.400',
+  'x-requested-with' => 'XMLHttpRequest',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'connection' => 'keep-alive',
+  'host' => 'www.laykefu.com',
+  'content-length' => '',
+  'content-type' => '',
+)
+[ info ] [ PARAM ] array (
+  'uid' => '7',
+  'page' => '1',
+)
+[ info ] [ RUN ] app\service\controller\Index->getChatLog[ F:\laragon\www\laykefu\application\service\controller\Index.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.002000s ] mysql:host=127.0.0.1;port=3306;dbname=laykefu;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `ws_chat_log` [ RunTime:0.012001s ]
+[ sql ] [ SQL ] SELECT * FROM `ws_chat_log` WHERE  (  `from_id` = '7'  AND `to_id` = 'KF2' ) OR (  `from_id` = 'KF2'  AND `to_id` = '7' ) ORDER BY `id` DESC LIMIT 0,10 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `ws_chat_log` WHERE  (  `from_id` = '7'  AND `to_id` = 'KF2' ) OR (  `from_id` = 'KF2'  AND `to_id` = '7' ) LIMIT 1 [ RunTime:0.001000s ]
+---------------------------------------------------------------
+[ 2019-04-19T12:39:00+08:00 ] 127.0.0.1 GET www.laykefu.com/
+[运行时间：0.026001s] [吞吐率：38.46req/s] [内存消耗：1,189.45kb] [文件加载：37]
+[ info ] [ LANG ] F:\laragon\www\laykefu\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => '',
+    1 => NULL,
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'user_name=admin; user_id=1',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/70.0.3538.77 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'cache-control' => 'no-cache',
+  'pragma' => 'no-cache',
+  'connection' => 'keep-alive',
+  'host' => 'www.laykefu.com',
+  'content-length' => '',
+  'content-type' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\index\controller\Index->index[ F:\laragon\www\laykefu\application\index\controller\Index.php ]
+[ info ] [ VIEW ] F:\laragon\www\laykefu\public/../application/index\view\index\index.html [ array (
+) ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2019-04-19T12:39:00+08:00 ] 127.0.0.1 GET www.laykefu.com/
+[运行时间：0.039003s] [吞吐率：25.64req/s] [内存消耗：1,075.97kb] [文件加载：35]
+[ info ] [ LANG ] F:\laragon\www\laykefu\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => '',
+    1 => NULL,
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'user_name=admin; user_id=1',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/70.0.3538.77 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'cache-control' => 'no-cache',
+  'pragma' => 'no-cache',
+  'connection' => 'keep-alive',
+  'host' => 'www.laykefu.com',
+  'content-length' => '',
+  'content-type' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\index\controller\Index->index[ F:\laragon\www\laykefu\application\index\controller\Index.php ]
+[ info ] [ VIEW ] F:\laragon\www\laykefu\public/../application/index\view\index\index.html [ array (
+) ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2019-04-19T12:39:00+08:00 ] 127.0.0.1 GET www.laykefu.com/service/index/getCity?ip=127.0.0.1
+[运行时间：0.033001s] [吞吐率：30.30req/s] [内存消耗：1,159.43kb] [文件加载：39]
+[ info ] [ LANG ] F:\laragon\www\laykefu\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'service',
+    1 => 'index',
+    2 => 'getCity',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'l_user_name=%E5%AE%A2%E6%9C%8D%E5%B0%8F%E7%BE%8E; l_user_id=2; l_user_avatar=%2Fuploads%2F20190419%2F4eb84234138339f27018e1e3625afd15.jpg',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://www.laykefu.com/service/index/index.html',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/70.0.3538.25 Safari/537.36 Core/1.70.3650.400 QQBrowser/10.4.3341.400',
+  'x-requested-with' => 'XMLHttpRequest',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'connection' => 'keep-alive',
+  'host' => 'www.laykefu.com',
+  'content-length' => '',
+  'content-type' => '',
+)
+[ info ] [ PARAM ] array (
+  'ip' => '127.0.0.1',
+)
+[ info ] [ RUN ] app\service\controller\Index->getCity[ F:\laragon\www\laykefu\application\service\controller\Index.php ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2019-04-19T12:39:00+08:00 ] 127.0.0.1 GET www.laykefu.com/service/index/getChatLog?uid=7&page=1
+[运行时间：0.048002s] [吞吐率：20.83req/s] [内存消耗：1,778.93kb] [文件加载：46]
+[ info ] [ LANG ] F:\laragon\www\laykefu\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'service',
+    1 => 'index',
+    2 => 'getChatLog',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'l_user_name=%E5%AE%A2%E6%9C%8D%E5%B0%8F%E7%BE%8E; l_user_id=2; l_user_avatar=%2Fuploads%2F20190419%2F4eb84234138339f27018e1e3625afd15.jpg',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://www.laykefu.com/service/index/index.html',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/70.0.3538.25 Safari/537.36 Core/1.70.3650.400 QQBrowser/10.4.3341.400',
+  'x-requested-with' => 'XMLHttpRequest',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'connection' => 'keep-alive',
+  'host' => 'www.laykefu.com',
+  'content-length' => '',
+  'content-type' => '',
+)
+[ info ] [ PARAM ] array (
+  'uid' => '7',
+  'page' => '1',
+)
+[ info ] [ RUN ] app\service\controller\Index->getChatLog[ F:\laragon\www\laykefu\application\service\controller\Index.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001000s ] mysql:host=127.0.0.1;port=3306;dbname=laykefu;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `ws_chat_log` [ RunTime:0.011001s ]
+[ sql ] [ SQL ] SELECT * FROM `ws_chat_log` WHERE  (  `from_id` = '7'  AND `to_id` = 'KF2' ) OR (  `from_id` = 'KF2'  AND `to_id` = '7' ) ORDER BY `id` DESC LIMIT 0,10 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `ws_chat_log` WHERE  (  `from_id` = '7'  AND `to_id` = 'KF2' ) OR (  `from_id` = 'KF2'  AND `to_id` = '7' ) LIMIT 1 [ RunTime:0.002000s ]
+---------------------------------------------------------------
+[ 2019-04-19T12:39:00+08:00 ] 127.0.0.1 GET www.laykefu.com/service/index/getCity?ip=127.0.0.1
+[运行时间：0.040002s] [吞吐率：25.00req/s] [内存消耗：1,159.43kb] [文件加载：39]
+[ info ] [ LANG ] F:\laragon\www\laykefu\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'service',
+    1 => 'index',
+    2 => 'getCity',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'l_user_name=%E5%AE%A2%E6%9C%8D%E5%B0%8F%E7%BE%8E; l_user_id=2; l_user_avatar=%2Fuploads%2F20190419%2F4eb84234138339f27018e1e3625afd15.jpg',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://www.laykefu.com/service/index/index.html',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/70.0.3538.25 Safari/537.36 Core/1.70.3650.400 QQBrowser/10.4.3341.400',
+  'x-requested-with' => 'XMLHttpRequest',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'connection' => 'keep-alive',
+  'host' => 'www.laykefu.com',
+  'content-length' => '',
+  'content-type' => '',
+)
+[ info ] [ PARAM ] array (
+  'ip' => '127.0.0.1',
+)
+[ info ] [ RUN ] app\service\controller\Index->getCity[ F:\laragon\www\laykefu\application\service\controller\Index.php ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2019-04-19T12:39:00+08:00 ] 127.0.0.1 GET www.laykefu.com/service/index/getChatLog?uid=7&page=1
+[运行时间：0.051003s] [吞吐率：19.61req/s] [内存消耗：1,778.93kb] [文件加载：46]
+[ info ] [ LANG ] F:\laragon\www\laykefu\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'service',
+    1 => 'index',
+    2 => 'getChatLog',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'l_user_name=%E5%AE%A2%E6%9C%8D%E5%B0%8F%E7%BE%8E; l_user_id=2; l_user_avatar=%2Fuploads%2F20190419%2F4eb84234138339f27018e1e3625afd15.jpg',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://www.laykefu.com/service/index/index.html',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/70.0.3538.25 Safari/537.36 Core/1.70.3650.400 QQBrowser/10.4.3341.400',
+  'x-requested-with' => 'XMLHttpRequest',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'connection' => 'keep-alive',
+  'host' => 'www.laykefu.com',
+  'content-length' => '',
+  'content-type' => '',
+)
+[ info ] [ PARAM ] array (
+  'uid' => '7',
+  'page' => '1',
+)
+[ info ] [ RUN ] app\service\controller\Index->getChatLog[ F:\laragon\www\laykefu\application\service\controller\Index.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.002000s ] mysql:host=127.0.0.1;port=3306;dbname=laykefu;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `ws_chat_log` [ RunTime:0.009001s ]
+[ sql ] [ SQL ] SELECT * FROM `ws_chat_log` WHERE  (  `from_id` = '7'  AND `to_id` = 'KF2' ) OR (  `from_id` = 'KF2'  AND `to_id` = '7' ) ORDER BY `id` DESC LIMIT 0,10 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `ws_chat_log` WHERE  (  `from_id` = '7'  AND `to_id` = 'KF2' ) OR (  `from_id` = 'KF2'  AND `to_id` = '7' ) LIMIT 1 [ RunTime:0.001000s ]
+---------------------------------------------------------------
+[ 2019-04-19T12:39:00+08:00 ] 127.0.0.1 GET www.laykefu.com/favicon.ico
+[运行时间：0.028002s] [吞吐率：35.71req/s] [内存消耗：879.21kb] [文件加载：28]
+[ info ] [ LANG ] F:\laragon\www\laykefu\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'favicon.ico',
+    1 => NULL,
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'user_name=admin; user_id=1',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://www.laykefu.com/',
+  'accept' => 'image/webp,image/apng,image/*,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/70.0.3538.77 Safari/537.36',
+  'cache-control' => 'no-cache',
+  'pragma' => 'no-cache',
+  'connection' => 'keep-alive',
+  'host' => 'www.laykefu.com',
+  'content-length' => '',
+  'content-type' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File

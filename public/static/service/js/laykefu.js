@@ -100,7 +100,7 @@ $(function () {
         layui.use(['layer'], function () {
             var layer = layui.layer;
 
-            var isShow = $(".layui-whisper-face").css('display');
+            var isShow = $(".layui-laykefu-face").css('display');
             if ('block' == isShow) {
                 layer.close(index);
                 return;
@@ -262,7 +262,7 @@ layui.use(['upload', 'layer'], function () {
 function showFaces() {
     isShow = true;
     var alt = getFacesIcon();
-    var _html = '<div class="layui-whisper-face"><ul class="layui-clear whisper-face-list">';
+    var _html = '<div class="layui-laykefu-face"><ul class="layui-clear laykefu-face-list">';
     layui.each(alt, function (index, item) {
         _html += '<li title="' + item + '" onclick="checkFace(this)"><img src="/static/service/js/layui/images/face/' + index + '.gif" /></li>';
     });
@@ -332,18 +332,18 @@ function showUserMessage(uinfo, content) {
 function msgFactory(content, type, uinfo) {
     var _html = '';
     if ('mine' == type) {
-        _html += '<li class="whisper-chat-mine">';
+        _html += '<li class="laykefu-chat-mine">';
     } else {
         _html += '<li>';
     }
-    _html += '<div class="whisper-chat-user">';
+    _html += '<div class="laykefu-chat-user">';
     _html += '<img src="' + uinfo.avatar + '">';
     if ('mine' == type) {
         _html += '<cite><i>' + getDate() + '</i>' + uinfo.username + '</cite>';
     } else {
         _html += '<cite>' + uinfo.name + '<i>' + getDate() + '</i></cite>';
     }
-    _html += '</div><div class="whisper-chat-text">' + replaceContent(content) + '</div>';
+    _html += '</div><div class="laykefu-chat-text">' + replaceContent(content) + '</div>';
     _html += '</li>';
 
     return _html;
@@ -494,18 +494,18 @@ function getChatLog(uid, page, flag) {
             for(var i = 0; i < len; i++){
                 var v = res.data[len - i - 1];
                 if ('mine' == v.type) {
-                    _html += '<li class="whisper-chat-mine">';
+                    _html += '<li class="laykefu-chat-mine">';
                 } else {
                     _html += '<li>';
                 }
-                _html += '<div class="whisper-chat-user">';
+                _html += '<div class="laykefu-chat-user">';
                 _html += '<img src="' + v.from_avatar + '">';
                 if ('mine' == v.type) {
                     _html += '<cite><i>' + v.time_line + '</i>' + v.from_name + '</cite>';
                 } else {
                     _html += '<cite>' + v.from_name + '<i>' + v.time_line + '</i></cite>';
                 }
-                _html += '</div><div class="whisper-chat-text">' + replaceContent(v.content) + '</div>';
+                _html += '</div><div class="laykefu-chat-text">' + replaceContent(v.content) + '</div>';
                 _html += '</li>';
             }
 
@@ -527,7 +527,7 @@ function getChatLog(uid, page, flag) {
 // 显示大图
 function showBigPic(){
 
-    $(".layui-whisper-photos").on('click', function () {
+    $(".layui-laykefu-photos").on('click', function () {
         var src = this.src;
         layer.photos({
             photos: {

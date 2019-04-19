@@ -40,7 +40,6 @@ class Login extends Controller
             if(empty($userInfo)){
                 return json(['code' => -3, 'data' => '', 'msg' => '管理员不存在']);
             }
-
             if(md5($password . config('salt')) != $userInfo['password']){
                 return json(['code' => -4, 'data' => '', 'msg' => '密码错误']);
             }
