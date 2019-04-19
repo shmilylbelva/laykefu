@@ -25,7 +25,7 @@ github仓库：https://github.com/shmilylbelva/laykefu
 ```php
 	laykefu.init({
 		group: 1,//客服分组
-		socket: 'ws.guoshanchina.com',//聊天服务器地址
+		socket: '127.0.0.1:7272',//聊天服务器地址
 		face_path:'/static/customer/images/face',//表情包路径
 		upload_url:'/index/upload/uploadImg',//图片上传路径
 	});
