@@ -2,6 +2,7 @@
 .idea
 composer.lock
 runtime/*
+public/uploads/*
 vendor/composer/*
 vendor/topthink/*
 vendor/workerman/gateway-worker/*

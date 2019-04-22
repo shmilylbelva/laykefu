@@ -1,7 +1,12 @@
 ## laykefu
 thinkphp5+Gatewayworker搭建的web客服系统
+
 体验地址：http://laykefu.guoshanchina.com
+
 github仓库：https://github.com/shmilylbelva/laykefu
+
+![演示](http://upload-images.jianshu.io/upload_images/2825702-f313bd88202681d8.gif?imageMogr2/auto-orient/strip%7CimageView2/2/w/1000/format/webp)
+
 ## 1.客户端接入
 
 1、添加laykefu.css样式文件
