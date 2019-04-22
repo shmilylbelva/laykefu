@@ -29,7 +29,7 @@ socket.onopen = function (res) {
 // 监听消息
 socket.onmessage = function (res) {
     var data = eval("(" + res.data + ")");
-	
+    
     switch (data['message_type']) {
         // 服务端ping客户端
         case 'ping':
@@ -376,7 +376,7 @@ function changeUserTab(obj) {
 
 // 添加用户到面板
 function addUser(data) {
-
+    console.log(data);
     var _html = '<li class="layui-nav-item" data-id="' + data.id + '" id="f-' + data.id +
         '" data-name="' + data.name + '" data-avatar="' + data.avatar + '" data-ip="' + data.ip + '">';
     _html += '<img src="' + data.avatar + '">';

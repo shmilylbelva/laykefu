@@ -1437,5 +1437,5 @@ CREATE TABLE `ws_words` (
 -- ----------------------------
 -- Records of ws_words
 -- ----------------------------
-INSERT INTO `ws_words` VALUES ('1', '欢迎来到whisper v1.0.0', '2017-10-25 12:51:09', '1');
+INSERT INTO `ws_words` VALUES ('1', '欢迎来到laykefu v1.0.0', '2017-10-25 12:51:09', '1');
 INSERT INTO `ws_words` VALUES ('3', '有什么可以帮您的吗', '2019-04-11 17:00:09', '1');

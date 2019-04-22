@@ -73,7 +73,7 @@ class Words extends Base
             'status' => config('kf_status')
         ]);
 
-        return $this->fetch();
+        return $this->fetch('add_word');
     }
 
     // 编辑常用语

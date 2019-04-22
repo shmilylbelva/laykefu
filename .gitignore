@@ -1,6 +1,7 @@
 .git
 .idea
 composer.lock
+runtime/*
 vendor/composer/*
 vendor/topthink/*
 vendor/workerman/gateway-worker/*

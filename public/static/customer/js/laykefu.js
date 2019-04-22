@@ -47,7 +47,6 @@
         $(tpl()).prependTo('body');//插入客服页面
         socket = new WebSocket('ws://' + config.socket);//创建Socket实例
         uinfo = getCache('laykefu-UserId');
-         
         socket.onopen = function (res) {
             var login_data = '{"type":"userInit", "uid": ' + uinfo[0].userId + ', "name" : "' + uinfo[0].name +
                 '", "avatar" : "' + config.avatar + '", "group" : ' + config.group + '}';
@@ -62,7 +61,7 @@
                 case 'connect':
                     kf_id = data.data.kf_id;
                     kf_name = data.data.kf_name;
-                    showSystem({content: '客服 ' + data.data.kf_name + ' 为您服务'});
+                    showSystem({content: '客服 ' + kf_name + ' 为您服务'});
                     $('#laykefu-title').html('与 ' + kf_name + ' 交流中');
                     showChatLog();
                     break;
@@ -72,9 +71,21 @@
                     // if('暂时没有客服上班,请稍后再咨询。' == data.data.content){
                     //     socket.close();
                     // }
-                    $('#laykefu-title').html('暂时没有客服上班,请稍后再来');
+                    $('#laykefu-title').html('暂时没有客服');
                     showSystem(data.data);
                     break;
+                // 监测客服上线
+                case 'kf_online':
+                    if (data.data.kf_group == config.group) {
+                        kf_id = data.data.kf_id;
+                        kf_name = data.data.kf_name;
+                        $('#laykefu-title').html('与 ' + kf_name + ' 交流中');
+                        showChatLog();    
+                        showSystem({content: '客服 ' + kf_name + ' 为您服务'});
+                        isLock(false);
+                    }
+               
+                    break;                    
                 // 监测聊天数据
                 case 'chatMessage':
                     showMsg(data.data);
@@ -176,14 +187,11 @@
     },sendMsg = function(sendMsg){// 发送信息
         (typeof($('#msg-area').attr('readonly')) == 'undefined')?isLock(false):isLock(true);
         var msg = (typeof(sendMsg) == 'undefined') ? $('#msg-area').val() : sendMsg;
-        if('' == msg){
-            return false;
-        }
+        if('' == msg) return false;
         var content = replaceContent(msg);    
         var time = getDate();    
         var word = msgFactory(content, 'mine',time,uinfo[0]);
         // 发送消息
-        uinfo[0].userId
         socket.send(JSON.stringify({
             type: 'chatMessage',
             data: {to_id: kf_id, to_name: kf_name, content: msg, from_name: uinfo[0].name,
@@ -212,9 +220,7 @@
             if(localMsg == null || localMsg.length == 0){
                 localMsg = [];
             }
-            if (type == 'mine') {
-                info.name = '我';
-            }
+            (type == 'mine') && (name = '我');
             if (getCache('nowMinutes').now != getMinutes()) {//消息发送接收时间大于当前记录时间
                 var data = {}; 
                 data.content = getTimeText(time);
@@ -222,7 +228,7 @@
                 localMsg.push({type: 'time', time: time,});
                 cacheChat({key:"nowMinutes",data:{'now':getMinutes()}});//更新时间
             }
-            localMsg.push({type: type, name: info.name, time: time, content: content,avatar:info.avatar});
+            localMsg.push({type: type, name: name, time: time, content: content,avatar:info.avatar});
             cacheChat({key: key, data: localMsg});
         }        
         var _html = '';
@@ -235,7 +241,7 @@
             _html += '<div class="laykefu-chat-user">';
             _html += '<img src="' + info.avatar + '">';
             if ('mine' == type) {
-                _html += '<cite>' + info.name + '</cite>';
+                _html += '<cite>' + name + '</cite>';
             } else {
                 _html += '<cite>' + info.name + '</cite>';
             }
@@ -322,6 +328,7 @@
 
         return content;
     },showFaces = function(){// 展示表情数据
+        if ($('#msg-area').attr('readonly') == 'readonly') return false;
         var _html = '<ul class="layim-face-list">';
         var faces = getFaces();
           for(var key in faces){
@@ -381,32 +388,32 @@
             $(".laykefu-bigimg").attr("src", $(this).attr("src")).fadeIn()
         });        
     },uploadImg = function(){
-            $('#laykefu-up-image').after('<input type="file" id="laykefu-upload" name="file" style="display:none" >');                
-            $("#laykefu-upload").click();
-            $("#laykefu-upload").change(function (e) {
+        if ($('#msg-area').attr('readonly') == 'readonly') return false;
+        $('#laykefu-up-image').after('<input type="file" id="laykefu-upload" name="file" style="display:none" >');                
+        $("#laykefu-upload").click();
+        $("#laykefu-upload").change(function (e) {
 
-                var formData = new FormData(this);
-                var file = $("#laykefu-upload")[0].files[0];
-                    formData.append("file",file); //传给后台的file的key值是可以自己定义的
-                filter(file) && $.ajax({
-                    url: config.upload_url || '',
-                    type: "post",
-                    data: formData,
-                    contentType: false,
-                    processData: false,
-                    dataType: 'JSON',
-                    mimeType: "multipart/form-data",
-                    success: function (res) {
-                        sendMsg('img[' + res.data.src + ']');
-                        showBigPic();
-                        $("#laykefu-upload").remove();                        
-                    },
-                    error: function (data) {
-                        console.log(data);
-                    }
-                }); 
-            });
-
+            var formData = new FormData(this);
+            var file = $("#laykefu-upload")[0].files[0];
+                formData.append("file",file); //传给后台的file的key值是可以自己定义的
+            filter(file) && $.ajax({
+                url: config.upload_url || '',
+                type: "post",
+                data: formData,
+                contentType: false,
+                processData: false,
+                dataType: 'JSON',
+                mimeType: "multipart/form-data",
+                success: function (res) {
+                    sendMsg('img[' + res.data.src + ']');
+                    showBigPic();
+                    $("#laykefu-upload").remove();                        
+                },
+                error: function (data) {
+                    console.log(data);
+                }
+            }); 
+        });
        
     },filter = function(obj){
         var imgType = ["image/jpeg","image/png"];
