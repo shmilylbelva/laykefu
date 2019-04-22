@@ -156,8 +156,18 @@ class Events
 
                 // 绑定 client_id 和 uid
                 Gateway::bindUid($client_id, $message['uid']);
-                // TODO 尝试拉取用户来服务 [二期规划]
-
+                // 通知在线用户
+                $msg = [
+                    'message_type' => 'kf_online',
+                    'data' => [
+                        'kf_name' => $message['name'],
+                        'kf_avatar' => $message['avatar'],
+                        'kf_id' => $message['uid'],
+                        'kf_group' => $message['group'],
+                        'time' => date('Y-m-d H:i:s'),
+                    ]
+                ];               
+                Gateway::sendToAll(json_encode($msg));
                 break;
             // 顾客初始化
             case 'userInit';
@@ -318,7 +328,7 @@ class Events
                 unset($userClient, $userGroup);
 
                 break;
-      case 'closeUser':
+            case 'closeUser':
 
                 $userInfo = self::$global->uidSimpleList;
                 if(isset($userInfo[$message['uid']])){
