@@ -82,7 +82,8 @@ $(".laykefu-min").click(function(){
 composer install
 ```
 2、配置环境
- 修改目录下.env信息
+ 复制.env.example文件并命名为.env，修改.env参数
+
 3、启动gatawayworker相关服务
 如果你是在windows上运行的话，直接双击`/vendor/workerman/Conf/start_for_bat.bat`即可
 如果你是在linux或mac上运行的话，请进入`/vendor/workerman/Conf/`目录，然后运行

@@ -1,7 +1,8 @@
 .git
 .idea
+.env
 composer.lock
-runtime/*
+*.log
 public/uploads/*
 vendor/composer/*
 vendor/topthink/*

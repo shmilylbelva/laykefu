@@ -24,14 +24,15 @@ if(!extension_loaded('posix'))
     exit("Please install posix extension. See http://doc3.workerman.net/appendices/install-extension.html\n");
 }
 
+// 标记是全局启动
+define('GLOBAL_START', 1);
 
-// 加载所有Applications/*/start.php，以便启动所有服务
+// 加载所有Applications/start.php，以便启动所有服务
 
 require_once './Events/start_register.php';
 require_once './Events/start_gataway.php';
 require_once './Events/start_bussinessworker.php';
 require_once './Events/start_globaldata.php';
-
 
 // 运行所有服务
 Worker::runAll();
