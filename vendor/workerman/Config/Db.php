@@ -1,7 +1,6 @@
 <?php
 namespace Config;
 
-use \think\Env;
 /**
  * mysql配置
  * @author walkor
@@ -24,8 +23,10 @@ class Db
         'charset'    => 'utf8',
     );    
 
-    public static $GlobalData = array(
-        'host'    => '127.0.0.1',
-        'port'    => 2207,
+    public static $config = array(
+        'globalData'    => '127.0.0.1:2207',
     );
+
 }
+
+

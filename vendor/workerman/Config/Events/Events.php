@@ -47,11 +47,11 @@ class Events
             
         }
         if (empty(self::$global_cfg)) {
-            self::$global_cfg = DbConfig::$GlobalData;  //分布式数据配置
+            self::$global_cfg = DbConfig::$config;  //分布式数据配置
             
         }        
         if (empty(self::$global)) {
-            self::$global = new \GlobalData\Client(self::$global_cfg['host'].':'.self::$global_cfg['port']);
+            self::$global = new \GlobalData\Client(self::$global_cfg['globalData']);
             // 客服列表
             if(is_null(self::$global->kfList)){
                 self::$global->kfList = [];

@@ -82,7 +82,12 @@ $(".laykefu-min").click(function(){
 composer install
 ```
 2、配置环境
- 复制.env.example文件并命名为.env，修改.env参数
+ 1.复制.env.example文件并命名为.env，修改.env参数
+ 2.如果是在服务器环境运行该项目，那么请配置`/vendor/workerman/Conf/Events`下的
+ start_globaldata.php的$globaldata参数，
+ start_gateway.php的$gateway->lanIp，$gateway->registerAddress参数
+ start_businessworker.php的$worker->registerAddress参数
+本地运行，无需修改
 
 3、启动gatawayworker相关服务
 如果你是在windows上运行的话，直接双击`/vendor/workerman/Conf/start_for_bat.bat`即可

@@ -14,12 +14,10 @@
 use \Workerman\Worker;
 use \GlobalData\Server;
 use \GlobalData\Client;
-use \think\Env;
 // 自动加载类
 require_once __DIR__ . '/../../../autoload.php';
-$globalDataIP = Env::get('config.ip', '0.0.0.0');
-$globalDataPort = Env::get('config.port', 2207);
-$globaldata = new GlobalData\Server($globalDataIP, $globalDataPort);
+//请设置成服务器内网ip
+$globaldata = new GlobalData\Server('127.0.0.1', 2207);
 
 
 // 如果不是在根目录启动，则运行runAll方法
