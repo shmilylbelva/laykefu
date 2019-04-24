@@ -44,7 +44,9 @@
     },getCache = function (key){
         return JSON.parse(localStorage.getItem(key));
     },register = function(){//注册监听事件
+        check();
         $(tpl()).prependTo('body');//插入客服页面
+        isMobile();
         socket = new WebSocket('ws://' + config.socket);//创建Socket实例
         uinfo = getCache('laykefu-UserId');
         socket.onopen = function (res) {
@@ -151,7 +153,7 @@
         // 滚动条自动定位到最底端
         wordBottom();
     },tpl = function(){
-        var tpl  = "<div style= 'width:" + config.width + ";display:none;height:"+ config.height+"; ' class='tpl' id='laykefu'>";
+        var tpl  = "<div style= 'width:" + config.width + ";display:none;height:"+ config.height+";' class='tpl' id='laykefu'>";
         tpl +=      '<div class="small-chat-box fadeInRight animated">';
         tpl +=          '<div class="heading" draggable="true">';
         tpl +=              '<small class="chat-date pull-right" id="hidden-laykefu">';
@@ -159,26 +161,26 @@
         tpl +=              '</small>';
         tpl +=              '<span id="laykefu-title">与 客服 交流中</span>'
         tpl +=          '</div>';
-        tpl +=          '<div class="slimScrollDiv" style="position: relative; width: auto; height: 60%;" id="chat-content-box">';
-        tpl +=              '<div class="chat-box laykefu-chat-main" style="width: auto; height: 92%;overflow: auto" id="laykefu-chat-list">';
+        tpl +=          '<div class="slimScrollDiv" id="chat-content-box">';
+        tpl +=              '<div class="chat-box laykefu-chat-main" id="laykefu-chat-list">';
         tpl +=                  '<ul style="display: block;"></ul>';
-        tpl +=              '</div>';
-        tpl +=          '</div>';
-        tpl +=          '<div class="bar">';
-        tpl +=              '<div style="padding-left:15px;cursor:pointer;width:100px">';
-        tpl +=                  '<i class="icono-smile" id="laykefu-face"></i>';
-        tpl +=                  '<i class="icono-image" id="laykefu-up-image"></i>';
-        // tpl +=                  '<input id="laykefu-up-image" type="file" name="file" style="; position: absolute;"><i class="icono-image" ></i>';
         tpl +=              '</div>';
         tpl +=          '</div>';
         tpl +=          '<div class="form-chat">';
         tpl +=              '<textarea class="form-control chat-area" id="msg-area" readonly="readonly"></textarea>';
-        tpl +=              '<div class="input-group" style="margin-top: 5px;width: 100%">';
-        tpl +=                  '<span class="input-group-btn" style="float: right;">';
+        tpl +=              '<div class="input-group">';
+        tpl +=                  '<span class="btn-event">';
+        tpl +=                      '<i class="icono-smile" id="laykefu-face"></i>';
+        tpl +=                      '<i class="icono-image" id="laykefu-up-image"></i>';
+        tpl +=                  '</span>';        
+        tpl +=                  '<span class="input-group-btn">';
         tpl +=                      '<button class="btn btn-primary" type="button" id="send">发送</button>';
         tpl +=                  '</span>';
         tpl +=              '</div>';
         tpl +=          '</div>';
+        tpl +=          '<div class="bar">';
+
+        tpl +=          '</div>';        
         tpl +=          '<div class="face-box" style="display:none" id="face-box">';
         tpl +=          '</div>';
         tpl +=      '</div>';            
@@ -302,8 +304,8 @@
         timeS = timeS.replace(/[年月]/g,'/').replace(/[日]/,'');
         return new Date().getTime() - new Date(timeS).getTime() - 1000; //有一秒的误差
     },wordBottom = function (){// 对话框定位到最底端
-        var ex = document.getElementById("laykefu-chat-list");
-        ex.scrollTop = ex.scrollHeight;
+        var ex = $("#laykefu-chat-list");
+        ex.scrollTop(ex[0].scrollHeight);
     },replaceContent = function(content) {// 转义聊天内容中的特殊字符
         // 支持的html标签
         var html = function (end) {
@@ -356,28 +358,26 @@
                 $('.laykefu-bigimg').on('mousewheel', scrollFn);                
             }
         }
-        function scrollFn() {
-            var ev = window.event;
-            var dir = ev.deltaY;
-            var width = $(".laykefu-bigimg").width();
-            var height = $(".laykefu-bigimg").height();
-            if (dir < 0) {
-                if (width > ($(window).width())) return
-                if (height > ($(window).height())) return
-                height += 50;
-                width += 50;            
-            } else {
-                if (width < 150) return
-                if (height < 150) return                
-                height = height-50;
-                width = width-50;
-            }
-            $(".laykefu-bigimg").css({
-                height: height + "px",
-                width: width + "px"
-            })            
+    },scrollFn = function (){// 双击图片
+        var ev = window.event;
+        var dir = ev.deltaY;
+        var width = $(".laykefu-bigimg").width();
+        var height = $(".laykefu-bigimg").height();
+        if (dir < 0) {
+            if (width > ($(window).width())) return
+            if (height > ($(window).height())) return
+            height += 50;
+            width += 50;            
+        } else {
+            if (width < 150) return
+            if (height < 150) return                
+            height = height-50;
+            width = width-50;
         }
-
+        $(".laykefu-bigimg").css({
+            height: height + "px",
+            width: width + "px"
+        })         
     },showBigPic = function (){// 双击图片
         $(".laykefu-img").click(function() {
             $(".laykefu-bigimg").css({
@@ -425,7 +425,19 @@
             }
         }  
         return false;  
-    },send = function(){
+    },isMobile = function (){
+        // 是否移动端访问
+        if( navigator.userAgent.match(/Android/i)
+            || navigator.userAgent.match(/webOS/i)
+            || navigator.userAgent.match(/iPhone/i)
+            || navigator.userAgent.match(/iPad/i)
+            || navigator.userAgent.match(/iPod/i)
+            || navigator.userAgent.match(/BlackBerry/i)
+            || navigator.userAgent.match(/Windows Phone/i)
+        ){
+            $("#laykefu").css({'width':'100%','height':'100%','bottom':'0px','right':'0px'});
+        }
+    },event = function(){
         // 发送表情
         $('#laykefu-face').click(function(e){
             e.stopPropagation();
@@ -457,6 +469,8 @@
             e.preventDefault();  // 取消事件的默认动作
             sendMsg();
         }); 
+        //点击图片事件
+        imgClick();
         $("#hidden-laykefu").click(function(){
             $("#laykefu").css('display','none');
             $(".laykefu-min").css('display','block');
@@ -478,11 +492,8 @@
         options.height = options.height || '600px',//窗口高度
         options.width = options.width || '400px', //窗口宽度     
         config = options; 
-        check(); 
         register();
-        imgClick();
-        send();
-        isLock(true);
+        event();
     }
     win.laykefu = new Laykefu();
   
