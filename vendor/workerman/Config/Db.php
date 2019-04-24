@@ -25,7 +25,7 @@ class Db
 
     public static $config = array(
         'globalData'    => '127.0.0.1:2207',
-    );
+    );    
 
 }
 

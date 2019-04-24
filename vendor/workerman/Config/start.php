@@ -28,11 +28,10 @@ if(!extension_loaded('posix'))
 define('GLOBAL_START', 1);
 
 // 加载所有Applications/start.php，以便启动所有服务
-
-require_once './Events/start_register.php';
-require_once './Events/start_gataway.php';
-require_once './Events/start_bussinessworker.php';
-require_once './Events/start_globaldata.php';
+foreach(glob('./Events/start*.php') as $start_file)
+{
+    require_once $start_file;
+}
 
 // 运行所有服务
 Worker::runAll();
