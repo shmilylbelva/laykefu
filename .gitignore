@@ -3,6 +3,7 @@
 .env
 composer.lock
 *.log
+runtime/*
 public/uploads/*
 vendor/composer/*
 vendor/topthink/*
