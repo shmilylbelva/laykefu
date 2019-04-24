@@ -478,6 +478,7 @@
         $(".laykefu-min").click(function(){
             $(".laykefu-min").css('display','none');
             $("#laykefu").css('display','block');
+            wordBottom();
         });       
     };
 
