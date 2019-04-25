@@ -5,6 +5,7 @@ body {
     color: #676a6c;
     overflow-x: hidden;
 }
+a,img,button,input,textarea,div,span{-webkit-tap-highlight-color:rgba(255,255,255,0);}
 .small-chat-box {
 
     background: #fff;
@@ -14,14 +15,14 @@ body {
 
 .small-chat-box .heading {
     background: #33cde5;
-    padding: 15px 15px;
+    padding: 20px 15px;
     font-weight: 700;
     color: #fff;
 }
 
 .small-chat-box .chat-date {
     opacity: .6;
-    font-size: 10px;
+    font-size: 13px;
     font-weight: 400;
 }
 
@@ -41,12 +42,6 @@ body {
     font-weight: 700;
     margin-bottom: 3px;
     font-size: 11px;
-}
-
-.small-chat-box .chat-date {
-    opacity: .6;
-    font-size: 10px;
-    font-weight: 400;
 }
 
 .small-chat-box a{
@@ -110,23 +105,22 @@ body {
 .small-chat-box .slimScrollDiv{
     position: absolute;
     width: 100%;
-    top: 48px;
+    top: 58px;
     bottom: 180px;    
 }
 
 .small-chat-box .form-chat {
-    padding: 10px;
-    width: 94%;
+    padding: 0px 3px;
+    width: 98%;
     position: absolute;
     bottom: 0px;
 }
 .small-chat-box .form-chat .btn-event {
-    padding-left: 15px;
     cursor: pointer;
 }
 .small-chat-box .form-chat .input-group {
-    margin-top: 5px;
-    width: 100%;    
+    margin: 6px 15px;
+    width: 93%;
     position: relative;
     display: table;
     border-collapse: separate;
@@ -189,7 +183,7 @@ body {
     font-size: 13px;
     border-width: 1px;
     border-style: solid;
-    border-color: #dedede;
+    border-color: rgba(51, 205, 229, 0.47);
     border-radius: 2px;
     width: 100%;
     height: 100px;
@@ -222,20 +216,20 @@ body {
 }
 
 .small-chat-box .pull-right{float:right}
-.small-chat-box .face-box{    width: 375px;
+.small-chat-box .face-box{    
     background: #fff;
     position: absolute;
     z-index: 99999999;
-    top: 210px;
-    padding: 5px;
+    bottom: 40px;
+    padding: 2px;
 }
 .small-chat-box .face-box:after{content:'';display:block;clear:both}
 .small-chat-box .face-box ul li{
     cursor: pointer;
     float: left;
     border: 1px solid #e8e8e8;
-    height: 22px;
-    width: 26px;
+    height: 25px;
+    width: 28px;
     overflow: hidden;
     margin: -1px 0 0 -1px;
     padding: 4px 2px;
@@ -426,8 +420,8 @@ body .layui-laykefu-face  .layui-layer-content{padding:0; background-color:#fff;
     -moz-border-radius: 50%;
     -o-border-radius: 50%;
     border-radius: 50%;
-    height: 26px;
-    width: 26px;
+    height: 28px;
+    width: 28px;
     margin: 2px
 }
 
@@ -437,8 +431,8 @@ body .layui-laykefu-face  .layui-layer-content{padding:0; background-color:#fff;
     -o-border-radius: 50%;
     border-radius: 50%;    
     box-shadow: 8px 0 0 0,0 0 0 2px inset;
-    height: 3px;
-    width: 3px;
+    height: 4px;
+    width: 4px;
     left: 7px;
     position: absolute;
     top: 29%;
@@ -466,16 +460,16 @@ body .layui-laykefu-face  .layui-layer-content{padding:0; background-color:#fff;
 
 
 .icono-image {
-    width: 27px;
-    height: 20px;
+    width: 32px;
+    height: 23px;
     overflow: hidden;
-    margin: 4px 8px;
+    margin: 4px 12px;
 }
 
 .icono-image:before {
     position: absolute;
-    width: 13px;
-    height: 12px;
+    width: 17px;
+    height: 16px;
     left: -2px;
     top: 10px;
     -webkit-transform: rotate(45deg);
@@ -519,4 +513,13 @@ body .layui-laykefu-face  .layui-layer-content{padding:0; background-color:#fff;
 
 [class*="icono-"],[class*="icono-"] * {
     box-sizing: border-box
+}
+
+.laykefu-newMsg {
+    height: 9px;
+    position: absolute;
+    width: 9px;
+    border-radius: 50%;
+    background: #e28f8f;
+    right: 2px;    
 }

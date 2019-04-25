@@ -14,7 +14,9 @@
     },kf_id = 0
     ,kf_name = ''
     ,socket = null
-    ,uinfo = null
+    ,uinfo = null //用户信息
+    ,time = 0
+    ,timer = 0 //通知定时器
     ,config = {
         uid: '',//用户id
         name: '',//用户name
@@ -23,7 +25,7 @@
         socket: '',//聊天服务器地址
         face_path: '',//表情地址
         height: '',//窗口高度
-        width: '', //窗口宽度      
+        width: '', //窗口宽度 
     },check = function(){
         if('' == config.url || 0 == config.group || '' == config.socket){
             console.log("配置文件错误");
@@ -47,6 +49,7 @@
         check();
         $(tpl()).prependTo('body');//插入客服页面
         isMobile();
+        isVisible();
         socket = new WebSocket('ws://' + config.socket);//创建Socket实例
         uinfo = getCache('laykefu-UserId');
         socket.onopen = function (res) {
@@ -169,10 +172,11 @@
         tpl +=          '<div class="form-chat">';
         tpl +=              '<textarea class="form-control chat-area" id="msg-area" readonly="readonly"></textarea>';
         tpl +=              '<div class="input-group">';
-        tpl +=                  '<span class="btn-event">';
-        tpl +=                      '<i class="icono-smile" id="laykefu-face"></i>';
-        tpl +=                      '<i class="icono-image" id="laykefu-up-image"></i>';
-        tpl +=                  '</span>';        
+        tpl +=                  '<span class="icono-smile" id="laykefu-face"></span>';
+        tpl +=                  '<span class="icono-image" id="laykefu-face"></span>';
+        // tpl +=                      '<i class="icono-smile" id="laykefu-face"></i>';
+        // tpl +=                      '<i class="icono-image" id="laykefu-up-image"></i>';
+        // tpl +=                  '</span>';        
         tpl +=                  '<span class="input-group-btn">';
         tpl +=                      '<button class="btn btn-primary" type="button" id="send">发送</button>';
         tpl +=                  '</span>';
@@ -207,10 +211,15 @@
     },showMsg = function(info){// 展示收到的消息
         // 清除系统消息
         $('.laykefu-chat-system').html('');
+        clearMsg();//清除已有提醒
         var _html = $('#laykefu-chat-list').html();
         var content = replaceContent(info.content);
         var word = msgFactory(content, 'other',info.time,info);
         $("#laykefu-chat-list ul").append(word);
+        if ($('#laykefu').css('display') == 'none') {
+            notice(true);
+        }
+        document.hidden && newMsg();
         showBigPic();
         // 滚动条自动定位到最底端
         wordBottom();
@@ -437,6 +446,47 @@
         ){
             $("#laykefu").css({'width':'100%','height':'100%','bottom':'0px','right':'0px'});
         }
+    },notice = function(state){//新消息红点提示
+        state?$('.laykefu-min').append('<i class="laykefu-newMsg"></i>'):$('.laykefu-newMsg').remove();        
+    },isMinStatus = function(){//当前窗口是否可见
+        //除了Internet Explorer浏览器，其他主流浏览器均支持Window outerHeight 和outerWidth 属性
+        if (window.outerWidth != undefined && window.outerHeight != undefined) {
+            isMin = window.outerWidth <= 160 && window.outerHeight <= 27;
+        } else {
+            isMin = window.outerWidth <= 160 && window.outerHeight <= 27;
+        }
+        //除了Internet Explorer浏览器，其他主流浏览器均支持Window screenY 和screenX 属性
+        if (window.screenY != undefined && window.screenX != undefined) {
+            isMin = window.screenY < -30000 && window.screenX < -30000;//FF Chrome       
+        } else {
+            isMin = window.screenTop < -30000 && window.screenLeft < -30000;//IE
+        }
+        return isMin;
+    },isVisible = function(){//当前窗口是否可见
+        $(document).on('visibilitychange', function(e) {
+            if (e.target.visibilityState === "hidden" && $('.laykefu-newMsg').length >0) {
+                newMsg();
+            }else{
+                clearMsg();
+            }
+        });
+    },newMsg = function(){//消息提醒
+        var title = document.title.replace("【　　　】", "").replace("【新消息】", "");  
+        // 定时器，设置消息切换频率闪烁效果就此产生  
+        timer = setTimeout(function () {  
+            time++;  
+            newMsg();
+            if (time % 2 == 0) {  
+                document.title = "【新消息】" + title  
+            }  
+            else {  
+                document.title = "【　　　】" + title  
+            };  
+        }, 600);  
+        return timer;
+    },clearMsg = function(){// 清除消息提示
+        clearTimeout(timer);  
+        document.title = document.title.replace("【　　　】", "").replace("【新消息】", ""); 
     },event = function(){
         // 发送表情
         $('#laykefu-face').click(function(e){
@@ -478,6 +528,8 @@
         $(".laykefu-min").click(function(){
             $(".laykefu-min").css('display','none');
             $("#laykefu").css('display','block');
+            clearMsg();
+            notice(false);
             wordBottom();
         });       
     };
@@ -489,7 +541,7 @@
         options.group = options.group,//客服分组
         options.socket = options.socket,//聊天服务器地址
         options.face_path = options.face_path+'/',
-        options.uploadUrl = options.uploadUrl,
+        options.uploadUrl = options.uploadUrl || '',
         options.height = options.height || '600px',//窗口高度
         options.width = options.width || '400px', //窗口宽度     
         config = options; 
