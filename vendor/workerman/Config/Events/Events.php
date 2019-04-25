@@ -156,7 +156,7 @@ class Events
 
                 // 绑定 client_id 和 uid
                 Gateway::bindUid($client_id, $message['uid']);
-                // 通知在线用户
+                // 客服上线通知在线用户
                 $msg = [
                     'message_type' => 'kf_online',
                     'data' => [
@@ -449,11 +449,21 @@ class Events
 
         // 尝试是否是客服退出
         if(false == $isServiceUserOut){
+            $type = [
+                'message_type' => 'kf_offline'
+            ];            
             $old = $kfList = self::$global->kfList;
             foreach(self::$global->kfList as $k=>$v){
+                $type['data']['kf_group'] = $k;                     
                 foreach($v as $key=>$vo){
+                    $type['data']['kf_id'] = $vo['id']; 
+                    $type['data']['kf_name'] = $vo['name']; 
+                    foreach($vo['user_info'] as $userId){
+                        Gateway::sendToClient($userId, json_encode($type));
+                    }
                     // 客服服务列表中无数据，才去删除客服内存信息
-                    if($client_id == $vo['client_id'] && (0 == count($vo['user_info']))){
+                    // && (0 == count($vo['user_info']))
+                    if($client_id == $vo['client_id'] ){
                         unset($kfList[$k][$key]);
                         break;
                     }
@@ -644,6 +654,15 @@ class Events
                 'end_time' => 0
             ];
 
+            $init_service_log = [
+                'user_id' => $res['data']['3']['id'],
+                'kf_id' => intval(ltrim($res['data']['0'], 'KF')),
+                'group_id' => $group,
+                'end_time' => 0
+            ];
+
+            self::$db->delete('ws_service_log')->where($init_service_log)->query();
+            unset($init_service_log);
             self::$db->insert('ws_service_log')->cols($serviceLog)->query();
             unset($serviceLog);
 

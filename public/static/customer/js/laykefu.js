@@ -32,7 +32,7 @@
             return false;
         }        
         if (!getCache('laykefu-UserId')) {//是否已分配账号
-            config.uid = config.uid || parseInt(Math.random() * 40) + 1;
+            config.uid = config.uid || setMember()+parseInt(Math.random() * 40) + 1;
             config.name = config.name || '会员'+config.uid;
             cacheChat({key:"laykefu-UserId",data:[{'userId':config.uid,'name': config.name,'avatar': config.avatar}]});
         }
@@ -85,13 +85,25 @@
                         kf_id = data.data.kf_id;
                         kf_name = data.data.kf_name;
                         $('#laykefu-title').html('与 ' + kf_name + ' 交流中');
-                        showChatLog();    
                         showSystem({content: '客服 ' + kf_name + ' 为您服务'});
+                        wordBottom();
                         isLock(false);
                     }
                
                     break;                    
-                // 监测聊天数据
+                // 监测客服下线
+                case 'kf_offline':
+                    if (data.data.kf_group == config.group) {
+                        kf_id = data.data.kf_id;
+                        kf_name = data.data.kf_name;
+                        $('#laykefu-title').html('暂时没有客服');
+                        showSystem({content: '客服 ' + kf_name + ' 暂时停止服务'});
+                        wordBottom();
+                        isLock(true);
+                    }
+               
+                    break;                    
+                // 监测聊天数据                
                 case 'chatMessage':
                     showMsg(data.data);
                     break;
@@ -109,6 +121,9 @@
         socket.onclose = function (err) {
             console.log('连接断开');
         };
+    },setMember = function(){
+        var d = new Date(new Date());
+        return  digit(d.getDate()) + digit(d.getHours()) + digit(d.getMinutes()) + digit(d.getSeconds());        
     },isLock = function(state){
         state?($('#msg-area').attr('readonly', 'readonly')):$('#msg-area').removeAttr('readonly');
     },ping = function(time){
