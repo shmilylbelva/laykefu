@@ -23,10 +23,9 @@ class Db
         'charset'    => 'utf8',
     );    
 
+    //分布式变量共享组件GlobalData的ip和port
     public static $config = array(
         'globalData'    => '127.0.0.1:2207',
     );    
 
 }
-
-
