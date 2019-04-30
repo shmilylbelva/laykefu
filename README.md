@@ -93,7 +93,7 @@ composer install
 
  2.3 修改vendor/workerman/Config/Db.php相关参数
 
-3.如果你是在服务器上运行该项目，请开放7272端口供laykefu使用，以阿里云为例，在网络和安全的安全组里面修改规则，增加7272端口
+3.如果你是在服务器上运行该项目，请开放7272端口供laykefu使用，以阿里云为例，在`网络和安全`的`安全组`里面`修改规则`，增加7272端口
 
 3、启动gatawayworker相关服务
 如果你是在windows上运行的话，直接双击`/vendor/workerman/Conf/start_for_bat.bat`即可
@@ -137,5 +137,17 @@ php start.php connections
 后台管理地址：host/admin
 账户密码：admin admin
 
+## License
+
+MIT
+
+## QQ交流群
+
+【601391162】
+
+**觉得项目对您有用，请我喝杯咖啡吧。您的支持将鼓励我继续创作！**
+
+![QQ截图20180904161534.jpg](https://upload-images.jianshu.io/upload_images/2825702-ae4567c3bf58fad4.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/320)
+![QQ截图20180904161507.jpg](https://upload-images.jianshu.io/upload_images/2825702-ef48969aa5338754.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/320)
 
 

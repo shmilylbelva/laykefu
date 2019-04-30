@@ -4,6 +4,7 @@
     <content url="file://$MODULE_DIR$">
       <excludeFolder url="file://$MODULE_DIR$/vendor/composer" />
       <excludeFolder url="file://$MODULE_DIR$/vendor/topthink/think-installer" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/workerman/Config" />
       <excludeFolder url="file://$MODULE_DIR$/vendor/workerman/applications" />
       <excludeFolder url="file://$MODULE_DIR$/vendor/workerman/gateway-worker" />
       <excludeFolder url="file://$MODULE_DIR$/vendor/workerman/globaldata" />
