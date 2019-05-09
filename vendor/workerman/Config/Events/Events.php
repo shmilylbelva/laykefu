@@ -28,8 +28,13 @@ use Config\Db as DbConfig;
  * 主要是处理 onConnect onMessage onClose 三个方法
  * onConnect 和 onClose 如果不需要可以不用实现并删除
  */
+
+//如果指定某个域名才能connect，请修改这里
+// const HTTP_ORIGIN = 'http://www.domain.com';
+
 class Events
 {
+
     /**
      * 新建一个类的静态成员，用来保存数据库实例
      */
@@ -99,23 +104,20 @@ class Events
 
     /**
      * 当客户端连接时触发
-     * 如果业务不需此回调可以删除onConnect
+     * 当客户端连接上gateway完成websocket握手时触发的回调函数。
      *
      * @param int $client_id 连接id
      */
-    public static function onConnect($client_id)
+    public static function onWebSocketConnect($client_id, $data)
     {
-        // $client_id->onWebSocketConnect = function($client_id , $http_header)
-        // {
-        //     // 可以在这里判断连接来源是否合法，不合法就关掉连接
-        //     // $_SERVER['HTTP_ORIGIN']标识来自哪个站点的页面发起的websocket链接
-        //     if($_SERVER['HTTP_ORIGIN'] != 'http://laykefu.guoshanchina.com')
-        //     {
-        //         $client_id->close();
-        //     }
-        //     // onWebSocketConnect 里面$_GET $_SERVER是可用的
-        //     // var_dump($_GET, $_SERVER);
-        // };
+        if(HTTP_ORIGIN && $data['server']['HTTP_ORIGIN'] != HTTP_ORIGIN)
+        {
+         $init_message = array(
+             'message_type' => 'unauthorized',
+         );          
+          Gateway::sendToClient($client_id, json_encode($init_message));
+          Gateway::closeClient($client_id);
+        }
     }
 
     /**
