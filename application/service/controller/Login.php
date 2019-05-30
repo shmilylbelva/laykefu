@@ -26,6 +26,10 @@ class Login extends Controller
                 return json(['code' => -1, 'data' => '', 'msg' => '客服不存在']);
             }
 
+            if ($user['status'] == 2) {
+                return json(['code' => -1, 'data' => '', 'msg' => '客服被禁用']);
+            }
+
             if(md5($password . config('salt')) != $user['user_pwd']){
                 return json(['code' => -2, 'data' => '', 'msg' => '密码错误']);
             }
