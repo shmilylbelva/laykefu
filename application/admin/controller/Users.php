@@ -12,8 +12,14 @@ class Users extends Base
     public function index()
     {
         if(request()->isAjax()){
+            $input = request()->request();
 
-            $result = db('users')->order('id', 'desc')->select();
+            $result = db('users')->order('id', 'desc');
+
+            if (!empty($input['searchText'])) {
+                $result = $result->whereLike('user_name', '%' . $input['searchText'] . '%');
+            }
+            $result = $result->select();
             foreach($result as $key=>$vo){
                 // 优化显示头像
                 $result[$key]['user_avatar'] = '<img src="' . $vo['user_avatar'] . '" width="40px" height="40px">';
@@ -130,7 +136,7 @@ class Users extends Base
                 return json(['code' => -2, 'data' => '', 'msg' => $e->getMessage()]);
             }
 
-            return json(['code' => 1, 'data' => '', 'msg' => '编辑客服成功']);
+            return json(['code' => 1, 'data' => '/admin/users/index.html', 'msg' => '编辑客服成功']);
         }
 
         $id = input('param.id/d');
