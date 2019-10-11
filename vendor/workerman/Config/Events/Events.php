@@ -30,7 +30,7 @@ use Config\Db as DbConfig;
  */
 
 //如果指定某个域名才能connect，请修改这里
-// const HTTP_ORIGIN = 'http://www.domain.com';
+const HTTP_ORIGIN = '';
 
 class Events
 {
