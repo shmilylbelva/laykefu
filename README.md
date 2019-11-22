@@ -1,8 +1,7 @@
 ## laykefu
 thinkphp5+Gatewayworker搭建的web客服系统
 
-体验地址：http://www.laykefu.com 搭建中
-体验地址：http://laykefu.gogophp.cn  临时
+体验地址：http://laykefu.com 
  
 
 github仓库：https://github.com/shmilylbelva/laykefu
