@@ -1,13 +1,13 @@
 ## laykefu
 thinkphp5+Gatewayworker搭建的web客服系统
 
-体验地址：http://laykefu.com 
+体验地址：https://laykefu.com 
 
-客服地址:http://laykefu.com/service
+客服地址:https://laykefu.com/service
 账户密码：
 客服小美 123456 
 
-后台管理地址：http://laykefu.com/admin
+后台管理地址：https://laykefu.com/admin
 账户密码：admin admin
 
 github仓库：https://github.com/shmilylbelva/laykefu
