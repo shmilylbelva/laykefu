@@ -1,4 +1,5 @@
 .git
+.idea
 .idea/*
 .env
 composer.lock

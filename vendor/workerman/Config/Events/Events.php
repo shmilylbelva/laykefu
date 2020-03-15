@@ -1,5 +1,5 @@
 <?php
-ini_set('date.timezone','Asia/Shanghai');
+ini_set('date.timezone', 'Asia/Shanghai');
 /**
  * This file is part of workerman.
  *
@@ -18,11 +18,13 @@ ini_set('date.timezone','Asia/Shanghai');
  * 如果发现业务卡死，可以将下面declare打开（去掉//注释），并执行php start.php reload
  * 然后观察一段时间workerman.log看是否有process_timeout异常
  */
+
 //declare(ticks=1);
 use \GatewayWorker\Lib\Gateway;
 use Workerman\Lib\Timer;
 use \GatewayWorker\Lib\Db;
 use Config\Db as DbConfig;
+
 /**
  * 主逻辑
  * 主要是处理 onConnect onMessage onClose 三个方法
@@ -30,18 +32,17 @@ use Config\Db as DbConfig;
  */
 
 //如果指定某个域名才能connect，请修改这里
-const HTTP_ORIGIN = '';
+//const HTTP_ORIGIN = '';
 
 class Events
 {
-
     /**
      * 新建一个类的静态成员，用来保存数据库实例
      */
     public static $db = null;
     public static $global = null;
     public static $global_cfg = null;
-    
+
     /**
      * 进程启动后初始化数据库连接
      */
@@ -49,29 +50,29 @@ class Events
     {
         if (empty(self::$db)) {
             self::$db = Db::instance('db');  //数据库链接
-            
+
         }
         if (empty(self::$global_cfg)) {
             self::$global_cfg = DbConfig::$config;  //分布式数据配置
-            
-        }        
+
+        }
         if (empty(self::$global)) {
             self::$global = new \GlobalData\Client(self::$global_cfg['globalData']);
             // 客服列表
-            if(is_null(self::$global->kfList)){
+            if (is_null(self::$global->kfList)) {
                 self::$global->kfList = [];
             }
             // 会员列表[动态的，这里面只是目前未被分配的会员信息]
-            if(is_null(self::$global->userList)){
+            if (is_null(self::$global->userList)) {
                 self::$global->userList = [];
             }
             // 会员以 uid 为key的信息简表,只有在用户退出的时候，才去执行修改
-            if(is_null(self::$global->uidSimpleList)){
+            if (is_null(self::$global->uidSimpleList)) {
                 self::$global->uidSimpleList = [];
             }
             // 当天的累积接入值
             $key = date('Ymd') . 'total_in';
-            if(is_null(self::$global->$key)){
+            if (is_null(self::$global->$key)) {
                 self::$global->$key = 0;
 
                 $oldKey = date('Ymd', strtotime('-1 day')); // 删除前一天的统计值
@@ -80,7 +81,7 @@ class Events
             }
             // 成功接入值
             $key = date('Ymd') . 'success_in';
-            if(is_null(self::$global->$key)){
+            if (is_null(self::$global->$key)) {
                 self::$global->$key = 0;
 
                 $oldKey = date('Ymd', strtotime('-1 day')); // 删除前一天的统计值
@@ -90,13 +91,13 @@ class Events
         }
 
         // 定时统计数据
-        if(0 === $worker->id){
+        if (0 === $worker->id) {
             // 1分钟统计一次实时数据
-            Timer::add(60 * 1, function(){
+            Timer::add(60 * 1, function () {
                 self::writeLog(1);
             });
             // 40分钟写一次当前日期点数的log数据
-            Timer::add(60 * 40, function(){
+            Timer::add(60 * 40, function () {
                 self::writeLog(2);
             });
         }
@@ -104,20 +105,23 @@ class Events
 
     /**
      * 当客户端连接时触发
-     * 当客户端连接上gateway完成websocket握手时触发的回调函数。
+     * 如果业务不需此回调可以删除onConnect
      *
      * @param int $client_id 连接id
      */
-    public static function onWebSocketConnect($client_id, $data)
+    public static function onConnect($client_id)
     {
-        if(HTTP_ORIGIN && $data['server']['HTTP_ORIGIN'] != HTTP_ORIGIN)
-        {
-         $init_message = array(
-             'message_type' => 'unauthorized',
-         );          
-          Gateway::sendToClient($client_id, json_encode($init_message));
-          Gateway::closeClient($client_id);
-        }
+        // $client_id->onWebSocketConnect = function($client_id , $http_header)
+        // {
+        //     // 可以在这里判断连接来源是否合法，不合法就关掉连接
+        //     // $_SERVER['HTTP_ORIGIN']标识来自哪个站点的页面发起的websocket链接
+        //     if($_SERVER['HTTP_ORIGIN'] != 'http://laykefu.guoshanchina.com')
+        //     {
+        //         $client_id->close();
+        //     }
+        //     // onWebSocketConnect 里面$_GET $_SERVER是可用的
+        //     // var_dump($_GET, $_SERVER);
+        // };
     }
 
     /**
@@ -131,11 +135,11 @@ class Events
         switch ($message['type']) {
             // 客服初始化
             case 'init':
-               $kfList = self::$global->kfList;
+                $kfList = self::$global->kfList;
                 // 如果该客服未在内存中记录则记录
-                if(!isset($kfList[$message['group']]) || !array_key_exists($message['uid'], $kfList[$message['group']])){
+                if (!isset($kfList[$message['group']]) || !array_key_exists($message['uid'], $kfList[$message['group']])) {
 
-                    do{
+                    do {
                         $newKfList = $kfList;
                         $newKfList[$message['group']][$message['uid']] = [
                             'id' => $message['uid'],
@@ -145,14 +149,14 @@ class Events
                             'task' => 0,
                             'user_info' => []
                         ];
-                    }while(!self::$global->cas('kfList', $kfList, $newKfList));
+                    } while (!self::$global->cas('kfList', $kfList, $newKfList));
                     unset($newKfList, $kfList);
-                }else if(isset($kfList[$message['group']][$message['uid']])){
+                } else if (isset($kfList[$message['group']][$message['uid']])) {
 
-                    do{
+                    do {
                         $newKfList = $kfList;
                         $newKfList[$message['group']][$message['uid']]['client_id'] = $client_id;
-                    }while(!self::$global->cas('kfList', $kfList, $newKfList));
+                    } while (!self::$global->cas('kfList', $kfList, $newKfList));
                     unset($newKfList, $kfList);
                 }
 
@@ -168,7 +172,7 @@ class Events
                         'kf_group' => $message['group'],
                         'time' => date('Y-m-d H:i:s'),
                     ]
-                ];               
+                ];
                 Gateway::sendToAll(json_encode($msg));
                 break;
             // 顾客初始化
@@ -176,8 +180,8 @@ class Events
 
                 $userList = self::$global->userList;
                 // 如果该顾客未在内存中记录则记录
-                if(!array_key_exists($message['uid'], $userList)){
-                    do{
+                if (!array_key_exists($message['uid'], $userList)) {
+                    do {
                         $NewUserList = $userList;
                         $NewUserList[$message['uid']] = [
                             'id' => $message['uid'],
@@ -188,27 +192,27 @@ class Events
                             'client_id' => $client_id
                         ];
 
-                    }while(!self::$global->cas('userList', $userList, $NewUserList));
+                    } while (!self::$global->cas('userList', $userList, $NewUserList));
                     unset($NewUserList, $userList);
 
                     // 维护 UID对应的client_id 数组
-                    do{
+                    do {
                         $old = $newList = self::$global->uidSimpleList;
                         $newList[$message['uid']] = [
                             $client_id,
                             $message['group']
                         ];
 
-                    }while(!self::$global->cas('uidSimpleList', $old, $newList));
+                    } while (!self::$global->cas('uidSimpleList', $old, $newList));
                     unset($old, $newList);
 
                     // 写入接入值
                     $key = date('Ymd') . 'total_in';
                     self::$global->$key = 0;
-                    do{
+                    do {
                         $oldKey = date('Ymd', strtotime('-1 day')); // 删除前一天的统计值
                         unset(self::$global->$oldKey);
-                    }while(!self::$global->increment($key));
+                    } while (!self::$global->increment($key));
                     unset($key);
                 }
 
@@ -222,7 +226,7 @@ class Events
             case 'chatMessage':
 
                 $client = Gateway::getClientIdByUid($message['data']['to_id']);
-                if(!empty($client)){
+                if (!empty($client)) {
                     $chat_message = [
                         'message_type' => 'chatMessage',
                         'data' => [
@@ -256,8 +260,8 @@ class Events
                 // 通知客户端转接中
                 $simpleList = self::$global->uidSimpleList;
 
-                if(!isset($simpleList[$message['uid']])){ // 客户已经退出
-                    return ;
+                if (!isset($simpleList[$message['uid']])) { // 客户已经退出
+                    return;
                 }
 
                 $userClient = $simpleList[$message['uid']]['0'];
@@ -274,10 +278,10 @@ class Events
 
                 // 从当前客服的服务表中删除这个会员
                 $old = $kfList = self::$global->kfList;
-                if(!isset($kfList[$userGroup])){
+                if (!isset($kfList[$userGroup])) {
                     $waitMsg = '暂时没有相关客服上班,请稍后再咨询。';
                     // 逐一通知
-                    foreach(self::$global->userList as $vo){
+                    foreach (self::$global->userList as $vo) {
 
                         $waitMessage = [
                             'message_type' => 'wait',
@@ -288,16 +292,16 @@ class Events
                         Gateway::sendToClient($userClient, json_encode($waitMessage));
                         unset($waitMessage);
                     }
-                    return ;
+                    return;
                 }
                 $myList = $kfList[$userGroup]; // 该客服分组数组
-                foreach($myList as $key=>$vo){
-                    if(in_array($userClient, $vo['user_info'])){
+                foreach ($myList as $key => $vo) {
+                    if (in_array($userClient, $vo['user_info'])) {
 
                         // 维护现在的该客服的服务信息
                         $kfList[$userGroup][$key]['task'] -= 1; // 当前服务的人数 -1
-                        foreach($vo['user_info'] as $k=>$v){
-                            if($userClient == $v){
+                        foreach ($vo['user_info'] as $k => $v) {
+                            if ($userClient == $v) {
                                 unset($kfList[$userGroup][$key]['user_info'][$k]);
                                 break;
                             }
@@ -306,12 +310,13 @@ class Events
                         break;
                     }
                 }
-                while(!self::$global->cas('kfList', $old, $kfList)){}; // 刷新内存中客服的服务列表
+                while (!self::$global->cas('kfList', $old, $kfList)) {
+                }; // 刷新内存中客服的服务列表
                 unset($old, $kfList, $myList);
 
                 // 将会员加入队列中
                 $userList = self::$global->userList;
-                do{
+                do {
                     $NewUserList = $userList;
                     $NewUserList[$message['uid']] = [
                         'id' => $message['uid'],
@@ -322,7 +327,7 @@ class Events
                         'client_id' => $userClient
                     ];
 
-                }while(!self::$global->cas('userList', $userList, $NewUserList));
+                } while (!self::$global->cas('userList', $userList, $NewUserList));
                 unset($NewUserList, $userList);
 
                 // 执行会员分配通知双方
@@ -333,7 +338,7 @@ class Events
             case 'closeUser':
 
                 $userInfo = self::$global->uidSimpleList;
-                if(isset($userInfo[$message['uid']])){
+                if (isset($userInfo[$message['uid']])) {
                     $waitMessage = [
                         'message_type' => 'wait',
                         'data' => [
@@ -344,7 +349,19 @@ class Events
                     unset($waitMessage);
                 }
                 unset($userInfo);
-                break;  
+                break;
+            case 'ping':
+                if (isset($message['data']['l_user_id'])) {
+                    $user = self::$db->query("SELECT `status` FROM `ws_users` WHERE `id`={$message['data']['l_user_id']} LIMIT 1");
+                    if ($user[0]['status'] == 2) {
+                        $waitMessage = [
+                            'message_type' => 'close',
+                        ];
+                        Gateway::sendToClient($userInfo[$message['uid']]['0'], json_encode($waitMessage));
+                        unset($waitMessage);
+                    }
+                }
+                break;
         }
     }
 
@@ -360,9 +377,9 @@ class Events
         $isServiceUserOut = false;
         // 将会员服务信息，从客服的服务列表中移除
         $old = $kfList = self::$global->kfList;
-        foreach($kfList as $k=>$v){
-            foreach($v as $key=>$vo){
-                if(in_array($client_id, $vo['user_info'])){
+        foreach ($kfList as $k => $v) {
+            foreach ($v as $key => $vo) {
+                if (in_array($client_id, $vo['user_info'])) {
 
                     $isServiceUserOut = true;
 
@@ -372,8 +389,8 @@ class Events
                     // 从会员的内存表中检索出该会员的信息，并更新内存
                     $oldSimple = $simpleList = self::$global->uidSimpleList;
                     $outUser = [];
-                    foreach($simpleList as $u=>$c){
-                        if($c['0'] == $client_id){
+                    foreach ($simpleList as $u => $c) {
+                        if ($c['0'] == $client_id) {
                             $outUser[] = [
                                 'user_id' => $u,
                                 'group_id' => $c['1']
@@ -382,12 +399,13 @@ class Events
                             break;
                         }
                     }
-                    while(!self::$global->cas('uidSimpleList', $oldSimple, $simpleList)){};
+                    while (!self::$global->cas('uidSimpleList', $oldSimple, $simpleList)) {
+                    };
                     unset($oldSimple, $simpleList);
 
                     //$outUser = self::$db->query("select `user_id`,`group_id` from `ws_service_log` where `client_id`= '" . $client_id . "'");
                     // 通知 客服删除退出的用户
-                    if(!empty($outUser)){
+                    if (!empty($outUser)) {
                         $del_message = [
                             'message_type' => 'delUser',
                             'data' => [
@@ -404,30 +422,31 @@ class Events
 
                     // 维护现在的该客服的服务信息
                     $kfList[$k][$key]['task'] -= 1; // 当前服务的人数 -1
-                    foreach($vo['user_info'] as $m=>$l){
-                        if($client_id == $l){
+                    foreach ($vo['user_info'] as $m => $l) {
+                        if ($client_id == $l) {
                             unset($kfList[$k][$key]['user_info'][$m]);
                             break;
                         }
                     }
 
                     // 刷新内存中客服的服务列表
-                    while(!self::$global->cas('kfList', $old, $kfList)){};
+                    while (!self::$global->cas('kfList', $old, $kfList)) {
+                    };
                     unset($old, $kfList);
 
                     break;
                 }
             }
 
-            if($isServiceUserOut) break;
+            if ($isServiceUserOut) break;
         }
 
 
         // 尝试从排队的用户中删除退出的客户端
-        if(false == $isServiceUserOut){
+        if (false == $isServiceUserOut) {
             $old = $userList = self::$global->userList;
-            foreach(self::$global->userList as $key=>$vo){
-                if($client_id == $vo['client_id']){
+            foreach (self::$global->userList as $key => $vo) {
+                if ($client_id == $vo['client_id']) {
 
                     $isServiceUserOut = true;
 
@@ -435,44 +454,47 @@ class Events
                     break;
                 }
             }
-            while(!self::$global->cas('userList', $old, $userList)){};
+            while (!self::$global->cas('userList', $old, $userList)) {
+            };
 
             // 从会员的内存表中检索出该会员的信息，并更新内存
             $oldSimple = $simpleList = self::$global->uidSimpleList;
-            foreach($simpleList as $u=>$c){
-                if($c['0'] == $client_id){
+            foreach ($simpleList as $u => $c) {
+                if ($c['0'] == $client_id) {
                     unset($simpleList[$u]);
                     break;
                 }
             }
-            while(!self::$global->cas('uidSimpleList', $oldSimple, $simpleList)){};
+            while (!self::$global->cas('uidSimpleList', $oldSimple, $simpleList)) {
+            };
             unset($oldSimple, $simpleList);
         }
 
         // 尝试是否是客服退出
-        if(false == $isServiceUserOut){
+        if (false == $isServiceUserOut) {
             $type = [
                 'message_type' => 'kf_offline'
-            ];            
+            ];
             $old = $kfList = self::$global->kfList;
-            foreach(self::$global->kfList as $k=>$v){
-                $type['data']['kf_group'] = $k;                     
-                foreach($v as $key=>$vo){
-                    $type['data']['kf_id'] = $vo['id']; 
-                    $type['data']['kf_name'] = $vo['name']; 
-                    foreach($vo['user_info'] as $userId){
+            foreach (self::$global->kfList as $k => $v) {
+                $type['data']['kf_group'] = $k;
+                foreach ($v as $key => $vo) {
+                    $type['data']['kf_id'] = $vo['id'];
+                    $type['data']['kf_name'] = $vo['name'];
+                    foreach ($vo['user_info'] as $userId) {
                         Gateway::sendToClient($userId, json_encode($type));
                     }
                     // 客服服务列表中无数据，才去删除客服内存信息
                     // && (0 == count($vo['user_info']))
-                    if($client_id == $vo['client_id'] ){
+                    if ($client_id == $vo['client_id']) {
                         unset($kfList[$k][$key]);
                         break;
                     }
                 }
             }
 
-            while(!self::$global->cas('kfList', $old, $kfList)){};
+            while (!self::$global->cas('kfList', $old, $kfList)) {
+            };
         }
     }
 
@@ -489,10 +511,12 @@ class Events
         $res = self::assignmentTask(self::$global->kfList, self::$global->userList, $group, $maxNumber);
         unset($maxNumber);
 
-        if(1 == $res['code']){
+        if (1 == $res['code']) {
 
-            while(!self::$global->cas('kfList', self::$global->kfList, $res['data']['4'])){}; // 更新客服数据
-            while(!self::$global->cas('userList', self::$global->userList, $res['data']['5'])){}; // 更新会员数据
+            while (!self::$global->cas('kfList', self::$global->kfList, $res['data']['4'])) {
+            }; // 更新客服数据
+            while (!self::$global->cas('userList', self::$global->userList, $res['data']['5'])) {
+            }; // 更新会员数据
 
             // 通知会员发送信息绑定客服的id
             $noticeUser = [
@@ -517,7 +541,7 @@ class Events
 
             // 逐一通知
             $number = 1;
-            foreach(self::$global->userList as $vo){
+            foreach (self::$global->userList as $vo) {
 
                 $waitMsg = '您前面还有 ' . $number . ' 位会员在等待。';
                 $waitMessage = [
@@ -535,20 +559,20 @@ class Events
             // 写入接入值
             $key = date('Ymd') . 'success_in';
             self::$global->$key = 0;
-            do{
+            do {
                 $oldKey = date('Ymd', strtotime('-1 day')); // 删除前一天的统计值
                 unset(self::$global->$oldKey);
-            }while(!self::$global->increment($key));
+            } while (!self::$global->increment($key));
             unset($key);
 
-        }else{
+        } else {
 
-            switch ($res['code']){
+            switch ($res['code']) {
 
                 case -1:
                     $waitMsg = '暂时没有客服上班,请稍后再咨询。';
                     // 逐一通知
-                    foreach(self::$global->userList as $vo){
+                    foreach (self::$global->userList as $vo) {
 
                         $waitMessage = [
                             'message_type' => 'wait',
@@ -566,7 +590,7 @@ class Events
                 case -4:
                     // 逐一通知
                     $number = 1;
-                    foreach(self::$global->userList as $vo){
+                    foreach (self::$global->userList as $vo) {
 
                         $waitMsg = '您前面还有 ' . $number . ' 位会员在等待。';
                         $waitMessage = [
@@ -598,10 +622,12 @@ class Events
         $res = self::assignmentTask(self::$global->kfList, self::$global->userList, $group, $maxNumber);
         unset($maxNumber);
 
-        if(1 == $res['code']){
+        if (1 == $res['code']) {
 
-            while(!self::$global->cas('kfList', self::$global->kfList, $res['data']['4'])){}; // 更新客服数据
-            while(!self::$global->cas('userList', self::$global->userList, $res['data']['5'])){}; // 更新会员数据
+            while (!self::$global->cas('kfList', self::$global->kfList, $res['data']['4'])) {
+            }; // 更新客服数据
+            while (!self::$global->cas('userList', self::$global->userList, $res['data']['5'])) {
+            }; // 更新会员数据
 
             // 通知会员发送信息绑定客服的id
             $noticeUser = [
@@ -616,7 +642,7 @@ class Events
 
             // 检测是否开启自动应答
             $sayHello = self::$db->query('select `word`,`status` from `ws_reply` where `id` = 1');
-            if(!empty($sayHello) && 1 == $sayHello['0']['status']){
+            if (!empty($sayHello) && 1 == $sayHello['0']['status']) {
 
                 $hello = [
                     'message_type' => 'helloMessage',
@@ -671,16 +697,16 @@ class Events
             // 写入接入值
             $key = date('Ymd') . 'success_in';
             self::$global->$key = 0;
-            do{
+            do {
                 $oldKey = date('Ymd', strtotime('-1 day')); // 删除前一天的统计值
                 unset(self::$global->$oldKey);
-            }while(!self::$global->increment($key));
+            } while (!self::$global->increment($key));
             unset($key);
 
-        }else{
+        } else {
 
             $waitMsg = '';
-            switch ($res['code']){
+            switch ($res['code']) {
 
                 case -1:
                     $waitMsg = '暂时没有客服上班,请稍后再咨询。';
@@ -718,22 +744,22 @@ class Events
     private static function assignmentTask($kfList, $userList, $group, $total)
     {
         // 没有客服上线
-        if(empty($kfList) || empty($kfList[$group])){
+        if (empty($kfList) || empty($kfList[$group])) {
             return ['code' => -1];
         }
 
         // 没有待分配的会员
-        if(empty($userList)){
+        if (empty($userList)) {
             return ['code' => -2];
         }
 
         // 未设置每个客服可以服务多少人
-        if(0 == $total){
+        if (0 == $total) {
             return ['code' => -3];
         }
 
         // 查看该组的客服是否在线
-        if(!isset($kfList[$group])){
+        if (!isset($kfList[$group])) {
             return ['code' => -1];
         }
 
@@ -744,8 +770,8 @@ class Events
         $min = $kf['task'];
         $flag = $kf['id'];
 
-        foreach($kfList[$group] as $key=>$vo){
-            if($vo['task'] < $min){
+        foreach ($kfList[$group] as $key => $vo) {
+            if ($vo['task'] < $min) {
                 $min = $vo['task'];
                 $flag = $key;
             }
@@ -753,7 +779,7 @@ class Events
         unset($kf);
 
         // 需要排队了
-        if($kfList[$group][$flag]['task'] == $total){
+        if ($kfList[$group][$flag]['task'] == $total) {
             return ['code' => -4];
         }
 
@@ -780,9 +806,9 @@ class Events
     private static function getMaxServiceNum()
     {
         $maxNumber = self::$db->query('select `max_service` from `ws_kf_config` where `id` = 1');
-        if(!empty($maxNumber)){
+        if (!empty($maxNumber)) {
             $maxNumber = 5;
-        }else{
+        } else {
             $maxNumber = $maxNumber['0']['max_service'];
         }
 
@@ -796,8 +822,8 @@ class Events
     private static function writeLog($flag = 1)
     {
         // 上午 8点 到 22 点开始统计
-        if(date('H') < 8 || date('H') > 22){
-            return ;
+        if (date('H') < 8 || date('H') > 22) {
+            return;
         }
 
         // 当前正在接入的人 和 在线客服数
@@ -805,12 +831,12 @@ class Events
 
         $nowTalking = 0;
         $onlineKf = 0;
-        if(!empty($kfList)){
+        if (!empty($kfList)) {
 
-            foreach($kfList as $key=>$vo){
+            foreach ($kfList as $key => $vo) {
 
                 $onlineKf += count($vo);
-                foreach($vo as $k=>$v){
+                foreach ($vo as $k => $v) {
                     $nowTalking += count($v['user_info']);
                 }
             }
@@ -831,7 +857,7 @@ class Events
         ];
         self::$db->update('ws_now_data')->cols($param)->where('id=1')->query();
 
-        if(2 == $flag){
+        if (2 == $flag) {
             $param = [
                 'is_talking' => $nowTalking,
                 'in_queue' => $inQueue,

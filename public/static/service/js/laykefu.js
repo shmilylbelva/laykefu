@@ -22,14 +22,18 @@ socket.onopen = function (res) {
     socket.send(login_data);
     //每30秒ping服务器
     setInterval(function(){
-        socket.send('{"type":"ping"}');
-    },30000);    
+        // socket.send('{"type":"ping"}');
+        socket.send(JSON.stringify({
+            type: 'ping',
+            data: {l_user_id: uid}
+        }));
+    },30000);
 };
 
 // 监听消息
 socket.onmessage = function (res) {
     var data = eval("(" + res.data + ")");
-    
+
     switch (data['message_type']) {
         // 服务端ping客户端
         case 'ping':
@@ -46,6 +50,9 @@ socket.onmessage = function (res) {
         // 监测聊天数据
         case 'chatMessage':
             showUserMessage(data.data, data.data.content);
+            break;
+        case 'close':
+            loginOut();
             break;
     }
 };
