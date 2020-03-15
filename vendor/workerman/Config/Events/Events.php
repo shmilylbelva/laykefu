@@ -30,6 +30,10 @@ use Config\Db as DbConfig;
  * 主要是处理 onConnect onMessage onClose 三个方法
  * onConnect 和 onClose 如果不需要可以不用实现并删除
  */
+
+//如果指定某个域名才能connect，请修改这里
+//const HTTP_ORIGIN = '';
+
 class Events
 {
     /**

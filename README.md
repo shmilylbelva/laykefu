@@ -1,7 +1,14 @@
 ## laykefu
 thinkphp5+Gatewayworker搭建的web客服系统
 
-体验地址：http://laykefu.guoshanchina.com
+体验地址：https://laykefu.com 
+
+客服地址:https://laykefu.com/service
+账户密码：
+客服小美 123456 
+
+后台管理地址：https://laykefu.com/admin
+账户密码：admin admin
 
 github仓库：https://github.com/shmilylbelva/laykefu
 
@@ -11,16 +18,16 @@ github仓库：https://github.com/shmilylbelva/laykefu
 
 1、添加laykefu.css样式文件
 ```php
-    <link href="http://laykefu.guoshanchina.com/static/customer/css/laykefu.css" rel="stylesheet" type="text/css" />
+    <link href="你的域名/static/customer/css/laykefu.css" rel="stylesheet" type="text/css" />
 ```
 
 2、添加jquery.js和laykefu.js 文件 
 ```php  
 <script src="https://cdn.staticfile.org/jquery/2.1.4/jquery.min.js"></script>
-<script src="http://laykefu.guoshanchina.com/static/customer/js/laykefu.js"></script>
+<script src="你的域名/static/customer/js/laykefu.js"></script>
 ```
 
-3、添加html目标代码 id="show-laykefu"，样式可根据需求自定义
+3、添加html目标代码 ，样式可根据需求自定义
 ```php
 <div class="laykefu-min">咨询客服</div>
 ```
@@ -77,21 +84,15 @@ $(".laykefu-min").click(function(){
 默认情况下咨询的客户是随机分配账户信息，如果你的平台有账户系统，那么可以在初始化的时候传递uid和name即可
 
 ## 2.服务端配置
-1、安装依赖
-```php
-composer install
-```
-2、配置环境
- 2.1 复制.env.example文件并命名为.env，修改.env参数
 
- 2.2 如果是在服务器环境运行该项目，那么请配置`/vendor/workerman/Conf/Events`下的
+ 1.1 如果是在服务器环境运行该项目，那么请配置`/vendor/workerman/Conf/Events`下的
  start_globaldata.php的$globaldata参数，
  start_gateway.php的$gateway->lanIp参数，
  $gateway->registerAddress参数
- start_businessworker.php的$worker->registerAddress参数
+ start_businessworker.php的$worker->registerAddress参数为内网ip,可通过`ifconfig`查看
 本地运行，无需修改
 
- 2.3 修改vendor/workerman/Config/Db.php相关参数
+ 1.2 修改vendor/workerman/Config/Db.php相关参数，，修改application/database.php数据库信息
 
 3、如果你是在服务器上运行该项目，请开放7272端口供laykefu使用，以阿里云为例，在`网络和安全`的`安全组`里面`修改规则`，增加7272端口
 
@@ -128,17 +129,6 @@ php start.php status
 
 查看连接状态
 php start.php connections
-
-## 其他信息
-
-客服地址:host/service
-账户密码：
-客服小美 123456 //售前客服
-
-客服小丽 123456 //售后客服
-
-后台管理地址：host/admin
-账户密码：admin admin
 
 ## License
 
