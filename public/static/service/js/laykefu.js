@@ -383,7 +383,13 @@ function changeUserTab(obj) {
 
 // 添加用户到面板
 function addUser(data) {
-    console.log(data);
+	var add = true;
+	$('.layui-nav-item').each(function(i){
+		if(parseInt($(this).attr('data-id'))==data.id) {
+			add =  false;
+		}
+	});
+	if(add){
     var _html = '<li class="layui-nav-item" data-id="' + data.id + '" id="f-' + data.id +
         '" data-name="' + data.name + '" data-avatar="' + data.avatar + '" data-ip="' + data.ip + '">';
     _html += '<img src="' + data.avatar + '">';
@@ -423,7 +429,7 @@ function addUser(data) {
         $("#f-user").val(name);
         $("#f-ip").val(ip);
 
-        $.getJSON('/service/index/getCity', {ip: ip}, function(res){
+        $.getJSON('/Houtailogin/chat/getCity', {ip: ip}, function(res){
             $("#f-area").val(res.data);
         });
     }
@@ -431,8 +437,9 @@ function addUser(data) {
     getChatLog(data.id, 1);
 
     checkUser();
-}
+	}
 
+}
 // 操作新连接用户的 dom操作
 function checkUser() {
 
