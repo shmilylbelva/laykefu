@@ -188,7 +188,7 @@
         tpl +=              '<textarea class="form-control chat-area" id="msg-area" readonly="readonly"></textarea>';
         tpl +=              '<div class="input-group">';
         tpl +=                  '<span class="icono-smile" id="laykefu-face"></span>';
-        tpl +=                  '<span class="icono-image" id="laykefu-face"></span>';
+        tpl +=                  '<span class="icono-image" id="laykefu-up-image"></span>';
         // tpl +=                      '<i class="icono-smile" id="laykefu-face"></i>';
         // tpl +=                      '<i class="icono-image" id="laykefu-up-image"></i>';
         // tpl +=                  '</span>';        
@@ -417,7 +417,7 @@
         $("#laykefu-upload").click();
         $("#laykefu-upload").change(function (e) {
 
-            var formData = new FormData(this);
+            var formData = new FormData();
             var file = $("#laykefu-upload")[0].files[0];
                 formData.append("file",file); //传给后台的file的key值是可以自己定义的
             filter(file) && $.ajax({
