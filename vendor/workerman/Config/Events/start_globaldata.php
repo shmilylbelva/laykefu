@@ -16,8 +16,9 @@ use \GlobalData\Server;
 use \GlobalData\Client;
 // 自动加载类
 require_once __DIR__ . '/../../../autoload.php';
+require_once __DIR__.'/../Db.php';
 //请设置成服务器内网ip
-$globaldata = new GlobalData\Server('127.0.0.1', 2207);
+$globaldata = new GlobalData\Server(INTRANET, 2207);
 
 
 // 如果不是在根目录启动，则运行runAll方法
@@ -25,4 +26,3 @@ if(!defined('GLOBAL_START'))
 {
     Worker::runAll();
 }
-
