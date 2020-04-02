@@ -51,7 +51,7 @@
         isMobile();
         isVisible();
 		      var protocol = location.protocol === 'https:' ? 'wss://' : 'ws://';
-		      socket = new WebSocket(protocol + config.socket);//创建Socket实例        uinfo = getCache('laykefu-UserId');
+		      socket = new ReconnectingWebSocket(protocol + config.socket);//创建Socket实例        uinfo = getCache('laykefu-UserId');
         socket.onopen = function (res) {
             var login_data = '{"type":"userInit", "uid": ' + uinfo[0].userId + ', "name" : "' + uinfo[0].name +
                 '", "avatar" : "' + config.avatar + '", "group" : ' + config.group + '}';
