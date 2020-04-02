@@ -5,10 +5,10 @@ thinkphp5+Gatewayworker搭建的web客服系统
 
 客服地址:https://laykefu.com/service
 账户密码：
-客服小美 123456 
+客服小丽 123456 
 
 后台管理地址：https://laykefu.com/admin
-账户密码：admin admin
+账户密码：暂不提供
 
 github仓库：https://github.com/shmilylbelva/laykefu
 
@@ -37,7 +37,7 @@ github仓库：https://github.com/shmilylbelva/laykefu
 ```php
 	laykefu.init({
 		group: 1,//客服分组
-		socket: '127.0.0.1:7272',//聊天服务器地址
+		socket: '',//聊天服务器地址
 		face_path:'/static/customer/images/face',//表情包路径
 		upload_url:'/index/upload/uploadImg',//图片上传路径
 	});
@@ -57,11 +57,40 @@ $(".laykefu-min").click(function(){
     var group = $(this).attr('data-group');
 	laykefu.init({
 		group: group,//客服分组
-		socket: '127.0.0.1:7272',//聊天服务器地址
+		socket: document.domain+'/wss',//聊天服务器地址，其实socket可以设置为ip:7272或者域名:7272,然后nginx做反向代理
 		face_path:'/static/customer/images/face',//表情包路径
 		upload_url:'/index/upload/uploadImg',//图片上传路径
 	});
 });
+```
+[可选] nginx反向代理 wss
+```
+location /wss {
+            proxy_pass http://127.0.0.1:7272;
+            proxy_set_header X-Real-IP $remote_addr;
+            proxy_set_header Host $host;
+            proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
+            proxy_http_version 1.1;
+            proxy_set_header Upgrade $http_upgrade;
+            proxy_set_header Connection "upgrade";
+            rewrite /wss/(.*) /$1 break;
+            proxy_redirect off;
+}
+```
+
+[可选] nginx反向代理 ws
+```
+location /wss {
+            proxy_pass http://127.0.0.1:7272;
+            proxy_set_header X-Real-IP $remote_addr;
+            proxy_set_header Host $host;
+            proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
+            proxy_http_version 1.1;
+            proxy_set_header Upgrade $http_upgrade;
+            proxy_set_header Connection "upgrade";
+            rewrite /ws/(.*) /$1 break;
+            proxy_redirect off;
+}
 ```
 
 6、可选参数
@@ -85,20 +114,15 @@ $(".laykefu-min").click(function(){
 
 ## 2.服务端配置
 
- 1.1 如果是在服务器环境运行该项目，那么请配置`/vendor/workerman/Conf/Events`下的
- start_globaldata.php的$globaldata参数，
- start_gateway.php的$gateway->lanIp参数，
- $gateway->registerAddress参数
- start_businessworker.php的$worker->registerAddress参数为内网ip,可通过`ifconfig`查看
-本地运行，无需修改
 
- 1.2 修改vendor/workerman/Config/Db.php相关参数，，修改application/database.php数据库信息
 
-3、如果你是在服务器上运行该项目，请开放7272端口供laykefu使用，以阿里云为例，在`网络和安全`的`安全组`里面`修改规则`，增加7272端口
+1、修改application/database.php数据库信息
 
-4、如果指定某个域名才能connect，那么请修改Events.php的HTTP_ORIGIN参数
+2、如果你是在服务器上运行该项目，请开放7272端口供laykefu使用，以阿里云为例，在`网络和安全`的`安全组`里面`修改规则`，增加7272端口
 
-5、启动gatawayworker相关服务
+3、如果指定某个域名才能connect，那么请修改Events.php的HTTP_ORIGIN参数
+
+4、启动gatawayworker相关服务
 如果你是在windows上运行的话，直接双击`/vendor/workerman/Conf/start_for_bat.bat`即可
 如果你是在linux或mac上运行的话，请进入`/vendor/workerman/Conf/`目录，然后运行
 ```php
