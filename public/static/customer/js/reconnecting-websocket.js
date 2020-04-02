@@ -1,5 +1,4 @@
 // MIT License:
-//
 // Copyright (c) 2010-2012, Joe Walnes
 //
 // Permission is hereby granted, free of charge, to any person obtaining a copy
