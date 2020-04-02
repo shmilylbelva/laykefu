@@ -7,7 +7,7 @@ var uinfo = {
 
 // 创建一个Socket实例
 var protocol = location.protocol === 'https:' ? 'wss://' : 'ws://';
-socket = new WebSocket(protocol + socket_server);//创建Socket实例// 打开Socket 
+socket = new ReconnectingWebSocket(protocol + socket_server);//创建Socket实例// 打开Socket 
 socket.onopen = function (res) {
     layui.use(['layer'], function () {
         var layer = layui.layer;
