@@ -37,7 +37,7 @@ github仓库：https://github.com/shmilylbelva/laykefu
 ```php
 	laykefu.init({
 		group: 1,//客服分组
-		socket: '',//聊天服务器地址
+		socket: '',//聊天服务器地址 本地测试可以设置为127.0.0.1：7272
 		face_path:'/static/customer/images/face',//表情包路径
 		upload_url:'/index/upload/uploadImg',//图片上传路径
 	});
@@ -57,7 +57,7 @@ $(".laykefu-min").click(function(){
     var group = $(this).attr('data-group');
 	laykefu.init({
 		group: group,//客服分组
-		socket: document.domain+'/wss',//聊天服务器地址，其实socket可以设置为ip:7272或者域名:7272,然后nginx做反向代理
+		socket: document.domain+':7272',//聊天服务器地址，其实socket可以设置为ip:7272或者域名:7272,然后nginx做反向代理可以设置为 域名/wss
 		face_path:'/static/customer/images/face',//表情包路径
 		upload_url:'/index/upload/uploadImg',//图片上传路径
 	});
@@ -116,7 +116,7 @@ location /wss {
 
 
 
-1、修改application/database.php数据库信息
+1、修改application/database.php数据库信息,配置后台socket地址，一般情况下和前台地址相同：
 
 2、如果你是在服务器上运行该项目，请开放7272端口供laykefu使用，以阿里云为例，在`网络和安全`的`安全组`里面`修改规则`，增加7272端口
 
