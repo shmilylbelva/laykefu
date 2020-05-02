@@ -18,7 +18,7 @@ return [
     // 数据库名
     'database'        => 'laykefu',
     // 用户名
-    'username'        => 'laykefu',
+    'username'        => 'root',
     // 密码
     'password'        => '123456',
     // 端口

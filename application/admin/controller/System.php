@@ -42,13 +42,13 @@ class System extends Base
         if(request()->isPost()){
 
             $param = input('post.');
-            db('kf_config')->where('id', 1)->update($param);
+            db('config')->where('id', 1)->update($param);
 
             return json(['code' => 1, 'data' => '', 'msg' => '设置成功']);
         }
 
         $this->assign([
-            'config' => db('kf_config')->where('id', 1)->find(),
+            'config' => db('config')->where('id', 1)->find(),
             'status' => config('kf_status')
         ]);
 

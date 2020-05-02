@@ -177,7 +177,6 @@ class Events
                 break;
             // 顾客初始化
             case 'userInit';
-
                 $userList = self::$global->userList;
                 // 如果该顾客未在内存中记录则记录
                 if (!array_key_exists($message['uid'], $userList)) {
@@ -218,7 +217,7 @@ class Events
 
                 // 绑定 client_id 和 uid
                 Gateway::bindUid($client_id, $message['uid']);
-
+                print_r('1注册');
                 // 尝试分配新会员进入服务
                 self::userOnlineTask($client_id, $message['group']);
                 break;
@@ -691,6 +690,7 @@ class Events
 
             self::$db->delete('ws_service_log')->where($init_service_log)->query();
             unset($init_service_log);
+            print_r($serviceLog);
             self::$db->insert('ws_service_log')->cols($serviceLog)->query();
             unset($serviceLog);
 
@@ -805,7 +805,7 @@ class Events
      */
     private static function getMaxServiceNum()
     {
-        $maxNumber = self::$db->query('select `max_service` from `ws_kf_config` where `id` = 1');
+        $maxNumber = self::$db->query('select `max_service` from `ws_config` where `id` = 1');
         if (!empty($maxNumber)) {
             $maxNumber = 5;
         } else {

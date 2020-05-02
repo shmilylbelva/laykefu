@@ -12,7 +12,7 @@ class Index extends Base
             'uinfo' => $userInfo,
             'word' => db('words')->select(),
             'groups' => db('groups')->where('status', 1)->select(),
-            'status' => db('kf_config')->where('id', 1)->find()
+            'status' => db('config')->where('id', 1)->find()
         ]);
 
         return $this->fetch();
@@ -26,7 +26,7 @@ class Index extends Base
 
             // 此处只查询过去 三个小时 内的未服务完的用户
             $userList = db('service_log')->field('user_id id,user_name name,user_avatar avatar,user_ip ip')
-                ->where('kf_id', cookie('l_user_id'))
+                ->where('kf_id', 2)
                 ->where('start_time', '>', time() - 3600 * 3)->where('end_time', 0)->select();
 
             return json(['code' => 1, 'data' => $userList, 'msg' => 'ok']);

@@ -20,9 +20,9 @@ return [
     // 加密盐
     'salt' => '~shmilylbelva!@#',
     // 用于客户端连接socket
-    'socket' => 'laykefu.com/wss',
+    'socket' => '127.0.0.1:7272',
     //globalData 内网ip 
-    'intranet' => '0.0.0.0',
+    'intranet' => '127.0.0.1',
     //socket端口，端口没被占用可不修改
 	'port'=>'7272',
     // 管理员登录时间
