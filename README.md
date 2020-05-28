@@ -114,7 +114,9 @@ location /wss {
 
 ## 2.服务端配置
 
-
+去掉php pcntl相关函数禁用(pcntl_alarm,pcntl_fork,pcntl_signal)
+根目录指向public
+开启伪静态
 
 1、修改application/database.php数据库信息,配置后台socket地址，一般情况下和前台地址相同：
 
