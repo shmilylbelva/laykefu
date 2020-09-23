@@ -47,9 +47,10 @@
 <script src="/static/customer/js/reconnecting-websocket.js"></script>    
 <script src="/static/customer/js/laykefu.js"></script>
 <script type="text/javascript">
+  var host = document.domain;
   laykefu.init({
     group: 1,//客服分组
-    socket: '127.0.0.1:7272',//聊天服务器地址
+    socket: host+':7272',//聊天服务器地址
     face_path:'/static/customer/images/face',//表情包路径
     upload_url:'/index/upload/uploadImg',//图片上传路径
   });
