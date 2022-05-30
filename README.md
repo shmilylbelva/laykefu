@@ -1,13 +1,13 @@
 ## laykefu
 thinkphp5+Gatewayworker搭建的web客服系统
 
-体验地址：https://www.laykefu.com 
+体验地址：https:
 
-客服地址:https://www.laykefu.com/service
+客服地址:https:/service
 账户密码：
 客服小美 123456 
 
-后台管理地址：https://www.laykefu.com/admin
+后台管理地址：https/admin
 账户密码：暂不提供
 
 github仓库：https://github.com/shmilylbelva/laykefu
@@ -159,7 +159,7 @@ php start.php connections
 ## License
 
 MIT
-
+##qq  1028604181
 ## QQ交流群
 
 【601391162】
