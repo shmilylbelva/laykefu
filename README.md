@@ -1,7 +1,7 @@
 ## laykefu
 thinkphp5+Gatewayworker搭建的web客服系统
 
-体验地址：https:
+体验地址：https://129.204.87.79/
 
 客服地址:https:/service
 账户密码：
